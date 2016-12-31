@@ -53,7 +53,7 @@ end
 activate :deploy do |deploy|
   deploy.user = 'JTronLabs'
   deploy.deploy_method = :git
-  deploy.remote   = 'https://github.com/JTronLabs/JTronLabs.github.io.git' #I recommend a URL over a 'remote' name, as those have broken on me
+  deploy.remote   = 'https://github.com/nhuston/nhuston.github.io.git' #I recommend a URL over a 'remote' name, as those have broken on me
   deploy.branch = 'master'
   deploy.build_before = true
 end
