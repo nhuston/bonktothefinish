@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    /*
+    Let's use System fonts for faster loading and consistent UI
+    Medium did it first: https://medium.design/system-shock-6b1dc6d6596f#.hrsz463cl
+    */
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-size: $base-font-size;
+    font-weight: 300;
+    margin: 0;
+    padding: 0;
+    color: $off-black;
+}
+
+.clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+}
+
+.site-header-banner{
+    @extend .site-header-image;
+    .site-header-image{
+        width:100%;
+        @include media-query($on-laptop) {
+            max-height: $max-site-header-height;
+        }
+    }
+}

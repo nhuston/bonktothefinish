@@ -1,0 +1,30 @@
+@charset "utf-8";
+@import "normalize"; //Define variables, mixins, etc for scss files
+$icon-len: 1.5em;
+$small-icon-len: 1em;
+$margin: 0.67em;
+$width-max: 780px;
+$base-font-size: 21px;
+$navbar-padding: 1em;
+$footer-padding: 1em;
+$footer-img-len: 1.25em;
+$wrap-width-mobile: 95%;
+$wrap-width-desktop: 70%;
+$max-site-header-height: 426px;
+$on-laptop: 800px;
+$on-desktop: 1200px;
+@mixin media-query($device) {
+     @media screen and (min-width: $device){
+        @content;
+    }
+}
+@mixin font-size($size, $amplifier, $desktop-amplifier) {
+    $context-size-computed: $size * $step-size-font;
+    font-size: $context-size-computed * $amplifier + em;
+    @include media-query($on-laptop) {
+        font-size: $context-size-computed * $desktop-amplifier + em;
+    }
+}
+
+@import "colors";
+@import "global","footer";

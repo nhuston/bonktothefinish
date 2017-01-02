@@ -1,0 +1,43 @@
+//http://stackoverflow.com/a/20432777
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    margin-top: $margin;
+    width: 100%;
+    padding: $footer-padding 0;
+    border-top: 1px solid $grey-color-light;
+    font-size: 0.6em;
+
+    .sides {
+        width: 175px;
+    }
+
+    .footer-links {
+        a {
+            text-decoration: none;
+            display: inline-block;
+            width: $footer-img-len;
+            height: $footer-img-len;
+            padding: $footer-img-len/6;
+
+            &:hover {
+                background-color: $grey-color-light;
+            }
+
+            img {
+                width: $footer-img-len;
+                height: $footer-img-len;
+                padding: 0;
+            }
+        }
+    }
+}
