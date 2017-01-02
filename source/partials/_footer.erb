@@ -1,0 +1,20 @@
+<footer>
+    <div class="wrap flex_row">
+      <!-- Left -->
+      <span class="sides footer-links">
+
+      </span>
+
+      <!-- Middle -->
+      <span class="">
+        Updated <%=  File.mtime(current_page.source_file).strftime("%b %e, %Y") %> <!-- Right way? -->
+      </span>
+
+      <!-- Right -->
+      <span class="sides" style="text-align:right;">
+        <%= link_to "Source", config[:repo_src], :target => "_blank" %>
+        </br>
+        <a class="open-mailchimp-subscribe-popup">Subscribe!</a>
+      </span>
+    </div>
+</footer>

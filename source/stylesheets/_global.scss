@@ -29,3 +29,11 @@ body {
         }
     }
 }
+
+.flex_row {
+    // uses flexbox - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}

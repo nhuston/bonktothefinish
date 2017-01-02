@@ -21,6 +21,7 @@ page '/*.txt', layout: false
 # Reload the browser automatically whenever files change
 configure :development do
   config[:host] = "localhost:4567"
+  config[:repo_src] = "https://github.com/nhuston/bonktothefinish"
   activate :livereload
 end
 
@@ -72,6 +73,7 @@ end
 # Build-specific configuration
 configure :build do
   config[:host] = "http://bonktothefinish.com"
+  config[:repo_src] = "https://github.com/nhuston/bonktothefinish"
 
   # Minify CSS and JS on build
   activate :minify_css
