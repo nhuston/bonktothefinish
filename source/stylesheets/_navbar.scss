@@ -8,11 +8,17 @@ navbar {
     background-color: black;
     width:100%;
     color:#ccc;
+    margin:0;
     a {
         //need class for higher specificity
         display: block;
+        text-decoration: none;
         text-align: center;
         margin: 0 auto;
+        color:$grey-color-light;
+        &:hover{
+          color:$grey-color-dark;
+        }
     }
     @include media-query($on-laptop) {
         a {

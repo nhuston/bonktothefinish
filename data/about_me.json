@@ -1,0 +1,24 @@
+{
+  "social": {
+    "linkedIn": {
+      "url":"https://www.linkedin.com/in/nicole-huston-7791a3a8/",
+      "img_url":"social/Linkedin.svg",
+      "img_alt":"LinkedIn"
+    },
+    "facebook": {
+      "url":"https://www.facebook.com/nicole.huston",
+      "img_url":"social/facebook.svg",
+      "img_alt":"Facebook"
+    },
+    "strava": {
+      "url":"https://www.strava.com/athletes/13343220",
+      "img_url":"social/strava.svg",
+      "img_alt":"Strava"
+    },
+    "twitter": {
+      "url":"https://twitter.com/bonktothefinish/",
+      "img_url":"social/twitter.svg",
+      "img_alt":"Twitter"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+
+<% content_for :head do
+  #pass content to head in parent layout
+  ""
+end %>
+
+<% wrap_layout :layout do %>
+      <article>
+
+        <%= yield %>
+
+      </article>
+      <%= partial "partials/comments.erb" %>
+
+<% end %>

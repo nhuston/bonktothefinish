@@ -28,8 +28,8 @@
     %>
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
-  <body>
 
+  <body class="<%= page_classes %>">
     <header class="site-header-banner">
       <%
       #choose the image to display as the site banner
@@ -42,7 +42,9 @@
       <%= partial "partials/navbar.erb" %>
     </header>
 
-    <div id="main" role="main">
+    <%= partial "partials/social_follow.erb" %>
+
+    <div id="main" role="main" class="wrap">
       <%= yield %>
     </div>
 

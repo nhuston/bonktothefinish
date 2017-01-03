@@ -1,5 +1,5 @@
 body {
-    text-align: center;
+    text-align: left;
     /*
     Let's use System fonts for faster loading and consistent UI
     Medium did it first: https://medium.design/system-shock-6b1dc6d6596f#.hrsz463cl
@@ -36,4 +36,30 @@ body {
     flex-flow: row nowrap;
     justify-content: space-between;
     align-items: center;
+}
+
+.about{
+  img{
+    float:left;
+  }
+}
+
+
+.wrap {
+    margin: 0 auto;
+    width: $wrap-width-mobile;
+    @include media-query($on-laptop) {
+        width: $wrap-width-desktop;
+    }
+}
+
+.social{
+  img{
+    @extend .icon;
+  }
+}
+
+.icon{
+  width:$icon-len;
+  height:$icon-len;
 }

@@ -25,10 +25,11 @@ configure :development do
   activate :livereload
 end
 
+
 activate :blog do |blog|
  # Matcher for blog source files
  # blog.taglink = "tags/{tag}.html"
- blog.layout = "layouts/layout"
+ blog.layout = "layouts/blog_layout"
  # blog.summary_separator = /(READMORE)/
  blog.summary_length = 150
  # blog.year_link = "{year}.html"
@@ -64,11 +65,12 @@ end
 ###
 
 # Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+helpers do
+  def img_link(img_url, img_alt, url, title, css_class,target = "_blank",id="")
+    img = app.image_tag img_url, alt: img_alt
+    link = app.link_to img, url, title: title,target: target, class: css_class, id: id
+  end
+ end
 
 # Build-specific configuration
 configure :build do
