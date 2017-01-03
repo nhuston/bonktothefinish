@@ -20,6 +20,16 @@ body {
     }
 }
 
+//main site content inside the wrap
+.main{
+
+}
+.sidebar{
+  ul{
+    list-style: none;
+  }
+}
+
 .site-header-banner{
     @extend .site-header-image;
     .site-header-image{
@@ -44,6 +54,21 @@ body {
   }
 }
 
+
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:visited {
+        color: $link-color;
+    }
+
+    &:hover {
+        color: $text-color;
+        text-decoration: underline;
+        cursor:pointer; //needed for links with no href
+    }
+}
 
 .wrap {
     margin: 0 auto;

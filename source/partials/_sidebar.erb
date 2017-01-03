@@ -1,0 +1,10 @@
+<aside class="sidebar clearfix">
+  <%= partial "partials/social_follow.erb" %>
+
+  <h4>Recent Articles</h4>
+  <ul>
+    <% blog.articles[0...10].each do |article| %>
+      <li><%= link_to article.title, article %></li>
+    <% end %>
+  </ol>
+</aside>

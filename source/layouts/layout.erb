@@ -33,43 +33,21 @@
     <header class="site-header-banner">
       <%
       #choose the image to display as the site banner
-      header_img = "images/site-header-img.jpg"
+      header_img = "/images/site-header-img.jpg"
       if current_page.data.dig(:header_img) then
         header_img = current_page.data.header_img
       end
       %>
-      <img class="site-header-image" src="<%= header_img %>" alt="Site Header Image">
+      <img class="site-header-image" src="<%= header_img %>" alt="Site Header Image"/>
       <%= partial "partials/navbar.erb" %>
     </header>
 
-    <%= partial "partials/social_follow.erb" %>
-
-    <div id="main" role="main" class="wrap">
-      <%= yield %>
+    <div role="main" class="wrap">
+      <section class="main">
+        <%= yield %>
+      </section>
+      <%= partial "partials/sidebar.erb" %>
     </div>
-
-    <aside>
-      <h2>Recent Articles</h2>
-      <ol>
-        <% blog.articles[0...10].each do |article| %>
-          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
-        <% end %>
-      </ol>
-
-      <h2>Tags</h2>
-      <ol>
-        <% blog.tags.each do |tag, articles| %>
-          <li><%= link_to "#{tag} (#{articles.size})", tag_path(tag) %></li>
-        <% end %>
-      </ol>
-
-      <h2>By Year</h2>
-      <ol>
-        <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
-          <li><%= link_to "#{year} (#{articles.size})", blog_year_path(year) %></li>
-        <% end %>
-      </ol>
-    </aside>
 
     <%= partial "partials/footer.erb" %>
   </body>
