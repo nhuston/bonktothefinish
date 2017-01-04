@@ -1,0 +1,13 @@
+<%
+#choose the image to display as the site banner
+header_img = "/images/site-header-img.jpg"
+if current_page.data.dig(:header_img) then
+  header_img = current_page.data.header_img
+end
+%>
+
+<header class="site-header-banner">
+  <img class="site-header-image" src="<%= header_img %>" alt="Site Header Image" />
+
+  <%= partial "partials/navbar.erb" %>
+</header>

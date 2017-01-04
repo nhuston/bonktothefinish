@@ -29,25 +29,13 @@
     <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
   </head>
 
-  <body class="<%= page_classes %>">
-    <header class="site-header-banner">
-      <%
-      #choose the image to display as the site banner
-      header_img = "/images/site-header-img.jpg"
-      if current_page.data.dig(:header_img) then
-        header_img = current_page.data.header_img
-      end
-      %>
-      <img class="site-header-image" src="<%= header_img %>" alt="Site Header Image"/>
-      <%= partial "partials/navbar.erb" %>
-    </header>
+  <body>
+    <%= partial "partials/header.erb" %>
 
-    <div role="main" class="wrap">
-      <section class="main">
-        <%= yield %>
-      </section>
+    <main class="wrap <%= page_classes %>">
+      <%= yield %>
       <%= partial "partials/sidebar.erb" %>
-    </div>
+    </main>
 
     <%= partial "partials/footer.erb" %>
   </body>
