@@ -1,0 +1,43 @@
+.site-header-banner{
+    @extend .site-header-image;
+
+    .site-header-image{
+        display:block;
+        margin:0;
+        padding:0;
+        width:100%;
+        @include media-query($on-laptop) {
+            max-height: $max-site-header-height;
+        }
+    }
+
+    navbar {
+        position: relative;
+        font-size: .75em;
+
+        display: block;
+        padding: $navbar-padding;
+        box-sizing: border-box; //subtracts padding from width
+        border-bottom: 1px solid $grey-color-light;
+
+        background-color: black;
+        width:100%;
+        color:#ccc;
+        margin:0;
+        a {
+            display: block;
+            text-decoration: none;
+            text-align: center;
+            margin: 0 auto;
+            color:$grey-color-light;
+            &:hover{
+              color:$grey-color-dark;
+            }
+        }
+        @include media-query($on-laptop) {
+            a {
+                display: inline-block;
+            }
+        }
+    }
+}

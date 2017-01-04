@@ -21,7 +21,7 @@ body {
 }
 
 //main site content inside the wrap
-.main{
+main{
 
 }
 .sidebar{
@@ -33,6 +33,7 @@ body {
 .site-header-banner{
     @extend .site-header-image;
     .site-header-image{
+        display:block;
         margin:0;
         padding:0;
         width:100%;
