@@ -22,25 +22,25 @@ body {
 
 //main site content inside the wrap
 main{
-
-}
-.sidebar{
-  ul{
-    list-style: none;
-  }
-}
-
-.site-header-banner{
-    @extend .site-header-image;
-    .site-header-image{
-        display:block;
-        margin:0;
-        padding:0;
-        width:100%;
-        @include media-query($on-laptop) {
-            max-height: $max-site-header-height;
-        }
+  .content{
+    @include media-query($on-laptop) {
+        display:inline-block;
+        width: 100%-$sidebar-desktop-width - 2%;
     }
+  }
+  .sidebar{
+    margin-top: $margin;
+    text-align: center;
+    vertical-align: top;
+    @include media-query($on-laptop) {
+        display:inline-block;
+        width: $sidebar-desktop-width - 2%;
+    }
+
+    .recent-articles{
+      display:block;
+    }
+  }
 }
 
 .flex_row {
@@ -52,9 +52,11 @@ main{
 }
 
 .about{
-  img{
-    float:left;
-    margin: 0 $margin * 2 $margin * 2 0;
+  .content{
+    img{
+      float:left;
+      margin: 0 $margin * 2 $margin * 2 0;
+    }
   }
 }
 
@@ -83,12 +85,15 @@ a {
 }
 
 .social{
+  display: block;
   img{
     @extend .icon;
   }
 }
 
 .icon{
+  margin:0;
+  padding:0;
   width:$icon-len;
   height:$icon-len;
 }

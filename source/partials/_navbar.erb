@@ -4,7 +4,6 @@
     <span class="sides footer-links">
       <%= link_to "Bonk!", "/" %>
       <% blog.tags.each do |tag, articles| %>
-      /
         <%= link_to "#{tag}", tag_path(tag) %>
       <% end %>
     </span>
@@ -15,6 +14,7 @@
     <!-- Right -->
     <span class="sides">
       <%= link_to("About", "/about.html") %>
+      <%= link_to "Archive", "/" %>
     </span>
   </div>
 </navbar>

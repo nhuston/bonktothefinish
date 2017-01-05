@@ -1,0 +1,10 @@
+<% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+
+  <h2><%= year %></h2>
+  <ul>
+    <% articles.each do |article| %>
+      <li><a href="<%= article.url %>"><%= article.title %></a></li>
+    <% end %>
+  </ul>
+
+<% end %>
