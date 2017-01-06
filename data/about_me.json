@@ -19,6 +19,14 @@
       "url":"https://twitter.com/bonktothefinish/",
       "img_url":"social/twitter.svg",
       "img_alt":"Twitter"
+    },
+    "reddit": {
+      "img_url":"social/reddit.svg",
+      "img_alt":"Reddit"
+    },
+    "gPlus": {
+      "img_url":"social/google-plus.svg",
+      "img_alt":"Google Plus"
     }
   }
 }

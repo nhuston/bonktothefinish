@@ -18,9 +18,8 @@ else
 end %>
 
 <div class="social">
-<%=
-#img_link social.facebook.img_url,social.facebook.img_alt, fb_url, "Share on #{social.facebook.img_alt}", ""
-%>
+  <span></span>
+  <%= img_link social.facebook.img_url,     social.facebook.img_alt,    fb_url,           "Share on #{social.facebook.img_alt}", "" %>
   <%= img_link social.gPlus.img_url,        social.gPlus.img_alt,       gPlus_url,        "Share on #{social.gPlus.img_alt}", "" %>
   <%= img_link social.twitter.img_url,      social.twitter.img_alt,     twitter_url,      "Share on #{social.twitter.img_alt}", "" %>
   <%= img_link social.reddit.img_url,       social.reddit.img_alt,      reddit_url,       "Share on #{social.reddit.img_alt}", "" %>
