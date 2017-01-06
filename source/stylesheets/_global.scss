@@ -51,6 +51,16 @@ main{
     align-items: center;
 }
 
+.content{
+  figure{
+    img{
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+    }
+  }
+}
+
 .about{
   .content{
     img{
@@ -76,7 +86,7 @@ a {
     }
 }
 
-b{
+strong, b{
   font-weight: bold;
 }
 
