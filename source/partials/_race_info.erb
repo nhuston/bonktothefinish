@@ -1,0 +1,30 @@
+<%
+race = current_article.data.race || {}
+location = race.fetch(:location,"")
+date = race.fetch(:date,"")
+distances = race.fetch(:distances,"")
+size = race.fetch(:size,"")
+url = race.fetch(:url,"")
+%>
+
+<div class="race-info">
+  <% if location != "" then %>
+    <b>Race Location: </b><span><%= location %></span><br/>
+  <% end %>
+
+  <% if date != "" then %>
+    <b>Race Date: </b><span><%= date %></span><br/>
+  <% end %>
+
+  <% if distances != "" then %>
+    <b>Distances Offered: </b><span><%= distances %></span><br/>
+  <% end %>
+
+  <% if size != "" then %>
+    <b>Number of Runners: </b><span><%= size %></span><br/>
+  <% end %>
+
+  <% if size != "" then %>
+    <a href="<%= url %>">Race Website </a><br/>
+  <% end %>
+</div>

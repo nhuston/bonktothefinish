@@ -76,6 +76,14 @@ a {
     }
 }
 
+b{
+  font-weight: bold;
+}
+
+.article-header{
+  margin: $margin 0;
+}
+
 .wrap {
     margin: 0 auto;
     width: $wrap-width-mobile;

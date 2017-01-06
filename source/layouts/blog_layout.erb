@@ -7,11 +7,13 @@ end %>
 <% wrap_layout :layout do %>
       <article>
 
-        <header>
+        <header class="article-header">
           <h1><%= current_article.title %></h1>
           <time><%= current_article.date.strftime("%B %e, %Y") %></time> / <a href="/about.html" rel="author">Nicole Huston</a>
           <%= partial "partials/social_share.erb" %>
         </header>
+
+        <%= partial "partials/race_info.erb" %>
 
         <%= yield %>
 
