@@ -32,17 +32,16 @@ main{
     margin-top: $margin;
     text-align: center;
     vertical-align: top;
+    .recent{
+      display:block;
+      font-size: .5em;
+      a{
+        margin: $margin/2;
+      }
+    }
     @include media-query($on-laptop) {
         display:inline-block;
         width: $sidebar-desktop-width - 2%;
-
-        .recent{
-          display:block;
-          font-size: .5em;
-          a{
-            margin: $margin/2;
-          }
-        }
     }
   }
 }
