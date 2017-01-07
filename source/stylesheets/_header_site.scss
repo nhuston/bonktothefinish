@@ -8,15 +8,14 @@
         width:100%;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-        @include media-query($on-laptop) {
-            max-height: $max-site-header-height;
-        }
+        max-height: $max-site-header-height;
+        min-height: $max-site-header-height/3;
     }
 
     navbar {
         //alignment
         position: absolute;
-        top: 100px;
+        top: 25px;
         left:25%;
         transform: translate(-12.5%, 0);
 
@@ -29,7 +28,7 @@
         border: 1px solid $grey-color-light;
 
         display: block;
-        padding: $navbar-padding;
+        padding: $margin;
 
         background-color: black;
         color:#ccc;
@@ -38,13 +37,14 @@
             display: block;
             text-decoration: none;
             text-align: center;
-            margin: 0 auto;
+            margin:0 $margin/2;
             color:$grey-color-light;
             &:hover{
               color:$grey-color-dark;
             }
         }
         @include media-query($on-laptop) {
+            top: 100px;
             a {
                 display: inline-block;
             }
