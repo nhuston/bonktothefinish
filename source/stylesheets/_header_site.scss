@@ -1,5 +1,6 @@
 .site-header-banner{
     @extend .site-header-image;
+    margin-bottom: $margin * 2;
 
     .site-header-image{
         display:block;

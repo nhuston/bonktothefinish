@@ -97,7 +97,7 @@ strong, b{
 }
 
 .wrap {
-    margin: $margin * 2 auto;
+    margin: 0 auto;
     width: $wrap-width-mobile;
     @include media-query($on-laptop) {
         width: $wrap-width-desktop;
