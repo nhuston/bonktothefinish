@@ -60,6 +60,11 @@ main{
       margin: 0 auto;
       max-width: 100%;
     }
+    figcaption{
+      text-align: center;
+      font-size: 0.95rem;
+      margin: $margin 0;
+    }
   }
 }
 
