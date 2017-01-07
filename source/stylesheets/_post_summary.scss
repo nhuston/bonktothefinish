@@ -1,0 +1,21 @@
+.post_summary{
+  margin-top: $margin * 2;
+    aside{
+        vertical-align: top;
+        font-size: .5em;
+        width: 20%;
+        display:inline-block;
+        .article-type{
+          width:80%;
+          display: block;
+        }
+    }
+    article{
+        width: 79%;
+        display:inline-block;
+        h2{
+          margin-top: 0;
+          margin-bottom: $margin/2;
+        }
+    }
+}

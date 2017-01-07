@@ -1,11 +1,8 @@
-<navbar>
-    <div class="wrap flex_row">
+<navbar class="main-navbar">
+  <div class="flex_row">
     <!-- Left -->
     <span class="sides footer-links">
       <%= link_to "Bonk!", "/" %>
-      <% blog.tags.each do |tag, articles| %>
-        <%= link_to "#{tag}", tag_path(tag) %>
-      <% end %>
     </span>
 
     <!-- Middle -->

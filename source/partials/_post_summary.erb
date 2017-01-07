@@ -1,0 +1,21 @@
+
+<section class="post_summary">
+  <aside>
+    <img src="<%= get_article_img(article.tags) %>" class="article-type"/>
+
+    <img src="/images/icons/tag.svg" class="icon"/>
+    <span>Tags: </span>
+    <% article.tags.each do |tag| %>
+      <%= link_to "#{tag}", tag_path(tag), { class: "button button_primary" }%>
+    <% end %>
+  </aside>
+
+  <article>
+    <h2><%= link_to article.title, article %> </h2>
+    <time><%= article.date.strftime("%B %e, %Y") %></time>
+    <%=
+    article.summary(250)
+    #article.body
+    %>
+  </article>
+</section>

@@ -4,10 +4,9 @@
   <h4>Follow</h4>
   <%= partial "partials/social_follow.erb" %>
 
-  <h4>Recent Articles</h4>
-  <div class="recent_articles">
-    <% blog.articles[0...5].each do |article| %>
-      <%= link_to article.title, article %>
+  <div class="recent">
+    <% blog.tags.each do |tag, articles| %>
+      <%= link_to "#{tag}", tag_path(tag), { class: "button button_primary" }%>
     <% end %>
   </div>
 </aside>

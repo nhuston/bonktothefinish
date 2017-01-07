@@ -35,10 +35,14 @@ main{
     @include media-query($on-laptop) {
         display:inline-block;
         width: $sidebar-desktop-width - 2%;
-    }
 
-    .recent-articles{
-      display:block;
+        .recent{
+          display:block;
+          font-size: .5em;
+          a{
+            margin: $margin/2;
+          }
+        }
     }
   }
 }
@@ -70,14 +74,9 @@ main{
   }
 }
 
-
 a {
     color: $link-color;
     text-decoration: none;
-
-    &:visited {
-        color: $link-color;
-    }
 
     &:hover {
         color: $text-color;

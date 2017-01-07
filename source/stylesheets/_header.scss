@@ -12,16 +12,24 @@
     }
 
     navbar {
-        position: relative;
+        //alignment
+        position: absolute;
+        top: 100px;
+        left:25%;
+        transform: translate(-12.5%, 0);
+
+        //size
+        width:75%;
         font-size: .75em;
+
+        //border
+      	border-radius: 0.317rem;
+        border: 1px solid $grey-color-light;
 
         display: block;
         padding: $navbar-padding;
-        box-sizing: border-box; //subtracts padding from width
-        border-bottom: 1px solid $grey-color-light;
 
         background-color: black;
-        width:100%;
         color:#ccc;
         margin:0;
         a {

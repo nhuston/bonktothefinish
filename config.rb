@@ -66,6 +66,14 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
+  def get_article_img(tags)
+    if tags.include? "Dog" then
+      return "/images/icons/dog.svg"
+    end
+
+    return "/images/icons/shoe.svg"
+  end
+
   def img_link(img_url, img_alt, url, title, css_class,target = "_blank",id="")
     img = app.image_tag img_url, alt: img_alt
     link = app.link_to img, url, title: title,target: target, class: css_class, id: id
