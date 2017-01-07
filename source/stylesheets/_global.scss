@@ -29,7 +29,6 @@ main{
     }
   }
   .sidebar{
-    margin-top: $margin;
     text-align: center;
     vertical-align: top;
     .recent{
@@ -93,7 +92,7 @@ strong, b{
 }
 
 .wrap {
-    margin: 0 auto;
+    margin: $margin * 2 auto;
     width: $wrap-width-mobile;
     @include media-query($on-laptop) {
         width: $wrap-width-desktop;
