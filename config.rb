@@ -66,13 +66,18 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
-  def get_article_img(tags)
-    if tags.include? "Dog" then
-      return "/images/icons/dog.svg"
-    end
+   def get_article_img(article_tags)
+     tag_links = data.tags.tag_images
+     #search thru data's tag list, return image url of first tag found
+     for tag in tag_links do
+       if article_tags.include? tag.name then
+         return tag.url
+       end
+     end
 
-    return "/images/icons/shoe.svg"
-  end
+     #return last tag's image url
+     return tag_links[tag_links.length-1].url
+   end
 
   def img_link(img_url, img_alt, url, title, css_class,target = "_blank",id="")
     img = app.image_tag img_url, alt: img_alt

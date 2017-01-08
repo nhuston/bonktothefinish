@@ -1,0 +1,12 @@
+{
+  "tag_images":[
+    {
+      "name":"Dog",
+      "url":"/images/icons/dog.svg"
+    },
+    {
+      "name":"Race",
+      "url":"/images/icons/shoe.svg"
+    }
+  ]
+}
