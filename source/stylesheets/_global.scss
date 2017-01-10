@@ -19,7 +19,16 @@ body {
         clear: both;
     }
 }
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
 //main site content inside the wrap
+
 main {
     .content {
         @include media-query($on-laptop) {
