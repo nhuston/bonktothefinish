@@ -19,30 +19,32 @@ body {
         clear: both;
     }
 }
-
 //main site content inside the wrap
-main{
-  .content{
-    @include media-query($on-laptop) {
-        display:inline-block;
-        width: 100%-$sidebar-desktop-width - 2%;
+main {
+    .content {
+        @include media-query($on-laptop) {
+            display: inline-block;
+            width: 100%-$sidebar-desktop-width - 2%;
+        }
     }
-  }
-  .sidebar{
-    text-align: center;
-    vertical-align: top;
-    .recent{
-      display:block;
-      font-size: .5em;
-      a{
-        margin: $margin/2;
-      }
+
+    .sidebar {
+        text-align: center;
+        vertical-align: top;
+
+        .recent {
+            display: block;
+            font-size: 0.5em;
+
+            a {
+                margin: $margin/2;
+            }
+        }
+        @include media-query($on-laptop) {
+            display: inline-block;
+            width: $sidebar-desktop-width - 2%;
+        }
     }
-    @include media-query($on-laptop) {
-        display:inline-block;
-        width: $sidebar-desktop-width - 2%;
-    }
-  }
 }
 
 .flex_row {
@@ -53,28 +55,29 @@ main{
     align-items: center;
 }
 
-.content{
-  figure{
-    img{
-      display: block;
-      margin: 0 auto;
-      max-width: 100%;
+.content {
+    figure {
+        img {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+        }
+
+        figcaption {
+            text-align: center;
+            font-size: 0.95rem;
+            margin: $margin 0;
+        }
     }
-    figcaption{
-      text-align: center;
-      font-size: 0.95rem;
-      margin: $margin 0;
-    }
-  }
 }
 
-.about{
-  .content{
-    img{
-      float:left;
-      margin: 0 $margin * 2 $margin * 2 0;
+.about {
+    .content {
+        img {
+            float: left;
+            margin: 0 $margin * 2 $margin * 2 0;
+        }
     }
-  }
 }
 
 a {
@@ -84,16 +87,23 @@ a {
     &:hover {
         color: $text-color;
         text-decoration: underline;
-        cursor:pointer; //needed for links with no href
+        cursor: pointer; //needed for links with no href
     }
 }
 
-strong, b{
-  font-weight: bold;
+b,
+strong {
+    font-weight: bold;
 }
 
-.article-header{
-  margin: $margin 0;
+blockquote {
+    color: $quote-color;
+    border-left: 0.25em solid #ddd;
+    padding: 0 1em;
+}
+
+.article-header {
+    margin: $margin 0;
 }
 
 .wrap {
@@ -104,16 +114,17 @@ strong, b{
     }
 }
 
-.social{
-  display: block;
-  img{
-    @extend .icon;
-  }
+.social {
+    display: block;
+
+    img {
+        @extend .icon;
+    }
 }
 
-.icon{
-  margin:0;
-  padding:0;
-  width:$icon-len;
-  height:$icon-len;
+.icon {
+    margin: 0;
+    padding: 0;
+    width: $icon-len;
+    height: $icon-len;
 }
