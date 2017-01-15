@@ -3,14 +3,18 @@
     margin-bottom: $margin * 2;
 
     .site-header-image{
-        display:block;
-        margin:0;
-        padding:0;
-        width:100%;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      overflow:hidden;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      background-size: cover;
+      background-position: 50% 50%;
+      z-index: -10;
 
-        max-height: $max-site-header-height;
-        min-height: $max-site-header-height/3;
+      ///http://stackoverflow.com/questions/600743/how-to-get-div-height-to-auto-adjust-to-background-size
+      min-height: $max-site-header-height;
+      padding-top: 10%; /* (img-height / img-width * container-width) */
     }
 
     navbar {
