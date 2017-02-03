@@ -84,16 +84,12 @@ main {
 }
 
 .race-info {
-    margin: $margin;
     text-align: left;
 
     iframe {
         display: block;
         margin: $margin*2 auto;
-    }
-
-    h2 {
-        text-align: center;
+        max-width: 100%;
     }
     @include media-query($on-laptop) {}
 }
@@ -156,6 +152,7 @@ blockquote {
 
 .article-header {
     margin-bottom: $margin;
+    text-align: center;
 }
 
 .wrap {
