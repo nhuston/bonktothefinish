@@ -35,6 +35,10 @@ body {
 
 main {
     .content {
+        h1:first-child,
+        section {
+            margin-top: 0;
+        }
         @include media-query($on-laptop) {
             display: inline-block;
             width: 100%-$sidebar-desktop-width - 2%;
@@ -126,7 +130,7 @@ blockquote {
 }
 
 .article-header {
-    margin: $margin 0;
+    margin-bottom: $margin;
 }
 
 .wrap {
