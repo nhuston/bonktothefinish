@@ -5,26 +5,37 @@ date = race.fetch(:date,"")
 distances = race.fetch(:distances,"")
 size = race.fetch(:size,"")
 url = race.fetch(:url,"")
+pacing = race.fetch(:pacing,"")
+strava_url = race.fetch(:strava_url,"")
 %>
 
 <div class="race-info">
+  <h2>Race Info</h2>
   <% if location != "" then %>
-    <b>Race Location: </b><span><%= location %></span><br/>
+    <b>Location: </b><span><%= location %></span><br/>
   <% end %>
 
   <% if date != "" then %>
-    <b>Race Date: </b><span><%= date %></span><br/>
+    <b>Date: </b><span><%= date %></span><br/>
+  <% end %>
+
+  <% if pacing != "" then %>
+    <b>Pacing Group: </b><span><%= pacing %></span><br/>
   <% end %>
 
   <% if distances != "" then %>
-    <b>Distances Offered: </b><span><%= distances %></span><br/>
+    <b>Distances: </b><span><%= distances %></span><br/>
   <% end %>
 
   <% if size != "" then %>
-    <b>Number of Runners: </b><span><%= size %></span><br/>
+    <b>People: </b><span><%= size %></span><br/>
   <% end %>
 
   <% if size != "" then %>
-    <a href="<%= url %>">Race Website </a><br/>
+    <a href="<%= url %>">Race Website</a><br/>
+  <% end %>
+
+  <% if strava_url != "" then %>
+    <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='<%= strava_url %>'></iframe>
   <% end %>
 </div>

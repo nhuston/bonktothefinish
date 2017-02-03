@@ -4,10 +4,14 @@
       "name":"Dog",
       "url":"/images/icons/dog.svg"
     },
-      {
-        "name":"Cooking",
-        "url":"/images/icons/cooking.svg"
-      },
+    {
+      "name":"goals",
+      "url":"/images/icons/goal.svg"
+    },
+    {
+      "name":"Cooking",
+      "url":"/images/icons/cooking.svg"
+    },
     {
       "name":"Race",
       "url":"/images/icons/shoe.svg"

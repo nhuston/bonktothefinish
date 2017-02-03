@@ -46,7 +46,7 @@ body {
 main {
     .content {
         h1:first-child,
-        section {
+        section:first-child {
             margin-top: 0;
         }
         @include media-query($on-laptop) {
@@ -81,6 +81,21 @@ main {
             width: $sidebar-desktop-width - 2%;
         }
     }
+}
+
+.race-info {
+    margin: $margin;
+    text-align: left;
+
+    iframe {
+        display: block;
+        margin: $margin*2 auto;
+    }
+
+    h2 {
+        text-align: center;
+    }
+    @include media-query($on-laptop) {}
 }
 
 .flex_row {

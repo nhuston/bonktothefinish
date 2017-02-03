@@ -9,7 +9,18 @@ end
 %>
 
 <header class="site-header-banner">
-  <%= partial "partials/navbar.erb" %>
+  <h1 class="title deepshadow"><%= link_to "Bonk To The Finish", "/" %></h1>
+
+  <navbar>
+    <div class="inner">
+      <div class="left">
+        <%= link_to("About", "/about.html") %>
+      </div>
+      <div class="right">
+        <%= link_to("Archive", "/archive.html") %>
+      </div>
+    </div>
+  </navbar>
 
   <div class="site-header-image" style="background-image:url(<%= header_img %>);" >
     <!-- <img src="<%= header_img %>" alt="Site Header Image" /> -->

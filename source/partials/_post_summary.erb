@@ -1,10 +1,10 @@
 <%
-summary_len ||= 250
-em ||= 1
+summary_len ||= 150
+img_url = article.data.dig(:header,:img_url) ? article.data.header.img_url : "/images/icons/write.svg"
+classes||=""
 %>
 
-
-<section class="post_summary" style="font-size:<%= em %>em">
+<section class="post_summary <%= classes %>">
   <aside>
     <img src="<%= get_article_img(article.tags) %>" class="article-type"/>
 
@@ -23,5 +23,5 @@ em ||= 1
     article.summary(summary_len)
     #article.body
     %>
-  </article>
+    </article>
 </section>
