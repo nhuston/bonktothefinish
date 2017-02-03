@@ -21,7 +21,7 @@ body {
 }
 
 .small {
-  font-size: 0.7em;
+    font-size: 0.7em;
 }
 
 .left {
@@ -51,6 +51,15 @@ main {
 
             a {
                 margin: $margin/2;
+            }
+        }
+
+        #mc_embed_signup {
+            max-width: 100%;
+
+            input {
+                max-width: 100%;
+                margin: 3px;
             }
         }
         @include media-query($on-laptop) {
