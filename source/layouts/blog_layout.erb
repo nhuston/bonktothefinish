@@ -9,12 +9,16 @@ end %>
 
         <header class="article-header">
           <h1><%= current_article.title %></h1>
-          <time><%= current_article.date.strftime("%B %e, %Y") %></time> / <a href="/about.html" rel="author">Nicole Huston</a>
+          <span class="subtext">
+            <time><%= current_article.date.strftime("%B %e, %Y") %></time> / <a href="/about.html" rel="author">Nicole Huston</a>
           <%= partial "partials/social_share.erb" %>
+          <%= partial "partials/tags.erb", locals: {
+          	tags: current_article.tags }  %>
+          </span>
         </header>
 
         <hr/>
-        
+
         <%= partial "partials/race_info.erb" %>
 
         <%= yield %>

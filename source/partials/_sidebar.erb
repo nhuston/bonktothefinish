@@ -2,12 +2,7 @@
   <%= partial "partials/email_subscribe_embed.erb" %>
 
   <%= partial "partials/social_follow.erb" %>
-
-  <div class="recent">
-    <img src="/images/icons/tag.svg" class="icon"/>
-    <span>Tags</span>
-    <% blog.tags.each do |tag, articles| %>
-      <%= link_to "#{tag}", tag_path(tag), { class: "button button_primary" }%>
-    <% end %>
-  </div>
+  
+  <%= partial "partials/tags.erb", locals: {
+  	tags: blog.tags }  %>
 </aside>
