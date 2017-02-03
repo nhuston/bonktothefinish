@@ -1,58 +1,65 @@
-.site-header-banner{
+$color-front: #00e6e6;
+$color-mid: #01cccc;
+$color-back: #00bdbd;
+
+.site-header-banner {
     @extend .site-header-image;
     margin-bottom: $margin * 2;
 
-    .site-header-image{
-      overflow:hidden;
-      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-      background-position: center;
-      background-repeat: no-repeat;
-      position: relative;
-      background-size: cover;
-      background-position: 50% 50%;
-      z-index: -10;
-
-      ///http://stackoverflow.com/questions/600743/how-to-get-div-height-to-auto-adjust-to-background-size
-      min-height: $max-site-header-height;
-      padding-top: 10%; /* (img-height / img-width * container-width) */
+    .site-header-image {
+        overflow: hidden;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+        background-size: cover;
+        background-position: 50% 50%;
+        z-index: -10;
+        ///http://stackoverflow.com/questions/600743/how-to-get-div-height-to-auto-adjust-to-background-size
+        min-height: $max-site-header-height;
+        padding-top: 10%;
+        /* (img-height / img-width * container-width) */
     }
 
     navbar {
+        $blur: 6px;
+        text-shadow: 0 0 $blur #000,0 0 $blur #000,0 0 $blur #000;
+        font-size: 1em;
+        width: 95%;
+        left: 50%;
+        transform: translate(-50%, 0);
+        position: absolute;
+        padding-top: $margin;
+        font-weight: bold;
+    }
+
+    a {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        margin: 0 $margin/2;
+        color: $grey-color-light;
+
+        &:hover {
+            color: $grey-color;
+        }
+    }
+
+    .title {
         //alignment
         position: absolute;
-        top: 25px;
-        left:50%;
+        top: 50px;
+        left: 50%;
         transform: translate(-50%, 0);
-
-        //size
-        width:75%;
-        font-size: .75em;
-
-        //border
-      	border-radius: 0.317rem;
-        border: 1px solid $grey-color-light;
-
         display: block;
-        padding: $margin;
-
-        background-color: black;
-        color:#ccc;
-        margin:0;
-        a {
-            display: block;
-            text-decoration: none;
-            text-align: center;
-            margin:0 $margin/2;
-            color:$grey-color-light;
-            &:hover{
-              color:$grey-color-dark;
-            }
-        }
+        font-size: 2em;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        text-align: center;
         @include media-query($on-laptop) {
-            top: 100px;
-            a {
-                display: inline-block;
-            }
+            top: 25px;
+            font-size: 3.5em;
         }
     }
 }
