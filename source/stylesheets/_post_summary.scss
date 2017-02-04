@@ -1,5 +1,5 @@
 .post_summary {
-    margin-top: $margin;
+    margin-top: $margin*2;
     font-size: 0.9em;
 
     aside {
@@ -13,10 +13,12 @@
             max-width: 80%;
             display: block;
             margin: 0 auto;
+            padding: $margin;
         }
 
         .tags {
             font-size: 0.55rem;
+            text-align: center;
 
             a {
                 margin: $margin/4;
