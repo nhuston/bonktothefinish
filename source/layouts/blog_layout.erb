@@ -4,13 +4,22 @@
   ""
 end %>
 
+<% update_date = File.mtime(current_page.source_file).to_date %>
+
 <% wrap_layout :layout do %>
       <article>
 
         <header class="article-header">
           <h1><%= current_article.title %></h1>
           <span class="subtext">
-            <time><%= current_article.date.strftime("%B %e, %Y") %></time> / <a href="/about.html" rel="author">Nicole Huston</a>
+            <span><%= current_article.date.strftime("%B %e, %Y") %> / <a href="/about.html" rel="author">Nicole Huston</a> <span>
+            <br/>
+
+            <% if current_article.date != update_date %>
+              <span>Updated <%=  update_date.strftime("%b %e, %Y") %></span>
+              <br/>
+            <% end %>
+
           <%= partial "partials/social_share.erb" %>
           <%= partial "partials/tags.erb", locals: {
           	tags: current_article.tags }  %>
