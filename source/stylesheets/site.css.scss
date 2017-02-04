@@ -1,11 +1,8 @@
 @charset "utf-8";
-@import "normalize";
-
-//Define variables, mixins, etc for scss files
-
+@import "normalize"; //Define variables, mixins, etc for scss files
 $icon-len: 1rem;
 $small-icon-len: 1em;
-$sidebar-desktop-width:20%;
+$sidebar-desktop-width: 20%;
 $margin: 0.67em;
 $width-max: 780px;
 $base-font-size: 21px;
@@ -16,6 +13,7 @@ $wrap-width-desktop: 70%;
 $max-site-header-height: 225px;
 $on-laptop: 800px;
 $on-desktop: 1200px;
+$sidebar-padding-left: 6%;
 @mixin media-query($device) {
      @media screen and (min-width: $device){
         @content;
@@ -28,6 +26,5 @@ $on-desktop: 1200px;
         font-size: $context-size-computed * $desktop-amplifier + em;
     }
 }
-
 @import "colors";
 @import "global","footer","header_site","buttons","post_summary";
