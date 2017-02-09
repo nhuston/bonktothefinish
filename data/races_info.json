@@ -50,10 +50,32 @@
 
   ],
   "50K":[
-
+    {
+      "name":"Run for Regis",
+      "location":"Cuyahoga Valley National Park, Peninsula, OH",
+      "date":"2017-01-28",
+      "trail":true,
+      "time":"06:53:49",
+      "notes":"1st day of back to back 50ks"
+    },
+    {
+      "name":"Rocks and Roots",
+      "location":"Alum Creek State Park, OH",
+      "date":"2017-01-08",
+      "trail":true,
+      "time":"06:23:36",
+      "notes":"Surprised with time! Training could have gone better"
+    }
   ],
   "60K":[
-
+    {
+      "name":"Hocking Hills Indian Run",
+      "location":"Hocking Hills, OH",
+      "date":"2015-09-19",
+      "trail":true,
+      "time":"7:12:04",
+      "notes":"First Ultra"
+    }
   ],
   "50 miles":[
 
