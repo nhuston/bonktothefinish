@@ -101,7 +101,14 @@
 
   ],
   "20K":[
-
+    {
+      "name":"Rocks and Roots Winter Trail Series",
+      "location":"Alum Creek State Park, OH",
+      "date":"2016-01-10",
+      "trail":true,
+      "time":"2:44:20",
+      "notes":"Dropped from 50K"
+    }
   ],
   "Half Marathon":[
 
