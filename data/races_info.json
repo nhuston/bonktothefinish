@@ -46,7 +46,8 @@
       "date":"2016-04-17",
       "trail":true,
       "time":"1:01:20",
-      "notes":"3rd female"
+      "notes":"3rd female",
+      "blog_link":"dirt-of-the-earth-10k.html"
     },
     {
       "name":"Hoot 10k",
@@ -81,14 +82,14 @@
       "location":"Sabino Canyon,Tucson, AZ",
       "date":"2015-04-11",
       "trail":false,
-      "time":"59:08.9",
+      "time":"59:08.9"
     },
     {
       "name":"Sabino Canyon Sunset Run",
       "location":"Sabino Canyon,Tucson, AZ",
       "date":"2014-04-12",
       "trail":false,
-      "time":"1:04:55",
+      "time":"1:04:55"
     }
   ],
   "8 miles":[
