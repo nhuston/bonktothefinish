@@ -3,10 +3,93 @@
 
   ],
   "4 miles":[
-
+    {
+      "name":"The Ohio State Four Miler",
+      "location":"Columbus, OH",
+      "date":"2015-10-25",
+      "trail":false,
+      "time":"28:35",
+    },
+    {
+      "name":"Flying Feather",
+      "location":"Dublin, OH",
+      "date":"2015-11-26",
+      "trail":false,
+      "time":"28:49",
+    },
+    {
+      "name":"FORE! Miler",
+      "location":"Dublin, OH",
+      "date":"2016-05-26",
+      "trail":false,
+      "time":"29:52",
+      "notes":"yikes"
+    }
   ],
   "5 miles":[
-
+    {
+      "name":"Bisbee Stair Climb",
+      "location":"Bisbee, AZ",
+      "date":"2014-10-18",
+      "trail":false,
+      "time":"42:28",
+      "notes":"4th in Age Group (19-29)"
+    },
+    {
+      "name":"Catalina State Park",
+      "location":"Catalina State Park, AZ",
+      "date":"2015-04-04",
+      "trail":true,
+      "time":"41:43",
+      "notes":"5.2 M, 1st female, 7th overall"
+    },
+    {
+      "name":"Catalina State Park",
+      "location":"Catalina State Park, AZ",
+      "date":"2014-09-21",
+      "trail":true,
+      "time":"45:08",
+      "notes":"5.2 M, 2nd female, 9th overall"
+    },
+    {
+      "name":"Catalina State Park",
+      "location":"Catalina State Park, AZ",
+      "date":"2014-04-05",
+      "trail":true,
+      "time":"49:28",
+      "notes":"5.2 M, 1st in AG (15-19)"
+    },
+    {
+      "name":"Catalina State Park",
+      "location":"Catalina State Park, AZ",
+      "date":"2013-09-22",
+      "trail":true,
+      "time":"49:26",
+      "notes":"5.2 M, 1st in AG (15-19)"
+    },
+    {
+      "name":"Gary Smith Worthington Classic",
+      "location":"Worthington, OH",
+      "date":"2016-06-12",
+      "trail":false,
+      "time":"35:54",
+      "notes":"1st in AG"
+    },
+    {
+      "name":"UACA Memorial Day 5 Miler",
+      "location":"Upper Arlington, OH",
+      "date":"2016-05-30",
+      "trail":false,
+      "time":"35:26",
+      "notes":"1st in AG"
+    },
+    {
+      "name":"Columbus Turkey Trot",
+      "location":"Upper Arlington, OH",
+      "date":"2016-11-24",
+      "trail":false,
+      "time":"35:27.14"
+    },
   ],
   "10K":[
     {
