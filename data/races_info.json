@@ -155,6 +155,92 @@
 
 	],
 	"10 miles": [
+  ],
+  "10K":[
+    {
+      "name":"Buckeye Classic",
+      "location":"Highbanks Metro Park, OH",
+      "date":"2015-11-01",
+      "trail":true,
+      "time":"48:10",
+      "notes":"3rd female"
+    },
+    {
+      "name":"Dr. Gann's Diet of Hope Cinco De Mayo 10K",
+      "location":"Tucson, AZ",
+      "date":"2014-05-04",
+      "trail":false,
+      "time":"47:56"
+    },
+    {
+      "name":"Warm Up For Boston",
+      "location":"Dublin, OH",
+      "date":"2016-02-21",
+      "trail":false,
+      "time":"47:01",
+      "notes":"4th female! Was still recovering from first 50 miler"
+    },
+    {
+      "name":"Summer Squatch",
+      "location":"Alum Creek State Park, OH",
+      "date":"2015-09-17",
+      "trail":true,
+      "time":"54:59",
+      "notes":"3rd female"
+    },
+    {
+      "name":"Dirt of the Earth",
+      "location":"Alum Creek State Park, OH",
+      "date":"2016-04-17",
+      "trail":true,
+      "time":"1:01:20",
+      "notes":"3rd female",
+      "blog_link":"dirt-of-the-earth-10k.html"
+    },
+    {
+      "name":"Hoot 10k",
+      "location":"Alum Creek State Park, OH",
+      "date":"2016-08-21",
+      "trail":true,
+      "time":"56:51",
+      "notes":"1st female, 7th overall"
+    },
+    {
+      "name":"Buckeye Classic",
+      "location":"Highbanks Metro Park, OH",
+      "date":"2016-11-06",
+      "trail":true,
+      "time":"47:45",
+      "notes":"4th female"
+    }
+  ],
+  "Quater Marathon":[
+    {
+      "name":"Emerald City",
+      "location":"Dublin, OH",
+      "date":"2016-08-28",
+      "trail":false,
+      "time":"47:20",
+      "notes":"7th female, 2nd in AG"
+    }
+  ],
+  "7.4 miles":[
+    {
+      "name":"Sabino Canyon Sunset Run",
+      "location":"Sabino Canyon,Tucson, AZ",
+      "date":"2015-04-11",
+      "trail":false,
+      "time":"59:08.9"
+    },
+    {
+      "name":"Sabino Canyon Sunset Run",
+      "location":"Sabino Canyon,Tucson, AZ",
+      "date":"2014-04-12",
+      "trail":false,
+      "time":"1:04:55"
+    }
+  ],
+  "8 miles":[
 
 	],
 	"20K": [{

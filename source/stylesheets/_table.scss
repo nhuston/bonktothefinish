@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    border-collapse: collapse;
+    color: $table-text-color;
+    background-color: $table-bg-color;
+    padding: 0;
+    margin: 0;
+    border-radius: 0.4em;
+
+    td,
+    th {
+        font-size: 0.8em;
+        padding: $margin/3;
+        @include media-query($on-laptop) {
+            padding: $margin;
+        }
+    }
+
+    thead {
+        @include media-query($on-laptop) {
+            font-size: 1.5em;
+        }
+        text-align: center;
+        color: $table-head-color;
+    }
+
+    tr:nth-child(even) {
+        //alternating row color
+        background-color: $table-alt-bg-color;
+    }
+}
