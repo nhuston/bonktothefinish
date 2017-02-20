@@ -1,5 +1,13 @@
 {
-	"5K": [
+	"5K": [{
+		"name": "5th Line 5k",
+		"location": "Nationwide Arena, Columbus, Ohio",
+		"date": "2012-02-05",
+		"trail": false,
+		"time": "20:52",
+		"notes": "6th female, 2.8 miles",
+		"blog_link": "5th-line-5k-race-report.html"
+	}
 
 	],
 	"4 miles": [{
