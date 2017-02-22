@@ -1,0 +1,17 @@
+pre.highlight {
+    /* allows a horizontal scrollbar on the text */
+    overflow: auto;
+}
+
+code {
+    text-align: left;
+}
+
+
+/* Rouge themes: http://www.rubydoc.info/gems/rouge/Rouge/Themes */
+
+<%= Rouge::Themes::Base16.mode(:light).render(scope: 'code') %>
+/* inline code */
+
+<%= Rouge::Themes::Base16.mode(:light).render(scope: '.highlight') %>
+/* block code */

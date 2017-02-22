@@ -9,6 +9,10 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+set :markdown_engine, :kramdown
+set :markdown, parse_block_html: true
+activate :syntax, :line_numbers => true
+
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout
 
