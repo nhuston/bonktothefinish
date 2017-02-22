@@ -19,6 +19,10 @@
     {
       "name":"Race",
       "url":"/images/icons/shoe.svg"
+    },
+    {
+      "name":"Blog",
+      "url":"/images/icons/blog.svg"
     }
   ]
 }
