@@ -262,12 +262,68 @@
 	"Half Marathon": [
 
 	],
-	"Marathon": [
-
-	],
+	"Marathon": [{
+		"name": "Kalamazoo Marathon",
+		"location": "Kalamazoo, Michigan",
+		"date": "2016-05-08",
+		"trail": false,
+		"time": "04:13:05.05",
+		"notes": "Earn Your Mittens 2nd Marathon",
+		"blog_link": "kalamazoo-marathon-race-report.html"
+	}, {
+		"name": "Wisconsin Marathon",
+		"location": "Kenosha, Wisconsin",
+		"date": "2016-05-07",
+		"trail": false,
+		"time": "04:02:10",
+		"notes": "Earn Your Mittens 1st Marathon",
+		"blog_link": "wisconsin-marathon-race-report.html"
+	},{
+		"name": "Pro Football Hall of Fame Marathon",
+		"location": "Canton, Ohio",
+		"date": "2016-04-24",
+		"trail": false,
+		"time": "04:09:01",
+		"notes": "Had better races",
+		"blog_link": "pro-football-hall-of-fame-marathon-race-report.html"
+	},{
+		"name": "Bobcat Trail Marathon",
+		"location": "Glouster, Ohio",
+		"date": "2015-11-07",
+		"trail": true,
+		"time": "05:49:59",
+		"notes": "Was sick, stuffy"
+	},{
+		"name": "Columbus Marathon",
+		"location": "Columbus, Ohio",
+		"date": "2015-10-18",
+		"trail": false,
+		"time": "03:58:15"
+	},{
+		"name": "Big Sur International Marathon",
+		"location": "Big Sur, California",
+		"date": "2015-04-26",
+		"trail": false,
+		"time": "04:36:01",
+		"notes": "Celebrating my 21st birthday!"
+	},{
+		"name": "Rock 'n' Roll Arizona",
+		"location": "Phoenix, Arizona",
+		"date": "2015-01-18",
+		"trail": false,
+		"time": "04:06:27",
+		"notes": "First Marathon; recovering from 2 week long flu"
+	},{
+		"name": "North Face Endurance Challenge - Madison",
+		"location": "Kettle Moraine State Park, Wisconsin",
+		"date": "2016-09-17",
+		"trail": true,
+		"time": "6:29:23"
+	}
+],
 	"50K": [{
 		"name": "Run for Regis",
-		"location": "Cuyahoga Valley National Park, Peninsula, OH",
+		"location": "Cuyahoga Valley National Park, Peninsula, Ohio",
 		"date": "2017-01-28",
 		"trail": true,
 		"time": "06:53:49",
@@ -275,7 +331,7 @@
 		"blog_link": "run-for-regis-50k-race-report.html"
 	}, {
 		"name": "Rocks and Roots",
-		"location": "Alum Creek State Park, OH",
+		"location": "Alum Creek State Park, Ohio",
 		"date": "2017-01-08",
 		"trail": true,
 		"time": "06:23:36",
@@ -283,7 +339,7 @@
 		"blog_link": "rocks-and-roots-race-report-1.html"
 	}, {
 		"name": "Rocks and Roots",
-		"location": "Alum Creek State Park, OH",
+		"location": "Alum Creek State Park, Ohio",
 		"date": "2017-02-12",
 		"trail": true,
 		"time": "08:01:59",
@@ -292,7 +348,7 @@
 ],
 	"60K": [{
 		"name": "Hocking Hills Indian Run",
-		"location": "Hocking Hills, OH",
+		"location": "Hocking Hills, Ohio",
 		"date": "2015-09-19",
 		"trail": true,
 		"time": "7:12:04",
