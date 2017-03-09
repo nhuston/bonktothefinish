@@ -1,7 +1,7 @@
 ---
 pageable: true
 ---
-<h1>Articles tagged '<%= tagname %>'</h1>
+<h1>'<%= tagname.capitalize %>' Articles</h1>
 
 <%= partial "partials/post_summaries.erb", locals: {
     articles: page_articles }%>
