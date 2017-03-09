@@ -1,0 +1,8 @@
+<% articles.each_with_index do |article, i| %>
+  <%= partial "partials/post_summary.erb", locals: {
+      article:article } %>
+
+  <% if i!=(articles.length-1) then %>
+    <hr  />
+  <% end %>
+<% end %>

@@ -7,14 +7,8 @@ per_page: 3
 
 <h2>Latest Posts</h2>
 
-<% page_articles.each_with_index do |article, i| %>
-  <%= partial "partials/post_summary.erb", locals: {
-      article:article } %>
-
-  <% if i!=(articles.length-1) then %>
-    <%=  "<hr  />" %>
-  <% end %>
-<% end %>
+<%= partial "partials/post_summaries.erb", locals: {
+    articles: page_articles }%>
 
 <h2>Common Tags</h2>
 
@@ -22,7 +16,7 @@ per_page: 3
   <%= partial "partials/card.erb", locals: {
       articles:blog.tags[tag_name],
       img_url: tag_info.url,
-      tag_name: tag_name, } %>
+      tag_name: tag_name } %>
 <% end %>
 
 

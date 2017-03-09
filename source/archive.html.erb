@@ -1,13 +1,12 @@
 <% blog.articles.group_by {|a| a.date.year }.each do |year, year_articles| %>
 
   <h2><%= year %></h2>
-    <% year_articles.group_by {|a| a.date.month }.each do |month,articles| %>
+    <% year_articles.group_by {|a| a.date.month }.each do |month,month_articles| %>
       <h3><%= Date::MONTHNAMES[month] %></h3>
-      <ul>
-        <% articles.each do |article| %>
-          <li><a href="<%= article.url %>"><%= article.title %></a></li>
-        <% end %>
-      </ul>
+
+      <%= partial "partials/post_summaries.erb", locals: {
+          articles: month_articles }%>
+
     <% end %>
 
 <% end %>
