@@ -10,7 +10,7 @@ per_page: 3
 <%= partial "partials/post_summaries.erb", locals: {
     articles: page_articles }%>
 
-<%= partial "partials/pages.erb" %>
+<p class="center"><%= link_to("For #{blog.articles.length - 3} More Articles, Click Here!", "/archive.html" )%></p>
 
 <h2>Popular Topics</h2>
 
