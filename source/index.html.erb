@@ -12,7 +12,7 @@ per_page: 3
 
 <%= partial "partials/pages.erb" %>
 
-<h2>Common Tags</h2>
+<h2>Popular Topics</h2>
 
 <% data.tags.sort_by { |k, v| v[:ranking] }.each do |tag_name,tag_info| %>
   <%= partial "partials/card.erb", locals: {
