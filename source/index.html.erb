@@ -1,14 +1,9 @@
----
-pageable: true
-per_page: 3
----
-
 <h1 class="center">Welcome!</h1>
 
 <h2>Latest Posts</h2>
 
 <%= partial "partials/post_summaries.erb", locals: {
-    articles: page_articles }%>
+    articles: blog.articles[0,3] }%>
 
 <p class="center"><%= link_to("For #{blog.articles.length - 3} More Articles, Click Here!", "/archive.html" )%></p>
 
