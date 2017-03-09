@@ -1,3 +1,5 @@
+<h1 class="center">Archive</h1>
+
 <% blog.articles.group_by {|a| a.date.year }.each do |year, year_articles| %>
 
   <h2><%= year %></h2>

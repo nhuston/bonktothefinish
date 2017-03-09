@@ -1,12 +1,5 @@
 <h1 class="center">Welcome!</h1>
 
-<h2>Latest Posts</h2>
-
-<%= partial "partials/post_summaries.erb", locals: {
-    articles: blog.articles[0,3] }%>
-
-<p class="center"><%= link_to("For #{blog.articles.length - 3} More Articles, Click Here!", "/archive.html" )%></p>
-
 <h2>Popular Topics</h2>
 
 <% data.tags.sort_by { |k, v| v[:ranking] }.each do |tag_name,tag_info| %>
