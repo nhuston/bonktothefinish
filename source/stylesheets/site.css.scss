@@ -14,6 +14,9 @@ $max-site-header-height: 225px;
 $on-laptop: 800px;
 $on-desktop: 1200px;
 $sidebar-padding-left: 6%;
+$card-width-desktop: 41.5%;
+$card-img-height: 5em;
+$card-p-size: 1.2em;
 @mixin media-query($device) {
      @media screen and (min-width: $device){
         @content;
@@ -27,4 +30,4 @@ $sidebar-padding-left: 6%;
     }
 }
 @import "colors";
-@import "global","table","footer","header_site","buttons","post_summary";
+@import "global","table","card","footer","header_site","buttons","post_summary";

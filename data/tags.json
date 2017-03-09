@@ -1,28 +1,26 @@
 {
-  "tag_images":[
-    {
-      "name":"Dog",
-      "url":"/images/icons/dog.svg"
+    "dog": {
+        "ranking": 1000,
+        "url": "/images/icons/dog.svg"
     },
-    {
-      "name":"goals",
-      "url":"/images/icons/goal.svg"
+    "goals": {
+        "ranking": 950,
+        "url": "/images/icons/goal.svg"
     },
-    {
-      "name":"gardening",
-      "url":"/images/icons/gardening.svg"
+    "gardening": {
+        "ranking": 850,
+        "url": "/images/icons/gardening.svg"
     },
-    {
-      "name":"Cooking",
-      "url":"/images/icons/cooking.svg"
+    "cooking": {
+        "ranking": 800,
+        "url": "/images/icons/cooking.svg"
     },
-    {
-      "name":"Race",
-      "url":"/images/icons/shoe.svg"
+    "blog": {
+        "ranking": 750,
+        "url": "/images/icons/blog.svg"
     },
-    {
-      "name":"Blog",
-      "url":"/images/icons/blog.svg"
+    "race": {
+        "ranking": 700,
+        "url": "/images/icons/shoe.svg"
     }
-  ]
 }

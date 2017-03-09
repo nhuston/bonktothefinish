@@ -1,0 +1,27 @@
+<%
+color_background =   '#22e67e'
+num_articles_per_card ||= 3
+%>
+
+<div  class="card">
+    <div class="card-img-wrap center" style="background-color:<%= color_background %>">
+        <%= app.image_tag img_url, alt: tag_name %>
+    </div>
+    <div class="card-content">
+        <ul>
+          <% articles.each_with_index do |article, i| %>
+            <%
+            #only use a max of 3 articles
+            if i > (num_articles_per_card-1) then
+              next
+            end
+            %>
+            <li>
+              <%= link_to article.title, article %>
+            </li>
+          <% end %>
+        </ul>
+
+        <p class="center"><%= link_to "More \"#{tag_name.capitalize}\" posts...", tag_path(tag_name) %></p>
+    </div>
+</div>

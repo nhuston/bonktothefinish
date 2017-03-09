@@ -1,4 +1,5 @@
 <% if paginate and num_pages > 1%>
+<div class="center">
   <p>Page <%= page_number %> of <%= num_pages %></p>
   <p>
   <% if prev_page %>
@@ -11,4 +12,5 @@
     <%= link_to 'Next page', next_page %>
   <% end %>
   </p>
+</div>
 <% end %>

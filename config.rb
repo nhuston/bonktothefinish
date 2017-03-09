@@ -71,16 +71,23 @@ end
 # Methods defined in the helpers block are available in templates
 helpers do
    def get_article_img(article_tags)
-     tag_links = data.tags.tag_images
-     #search thru data's tag list, return image url of first tag found
-     for tag in tag_links do
-       if article_tags.include? tag.name then
-         return tag.url
+     tag_links = data.tags
+     #search thru data's tag list, return image url of highest ranking matching tag
+     saved_url = ''
+     top_ranking = 0
+     tag_links.each do |tag_name, tag|
+       if article_tags.include? tag_name and tag.ranking > top_ranking then
+         top_ranking = tag.ranking
+         saved_url = tag.url
        end
      end
 
-     #return last tag's image url
-     return tag_links[tag_links.length-1].url
+     #return the url value
+     if saved_url != '' then
+       return saved_url
+     else
+       return tag_links['race'].url
+     end
    end
 
   def img_link(img_url, img_alt, url, title, css_class,target = "_blank",id="")
