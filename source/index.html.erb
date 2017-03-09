@@ -10,6 +10,8 @@ per_page: 3
 <%= partial "partials/post_summaries.erb", locals: {
     articles: page_articles }%>
 
+<%= partial "partials/pages.erb" %>
+
 <h2>Common Tags</h2>
 
 <% data.tags.sort_by { |k, v| v[:ranking] }.each do |tag_name,tag_info| %>
@@ -18,6 +20,3 @@ per_page: 3
       img_url: tag_info.url,
       tag_name: tag_name } %>
 <% end %>
-
-
-<%= partial "partials/pages.erb" %>
