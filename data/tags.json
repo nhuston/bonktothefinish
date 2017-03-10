@@ -1,22 +1,22 @@
 {
     "dog": {
-        "ranking": 1000,
+        "ranking": 750,
         "url": "/images/icons/dog.svg"
     },
     "goals": {
-        "ranking": 950,
+        "ranking": 900,
         "url": "/images/icons/goal.svg"
     },
     "gardening": {
-        "ranking": 850,
+        "ranking": 800,
         "url": "/images/icons/gardening.svg"
     },
     "cooking": {
-        "ranking": 800,
+        "ranking": 850,
         "url": "/images/icons/cooking.svg"
     },
     "blog": {
-        "ranking": 750,
+        "ranking": 950,
         "url": "/images/icons/blog.svg"
     },
     "race": {

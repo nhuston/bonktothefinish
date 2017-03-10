@@ -22,6 +22,8 @@ num_articles_per_card ||= 3
           <% end %>
         </ul>
 
-        <p class="center"><%= link_to "More \"#{tag_name.capitalize}\" posts...", tag_path(tag_name) %></p>
+        <% if articles.length > num_articles_per_card then %>
+          <p class="center"><%= link_to "More \"#{tag_name.capitalize}\" posts...", tag_path(tag_name) %></p>
+        <% end %>
     </div>
 </div>

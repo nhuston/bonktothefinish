@@ -133,6 +133,15 @@ main {
     }
 }
 
+.archive {
+    .month {
+        border: 1px solid #ccc;
+        border-radius: 25px;
+        margin: $margin;
+        padding: $margin/2;
+    }
+}
+
 a {
     color: $link-color;
     text-decoration: none;
