@@ -8,6 +8,10 @@
     width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+    a {
+        color: $off-black;
+    }
+
     ul {
         padding: 0;
         list-style: none;
@@ -25,11 +29,23 @@
         text-decoration: none;
     }
 
-    .card-img-wrap {
+    .card_image {
         display: block;
+        margin: 0;
+        height: 2 * $card-img-height;
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        //max-width: $card-img-height * 2;
+    }
 
+    .card_icon {
         img {
-            margin: $margin;
+            text-align: center;
+            padding: $margin;
+            margin: 0 auto;
+            display: block;
             height: $card-img-height;
         }
     }

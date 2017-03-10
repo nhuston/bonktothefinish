@@ -1,26 +1,29 @@
 {
     "dog": {
         "ranking": 750,
-        "url": "/images/icons/dog.svg"
+        "img_url": "/images/blog/bark-box-review/barkbox5.jpg",
+        "icon_url": "/images/icons/dog.svg"
     },
     "goals": {
         "ranking": 900,
-        "url": "/images/icons/goal.svg"
+        "icon_url": "/images/icons/goal.svg"
     },
     "gardening": {
         "ranking": 800,
-        "url": "/images/icons/gardening.svg"
+        "img_url": "/images/blog/banana-plant-after-3-5-months/banana-plant2.jpg",
+        "icon_url": "/images/icons/gardening.svg"
     },
     "cooking": {
         "ranking": 850,
-        "url": "/images/icons/cooking.svg"
+        "icon_url": "/images/icons/cooking.svg"
     },
     "blog": {
         "ranking": 950,
-        "url": "/images/icons/blog.svg"
+        "icon_url": "/images/icons/blog.svg"
     },
     "race": {
         "ranking": 700,
-        "url": "/images/icons/shoe.svg"
+        "img_url": "/images/blog/kalamazoo-marathon-race-report/Mittens_2016.jpg",
+        "icon_url": "/images/icons/shoe.svg"
     }
 }

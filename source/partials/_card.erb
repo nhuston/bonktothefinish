@@ -1,11 +1,22 @@
 <%
-color_background =   '#22e67e'
+color_background =   '#47167f'
+
 num_articles_per_card ||= 3
+
+if is_icon then
+  img_class = 'card_icon'
+  style=""
+else
+  img_class = 'card_image'
+  style="background-image:url('#{img_url}');"
+end
 %>
 
 <div  class="card">
-    <div class="card-img-wrap center" style="background-color:<%= color_background %>">
-        <%= app.image_tag img_url, alt: tag_name %>
+    <div class="card-img-wrap <%= img_class %>" style="background-color:<%= color_background %>;<%= style %>;">
+        <%if is_icon then %>
+          <%= app.image_tag img_url, alt: tag_name %>
+        <% end %>
     </div>
     <div class="card-content">
         <ul>

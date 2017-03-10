@@ -70,7 +70,7 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
-   def get_article_img(article_tags)
+   def get_article_img(article_tags,is_icon=true)
      tag_links = data.tags
      #search thru data's tag list, return image url of highest ranking matching tag
      saved_url = ''
@@ -78,7 +78,11 @@ helpers do
      tag_links.each do |tag_name, tag|
        if article_tags.include? tag_name and tag.ranking > top_ranking then
          top_ranking = tag.ranking
-         saved_url = tag.url
+         if is_icon then
+           saved_url = tag.icon_url
+         else
+           saved_url = tag.img_url
+         end
        end
      end
 
