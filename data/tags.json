@@ -1,7 +1,7 @@
 {
     "dog": {
         "ranking": 750,
-        "img_url": "/images/blog/bark-box-review/barkbox5.jpg",
+        "img_url": "/images/homepagedog.jpg",
         "icon_url": "/images/icons/dog.svg"
     },
     "goals": {
@@ -23,7 +23,7 @@
     },
     "race": {
         "ranking": 700,
-        "img_url": "/images/blog/kalamazoo-marathon-race-report/Mittens_2016.jpg",
+        "img_url": "/images/homepagerace.jpg",
         "icon_url": "/images/icons/shoe.svg"
     }
 }
