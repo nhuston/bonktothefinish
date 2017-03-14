@@ -22,22 +22,33 @@ $color-back: #00bdbd;
     }
 
     navbar {
+        position: absolute;
+        text-align: center;
         $blur: 6px;
+        display: block;
         text-shadow: 0 0 $blur #000,0 0 $blur #000,0 0 $blur #000;
         font-size: 1em;
         width: 95%;
-        left: 50%;
-        transform: translate(-50%, 0);
-        position: absolute;
-        padding-top: $margin;
+        margin: $margin;
         font-weight: bold;
+
+        .site_header {
+            position: relative;
+        }
+
+        .site_links {
+            padding: $margin;
+            position: relative;
+
+            a {
+                padding: $margin;
+            }
+        }
     }
 
     a {
-        display: block;
         text-decoration: none;
         text-align: center;
-        margin: 0 $margin/2;
         color: $grey-color-light;
 
         &:hover {
@@ -47,15 +58,11 @@ $color-back: #00bdbd;
 
     .title {
         //alignment
-        position: absolute;
-        top: 50px;
-        left: 50%;
-        transform: translate(-50%, 0);
         display: block;
         font-size: 2em;
         font-weight: bold;
-        margin: 0;
         padding: 0;
+        margin: 0;
         text-align: center;
         @include media-query($on-laptop) {
             top: 25px;
