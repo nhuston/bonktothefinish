@@ -19,3 +19,5 @@ gem 'middleman-deploy', '~> 2.0.0.pre.alpha'
 gem 'nokogiri' #for summaries
 gem 'redcarpet', '~> 3.3', '>= 3.3.3'#for markdown
 gem "builder", "~> 3.0"# For feed.xml.builder
+
+gem "chronic_duration"

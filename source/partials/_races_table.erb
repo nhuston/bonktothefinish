@@ -10,6 +10,16 @@ data.races_info.each do |race_type|
 
   <h2><%= distance %></h2>
 
+  <%
+  avg_time = 0
+  info.each do |race|
+    avg_time += ChronicDuration.parse(race.time)
+  end
+  avg_time /= info.length
+  avg_time = avg_time.round(2)
+  %>
+  <p class="center"><%= info.length %> Races -- Average Time <%= ChronicDuration.output(avg_time,:format => :short) %></p>
+
   <table>
     <thead>
       <tr>
