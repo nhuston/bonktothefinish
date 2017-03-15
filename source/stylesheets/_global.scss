@@ -183,6 +183,19 @@ blockquote {
 
     img {
         @extend .icon;
+        display: block;
+    }
+
+    a {
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 2px 8px 2px;
+        background-color: white;
+        padding: 3px;
+    }
+
+    a:hover {
+        background-color: $grey-color;
     }
 }
 
