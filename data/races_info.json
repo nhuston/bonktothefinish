@@ -2,13 +2,52 @@
 	"5K": [{
 		"name": "5th Line 5k",
 		"location": "Nationwide Arena, Columbus, Ohio",
-		"date": "2012-02-05",
+		"date": "2017-02-05",
 		"trail": false,
 		"time": "20:52",
 		"notes": "6th female, 2.8 miles",
 		"blog_link": "5th-line-5k-race-report.html"
+	},
+	{
+		"name": "Be Tucson Women's 5k",
+		"location": "Tucson, AZ",
+		"date": "2015-02-05",
+		"trail": false,
+		"time": "22:31.9",
+		"notes": "3rd female"
+	},
+	{
+		"name": "First on the First",
+		"location": "Westerville, OH",
+		"date": "2015-01-01",
+		"trail": false,
+		"time": "22:46"
+	},
+	{
+		"name": "First on the First",
+		"location": "Westerville, OH",
+		"date": "2016-01-01",
+		"trail": false,
+		"time": "21:35",
+		"notes": "Dressed too warm, needed wind layer, 6th female"
+	},
+	{
+		"name": "5th Line 5k",
+		"location": "Nationwide Arena, Columbus, Ohio",
+		"date": "2016-01-23",
+		"trail": false,
+		"time": "21:19",
+		"notes": "6th female"
+	},
+	{
+		"name": "Thanksgiving Cross-Country",
+		"location": "Tucson, AZ",
+		"date": "2013-11-28",
+		"trail": false,
+		"time": "28:02",
+		"notes": "Injured knee"
 	}
-
+	
 	],
 	"4 miles": [{
 		"name": "The Ohio State Four Miler",
@@ -164,8 +203,7 @@
 	],
 	"10 miles": [
   ],
-  "10K":[
-    {
+  "10K": [{
       "name":"Buckeye Classic",
       "location":"Highbanks Metro Park, OH",
       "date":"2015-11-01",
@@ -319,6 +357,14 @@
 		"date": "2016-09-17",
 		"trail": true,
 		"time": "6:29:23"
+	},{
+		"name": "Warm Up Columbus",
+		"location": "Dublin, Ohio",
+		"date": "2016-02-19",
+		"trail": false,
+		"time": "4:12:03",
+		"notes": "10th female",
+		"blog_link": "warm-up-columbus-race-report.html"
 	}
 ],
 	"50K": [{
