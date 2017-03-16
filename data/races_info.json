@@ -66,7 +66,8 @@
         "date": "2016-05-26",
         "trail": false,
         "time": "29:52",
-        "notes": "yikes"
+        "notes": "yikes",
+				"blog_link": "fore-miler-race-report.html"
     }],
     "5 miles": [{
         "name": "Bisbee Stair Climb",
@@ -109,14 +110,16 @@
         "date": "2016-06-12",
         "trail": false,
         "time": "35:54",
-        "notes": "1st in AG"
+        "notes": "1st in AG",
+				"blog_link": "gary-smith-worthington-classic-race-report.html"
     }, {
         "name": "UACA Memorial Day 5 Miler",
         "location": "Upper Arlington, OH",
         "date": "2016-05-30",
         "trail": false,
         "time": "35:26",
-        "notes": "1st in AG"
+        "notes": "1st in AG",
+				"blog_link": "uaca-5-miler-race-report.html"
     }, {
         "name": "Columbus Turkey Trot",
         "location": "Upper Arlington, OH",
@@ -157,7 +160,8 @@
         "date": "2016-04-17",
         "trail": true,
         "time": "1:01:20",
-        "notes": "3rd female"
+        "notes": "3rd female",
+				"blog_link": "dirt-of-the-earth-10k.html"
     }, {
         "name": "Hoot 10k",
         "location": "Alum Creek State Park, OH",
