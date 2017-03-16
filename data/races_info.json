@@ -1,409 +1,319 @@
 {
-	"5K": [{
-		"name": "5th Line 5k",
-		"location": "Nationwide Arena, Columbus, Ohio",
-		"date": "2017-02-05",
-		"trail": false,
-		"time": "20:52",
-		"notes": "6th female, 2.8 miles",
-		"blog_link": "5th-line-5k-race-report.html"
-	},
-	{
-		"name": "Be Tucson Women's 5k",
-		"location": "Tucson, AZ",
-		"date": "2015-02-05",
-		"trail": false,
-		"time": "22:31.9",
-		"notes": "3rd female"
-	},
-	{
-		"name": "First on the First",
-		"location": "Westerville, OH",
-		"date": "2015-01-01",
-		"trail": false,
-		"time": "22:46"
-	},
-	{
-		"name": "First on the First",
-		"location": "Westerville, OH",
-		"date": "2016-01-01",
-		"trail": false,
-		"time": "21:35",
-		"notes": "Dressed too warm, needed wind layer, 6th female"
-	},
-	{
-		"name": "5th Line 5k",
-		"location": "Nationwide Arena, Columbus, Ohio",
-		"date": "2016-01-23",
-		"trail": false,
-		"time": "21:19",
-		"notes": "6th female"
-	},
-	{
-		"name": "Thanksgiving Cross-Country",
-		"location": "Tucson, AZ",
-		"date": "2013-11-28",
-		"trail": false,
-		"time": "28:02",
-		"notes": "Injured knee"
-	}
-	
-	],
-	"4 miles": [{
-		"name": "The Ohio State Four Miler",
-		"location": "Columbus, OH",
-		"date": "2015-10-25",
-		"trail": false,
-		"time": "28:35"
-	}, {
-		"name": "Flying Feather",
-		"location": "Dublin, OH",
-		"date": "2015-11-26",
-		"trail": false,
-		"time": "28:49"
-	}, {
-		"name": "FORE! Miler",
-		"location": "Dublin, OH",
-		"date": "2016-05-26",
-		"trail": false,
-		"time": "29:52",
-		"notes": "yikes"
-	}],
-	"5 miles": [{
-		"name": "Bisbee Stair Climb",
-		"location": "Bisbee, AZ",
-		"date": "2014-10-18",
-		"trail": false,
-		"time": "42:28",
-		"notes": "4th in Age Group (19-29)"
-	}, {
-		"name": "Catalina State Park",
-		"location": "Catalina State Park, AZ",
-		"date": "2015-04-04",
-		"trail": true,
-		"time": "41:43",
-		"notes": "5.2 M, 1st female, 7th overall"
-	}, {
-		"name": "Catalina State Park",
-		"location": "Catalina State Park, AZ",
-		"date": "2014-09-21",
-		"trail": true,
-		"time": "45:08",
-		"notes": "5.2 M, 2nd female, 9th overall"
-	}, {
-		"name": "Catalina State Park",
-		"location": "Catalina State Park, AZ",
-		"date": "2014-04-05",
-		"trail": true,
-		"time": "49:28",
-		"notes": "5.2 M, 1st in AG (15-19)"
-	}, {
-		"name": "Catalina State Park",
-		"location": "Catalina State Park, AZ",
-		"date": "2013-09-22",
-		"trail": true,
-		"time": "49:26",
-		"notes": "5.2 M, 1st in AG (15-19)"
-	}, {
-		"name": "Gary Smith Worthington Classic",
-		"location": "Worthington, OH",
-		"date": "2016-06-12",
-		"trail": false,
-		"time": "35:54",
-		"notes": "1st in AG"
-	}, {
-		"name": "UACA Memorial Day 5 Miler",
-		"location": "Upper Arlington, OH",
-		"date": "2016-05-30",
-		"trail": false,
-		"time": "35:26",
-		"notes": "1st in AG"
-	}, {
-		"name": "Columbus Turkey Trot",
-		"location": "Upper Arlington, OH",
-		"date": "2016-11-24",
-		"trail": false,
-		"time": "35:27.14"
-	}],
-	"10K": [{
-		"name": "Buckeye Classic",
-		"location": "Highbanks Metro Park, OH",
-		"date": "2015-11-01",
-		"trail": true,
-		"time": "48:10",
-		"notes": "3rd female"
-	}, {
-		"name": "Dr. Gann's Diet of Hope Cinco De Mayo 10K",
-		"location": "Tucson, AZ",
-		"date": "2014-05-04",
-		"trail": false,
-		"time": "47:56"
-	}, {
-		"name": "Warm Up For Boston",
-		"location": "Dublin, OH",
-		"date": "2016-02-21",
-		"trail": false,
-		"time": "47:01",
-		"notes": "4th female! Was still recovering from first 50 miler"
-	}, {
-		"name": "Summer Squatch",
-		"location": "Alum Creek State Park, OH",
-		"date": "2015-09-17",
-		"trail": true,
-		"time": "54:59",
-		"notes": "3rd female"
-	}, {
-		"name": "Dirt of the Earth",
-		"location": "Alum Creek State Park, OH",
-		"date": "2016-04-17",
-		"trail": true,
-		"time": "1:01:20",
-		"notes": "3rd female"
-	}, {
-		"name": "Hoot 10k",
-		"location": "Alum Creek State Park, OH",
-		"date": "2016-08-21",
-		"trail": true,
-		"time": "56:51",
-		"notes": "1st female, 7th overall"
-	}, {
-		"name": "Buckeye Classic",
-		"location": "Highbanks Metro Park, OH",
-		"date": "2016-11-06",
-		"trail": true,
-		"time": "47:45",
-		"notes": "4th female"
-	}],
-	"Quater Marathon": [{
-		"name": "Emerald City",
-		"location": "Dublin, OH",
-		"date": "2016-08-28",
-		"trail": false,
-		"time": "47:20",
-		"notes": "7th female, 2nd in AG"
-	}],
-	"7.4 miles": [{
-		"name": "Sabino Canyon Sunset Run",
-		"location": "Sabino Canyon,Tucson, AZ",
-		"date": "2015-04-11",
-		"trail": false,
-		"time": "59:08.9"
-	}, {
-		"name": "Sabino Canyon Sunset Run",
-		"location": "Sabino Canyon,Tucson, AZ",
-		"date": "2014-04-12",
-		"trail": false,
-		"time": "1:04:55"
-	}],
-	"8 miles": [
+    "5K": [{
+            "name": "5th Line 5k",
+            "location": "Nationwide Arena, Columbus, Ohio",
+            "date": "2017-02-05",
+            "trail": false,
+            "time": "20:52",
+            "notes": "6th female, 2.8 miles",
+            "blog_link": "5th-line-5k-race-report.html"
+        },
+        {
+            "name": "Be Tucson Women's 5k",
+            "location": "Tucson, AZ",
+            "date": "2015-02-05",
+            "trail": false,
+            "time": "22:31.9",
+            "notes": "3rd female"
+        },
+        {
+            "name": "First on the First",
+            "location": "Westerville, OH",
+            "date": "2015-01-01",
+            "trail": false,
+            "time": "22:46"
+        },
+        {
+            "name": "First on the First",
+            "location": "Westerville, OH",
+            "date": "2016-01-01",
+            "trail": false,
+            "time": "21:35",
+            "notes": "Dressed too warm, needed wind layer, 6th female"
+        },
+        {
+            "name": "5th Line 5k",
+            "location": "Nationwide Arena, Columbus, Ohio",
+            "date": "2016-01-23",
+            "trail": false,
+            "time": "21:19",
+            "notes": "6th female"
+        },
+        {
+            "name": "Thanksgiving Cross-Country",
+            "location": "Tucson, AZ",
+            "date": "2013-11-28",
+            "trail": false,
+            "time": "28:02",
+            "notes": "Injured knee"
+        }
+    ],
+    "4 miles": [{
+        "name": "The Ohio State Four Miler",
+        "location": "Columbus, OH",
+        "date": "2015-10-25",
+        "trail": false,
+        "time": "28:35"
+    }, {
+        "name": "Flying Feather",
+        "location": "Dublin, OH",
+        "date": "2015-11-26",
+        "trail": false,
+        "time": "28:49"
+    }, {
+        "name": "FORE! Miler",
+        "location": "Dublin, OH",
+        "date": "2016-05-26",
+        "trail": false,
+        "time": "29:52",
+        "notes": "yikes"
+    }],
+    "5 miles": [{
+        "name": "Bisbee Stair Climb",
+        "location": "Bisbee, AZ",
+        "date": "2014-10-18",
+        "trail": false,
+        "time": "42:28",
+        "notes": "4th in Age Group (19-29)"
+    }, {
+        "name": "Catalina State Park",
+        "location": "Catalina State Park, AZ",
+        "date": "2015-04-04",
+        "trail": true,
+        "time": "41:43",
+        "notes": "5.2 M, 1st female, 7th overall"
+    }, {
+        "name": "Catalina State Park",
+        "location": "Catalina State Park, AZ",
+        "date": "2014-09-21",
+        "trail": true,
+        "time": "45:08",
+        "notes": "5.2 M, 2nd female, 9th overall"
+    }, {
+        "name": "Catalina State Park",
+        "location": "Catalina State Park, AZ",
+        "date": "2014-04-05",
+        "trail": true,
+        "time": "49:28",
+        "notes": "5.2 M, 1st in AG (15-19)"
+    }, {
+        "name": "Catalina State Park",
+        "location": "Catalina State Park, AZ",
+        "date": "2013-09-22",
+        "trail": true,
+        "time": "49:26",
+        "notes": "5.2 M, 1st in AG (15-19)"
+    }, {
+        "name": "Gary Smith Worthington Classic",
+        "location": "Worthington, OH",
+        "date": "2016-06-12",
+        "trail": false,
+        "time": "35:54",
+        "notes": "1st in AG"
+    }, {
+        "name": "UACA Memorial Day 5 Miler",
+        "location": "Upper Arlington, OH",
+        "date": "2016-05-30",
+        "trail": false,
+        "time": "35:26",
+        "notes": "1st in AG"
+    }, {
+        "name": "Columbus Turkey Trot",
+        "location": "Upper Arlington, OH",
+        "date": "2016-11-24",
+        "trail": false,
+        "time": "35:27.14"
+    }],
+    "10K": [{
+        "name": "Buckeye Classic",
+        "location": "Highbanks Metro Park, OH",
+        "date": "2015-11-01",
+        "trail": true,
+        "time": "48:10",
+        "notes": "3rd female"
+    }, {
+        "name": "Dr. Gann's Diet of Hope Cinco De Mayo 10K",
+        "location": "Tucson, AZ",
+        "date": "2014-05-04",
+        "trail": false,
+        "time": "47:56"
+    }, {
+        "name": "Warm Up For Boston",
+        "location": "Dublin, OH",
+        "date": "2016-02-21",
+        "trail": false,
+        "time": "47:01",
+        "notes": "4th female! Was still recovering from first 50 miler"
+    }, {
+        "name": "Summer Squatch",
+        "location": "Alum Creek State Park, OH",
+        "date": "2015-09-17",
+        "trail": true,
+        "time": "54:59",
+        "notes": "3rd female"
+    }, {
+        "name": "Dirt of the Earth",
+        "location": "Alum Creek State Park, OH",
+        "date": "2016-04-17",
+        "trail": true,
+        "time": "1:01:20",
+        "notes": "3rd female"
+    }, {
+        "name": "Hoot 10k",
+        "location": "Alum Creek State Park, OH",
+        "date": "2016-08-21",
+        "trail": true,
+        "time": "56:51",
+        "notes": "1st female, 7th overall"
+    }, {
+        "name": "Buckeye Classic",
+        "location": "Highbanks Metro Park, OH",
+        "date": "2016-11-06",
+        "trail": true,
+        "time": "47:45",
+        "notes": "4th female"
+    }],
+    "7.4 miles": [{
+        "name": "Sabino Canyon Sunset Run",
+        "location": "Sabino Canyon,Tucson, AZ",
+        "date": "2015-04-11",
+        "trail": false,
+        "time": "59:08.9"
+    }, {
+        "name": "Sabino Canyon Sunset Run",
+        "location": "Sabino Canyon,Tucson, AZ",
+        "date": "2014-04-12",
+        "trail": false,
+        "time": "1:04:55"
+    }],
+    "8 miles": [
 
-	],
-	"15K": [
+    ],
+    "15K": [
 
-	],
-	"10 miles": [
-  ],
-  "10K": [{
-      "name":"Buckeye Classic",
-      "location":"Highbanks Metro Park, OH",
-      "date":"2015-11-01",
-      "trail":true,
-      "time":"48:10",
-      "notes":"3rd female"
-    },
-    {
-      "name":"Dr. Gann's Diet of Hope Cinco De Mayo 10K",
-      "location":"Tucson, AZ",
-      "date":"2014-05-04",
-      "trail":false,
-      "time":"47:56"
-    },
-    {
-      "name":"Warm Up For Boston",
-      "location":"Dublin, OH",
-      "date":"2016-02-21",
-      "trail":false,
-      "time":"47:01",
-      "notes":"4th female! Was still recovering from first 50 miler"
-    },
-    {
-      "name":"Summer Squatch",
-      "location":"Alum Creek State Park, OH",
-      "date":"2015-09-17",
-      "trail":true,
-      "time":"54:59",
-      "notes":"3rd female"
-    },
-    {
-      "name":"Dirt of the Earth",
-      "location":"Alum Creek State Park, OH",
-      "date":"2016-04-17",
-      "trail":true,
-      "time":"1:01:20",
-      "notes":"3rd female",
-      "blog_link":"dirt-of-the-earth-10k.html"
-    },
-    {
-      "name":"Hoot 10k",
-      "location":"Alum Creek State Park, OH",
-      "date":"2016-08-21",
-      "trail":true,
-      "time":"56:51",
-      "notes":"1st female, 7th overall"
-    },
-    {
-      "name":"Buckeye Classic",
-      "location":"Highbanks Metro Park, OH",
-      "date":"2016-11-06",
-      "trail":true,
-      "time":"47:45",
-      "notes":"4th female"
-    }
-  ],
-  "Quater Marathon":[
-    {
-      "name":"Emerald City",
-      "location":"Dublin, OH",
-      "date":"2016-08-28",
-      "trail":false,
-      "time":"47:20",
-      "notes":"7th female, 2nd in AG"
-    }
-  ],
-  "7.4 miles":[
-    {
-      "name":"Sabino Canyon Sunset Run",
-      "location":"Sabino Canyon,Tucson, AZ",
-      "date":"2015-04-11",
-      "trail":false,
-      "time":"59:08.9"
-    },
-    {
-      "name":"Sabino Canyon Sunset Run",
-      "location":"Sabino Canyon,Tucson, AZ",
-      "date":"2014-04-12",
-      "trail":false,
-      "time":"1:04:55"
-    }
-  ],
-  "8 miles":[
+    ],
+    "10 miles": [],
+    "Quater Marathon": [{
+        "name": "Emerald City",
+        "location": "Dublin, OH",
+        "date": "2016-08-28",
+        "trail": false,
+        "time": "47:20",
+        "notes": "7th female, 2nd in AG"
+    }],
+    "20K": [{
+        "name": "Rocks and Roots Winter Trail Series",
+        "location": "Alum Creek State Park, OH",
+        "date": "2016-01-10",
+        "trail": true,
+        "time": "2:44:20",
+        "notes": "Dropped from 50K"
+    }],
+    "Half Marathon": [
 
-	],
-	"20K": [{
-		"name": "Rocks and Roots Winter Trail Series",
-		"location": "Alum Creek State Park, OH",
-		"date": "2016-01-10",
-		"trail": true,
-		"time": "2:44:20",
-		"notes": "Dropped from 50K"
-	}],
-	"Half Marathon": [
+    ],
+    "Marathon": [{
+        "name": "Kalamazoo Marathon",
+        "location": "Kalamazoo, Michigan",
+        "date": "2016-05-08",
+        "trail": false,
+        "time": "04:13:05.05",
+        "notes": "Earn Your Mittens 2nd Marathon",
+        "blog_link": "kalamazoo-marathon-race-report.html"
+    }, {
+        "name": "Wisconsin Marathon",
+        "location": "Kenosha, Wisconsin",
+        "date": "2016-05-07",
+        "trail": false,
+        "time": "04:02:10",
+        "notes": "Earn Your Mittens 1st Marathon",
+        "blog_link": "wisconsin-marathon-race-report.html"
+    }, {
+        "name": "Pro Football Hall of Fame Marathon",
+        "location": "Canton, Ohio",
+        "date": "2016-04-24",
+        "trail": false,
+        "time": "04:09:01",
+        "notes": "Had better races",
+        "blog_link": "pro-football-hall-of-fame-marathon-race-report.html"
+    }, {
+        "name": "Bobcat Trail Marathon",
+        "location": "Glouster, Ohio",
+        "date": "2015-11-07",
+        "trail": true,
+        "time": "05:49:59",
+        "notes": "Was sick, stuffy"
+    }, {
+        "name": "Columbus Marathon",
+        "location": "Columbus, Ohio",
+        "date": "2015-10-18",
+        "trail": false,
+        "time": "03:58:15"
+    }, {
+        "name": "Big Sur International Marathon",
+        "location": "Big Sur, California",
+        "date": "2015-04-26",
+        "trail": false,
+        "time": "04:36:01",
+        "notes": "Celebrating my 21st birthday!"
+    }, {
+        "name": "Rock 'n' Roll Arizona",
+        "location": "Phoenix, Arizona",
+        "date": "2015-01-18",
+        "trail": false,
+        "time": "04:06:27",
+        "notes": "First Marathon; recovering from 2 week long flu"
+    }, {
+        "name": "North Face Endurance Challenge - Madison",
+        "location": "Kettle Moraine State Park, Wisconsin",
+        "date": "2016-09-17",
+        "trail": true,
+        "time": "6:29:23"
+    }, {
+        "name": "Warm Up Columbus",
+        "location": "Dublin, Ohio",
+        "date": "2016-02-19",
+        "trail": false,
+        "time": "4:12:03",
+        "notes": "10th female",
+        "blog_link": "warm-up-columbus-race-report.html"
+    }],
+    "50K": [{
+        "name": "Run for Regis",
+        "location": "Cuyahoga Valley National Park, Peninsula, Ohio",
+        "date": "2017-01-28",
+        "trail": true,
+        "time": "06:53:49",
+        "notes": "1st day of back to back 50ks",
+        "blog_link": "run-for-regis-50k-race-report.html"
+    }, {
+        "name": "Rocks and Roots",
+        "location": "Alum Creek State Park, Ohio",
+        "date": "2017-01-08",
+        "trail": true,
+        "time": "06:23:36",
+        "notes": "Surprised with time! Training could have gone better",
+        "blog_link": "rocks-and-roots-race-report-1.html"
+    }, {
+        "name": "Rocks and Roots",
+        "location": "Alum Creek State Park, Ohio",
+        "date": "2017-02-12",
+        "trail": true,
+        "time": "08:01:59",
+        "blog_link": "rocks-and-roots-race-report-2.html"
+    }],
+    "60K": [{
+        "name": "Hocking Hills Indian Run",
+        "location": "Hocking Hills, Ohio",
+        "date": "2015-09-19",
+        "trail": true,
+        "time": "7:12:04",
+        "notes": "First Ultra"
+    }],
+    "50 miles": [
 
-	],
-	"Marathon": [{
-		"name": "Kalamazoo Marathon",
-		"location": "Kalamazoo, Michigan",
-		"date": "2016-05-08",
-		"trail": false,
-		"time": "04:13:05.05",
-		"notes": "Earn Your Mittens 2nd Marathon",
-		"blog_link": "kalamazoo-marathon-race-report.html"
-	}, {
-		"name": "Wisconsin Marathon",
-		"location": "Kenosha, Wisconsin",
-		"date": "2016-05-07",
-		"trail": false,
-		"time": "04:02:10",
-		"notes": "Earn Your Mittens 1st Marathon",
-		"blog_link": "wisconsin-marathon-race-report.html"
-	},{
-		"name": "Pro Football Hall of Fame Marathon",
-		"location": "Canton, Ohio",
-		"date": "2016-04-24",
-		"trail": false,
-		"time": "04:09:01",
-		"notes": "Had better races",
-		"blog_link": "pro-football-hall-of-fame-marathon-race-report.html"
-	},{
-		"name": "Bobcat Trail Marathon",
-		"location": "Glouster, Ohio",
-		"date": "2015-11-07",
-		"trail": true,
-		"time": "05:49:59",
-		"notes": "Was sick, stuffy"
-	},{
-		"name": "Columbus Marathon",
-		"location": "Columbus, Ohio",
-		"date": "2015-10-18",
-		"trail": false,
-		"time": "03:58:15"
-	},{
-		"name": "Big Sur International Marathon",
-		"location": "Big Sur, California",
-		"date": "2015-04-26",
-		"trail": false,
-		"time": "04:36:01",
-		"notes": "Celebrating my 21st birthday!"
-	},{
-		"name": "Rock 'n' Roll Arizona",
-		"location": "Phoenix, Arizona",
-		"date": "2015-01-18",
-		"trail": false,
-		"time": "04:06:27",
-		"notes": "First Marathon; recovering from 2 week long flu"
-	},{
-		"name": "North Face Endurance Challenge - Madison",
-		"location": "Kettle Moraine State Park, Wisconsin",
-		"date": "2016-09-17",
-		"trail": true,
-		"time": "6:29:23"
-	},{
-		"name": "Warm Up Columbus",
-		"location": "Dublin, Ohio",
-		"date": "2016-02-19",
-		"trail": false,
-		"time": "4:12:03",
-		"notes": "10th female",
-		"blog_link": "warm-up-columbus-race-report.html"
-	}
-],
-	"50K": [{
-		"name": "Run for Regis",
-		"location": "Cuyahoga Valley National Park, Peninsula, Ohio",
-		"date": "2017-01-28",
-		"trail": true,
-		"time": "06:53:49",
-		"notes": "1st day of back to back 50ks",
-		"blog_link": "run-for-regis-50k-race-report.html"
-	}, {
-		"name": "Rocks and Roots",
-		"location": "Alum Creek State Park, Ohio",
-		"date": "2017-01-08",
-		"trail": true,
-		"time": "06:23:36",
-		"notes": "Surprised with time! Training could have gone better",
-		"blog_link": "rocks-and-roots-race-report-1.html"
-	}, {
-		"name": "Rocks and Roots",
-		"location": "Alum Creek State Park, Ohio",
-		"date": "2017-02-12",
-		"trail": true,
-		"time": "08:01:59",
-		"blog_link": "rocks-and-roots-race-report-2.html"
-	}
-],
-	"60K": [{
-		"name": "Hocking Hills Indian Run",
-		"location": "Hocking Hills, Ohio",
-		"date": "2015-09-19",
-		"trail": true,
-		"time": "7:12:04",
-		"notes": "First Ultra"
-	}],
-	"50 miles": [
+    ],
+    "Relays": [
 
-	],
-	"Relays": [
-
-	]
+    ]
 }
