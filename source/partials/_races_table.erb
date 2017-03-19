@@ -1,3 +1,4 @@
+
 <%
 note_idx = 1
 
@@ -5,6 +6,14 @@ data.races_info.each do |race_type|
   distance = race_type[0]
   info = race_type[1]
   %>
+
+  <%
+  #sort races by date
+  info.sort_by! do |item|
+    item[:date]
+  end
+  %>
+
   <!-- Do not create table if there are 0 elements in it-->
   <% if info.length > 0 %>
 
