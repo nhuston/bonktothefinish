@@ -176,6 +176,13 @@
         "trail": true,
         "time": "47:45",
         "notes": "4th female"
+    }, {
+        "name": "Bacon & Beer 10K+",
+        "location": "Steam Pump Ranch, Tucson, AZ",
+        "date": "2014-11-01",
+        "trail": false,
+        "time": "47:53",
+        "notes": "2nd female"
     }],
     "7.4 miles": [{
         "name": "Sabino Canyon Sunset Run",
@@ -276,7 +283,7 @@
     }, {
         "name": "Warm Up Columbus",
         "location": "Dublin, Ohio",
-        "date": "2016-02-19",
+        "date": "2017-02-19",
         "trail": false,
         "time": "4:12:03",
         "notes": "10th female",
@@ -305,6 +312,25 @@
         "trail": true,
         "time": "08:01:59",
         "blog_link": "rocks-and-roots-race-report-2.html"
+    }, {
+        "name": "Bigfoot 50k",
+        "location": "Salt Fork State Park, OH",
+        "date": "2015-12-12",
+        "trail": true,
+        "time": "07:18:26"
+    }, {
+        "name": "Green Jewel",
+        "location": "Brecksville, OH",
+        "date": "2016-03-05",
+        "trail": false,
+        "time": "5:48:03"
+    }, {
+        "name": "Olde Girdled Grit",
+        "location": "Concord Twp., OH",
+        "date": "2017-02-26",
+        "trail": true,
+        "time": "6:31:44",
+        "blog_link": "olde-girdled-grit-50k-race-report.html"
     }],
     "60K": [{
         "name": "Hocking Hills Indian Run",
