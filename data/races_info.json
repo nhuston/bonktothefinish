@@ -46,6 +46,23 @@
             "trail": false,
             "time": "28:02",
             "notes": "Injured knee"
+        },
+        {
+            "name": "Orange out the Door",
+            "location": "Lewis Center, Ohio",
+            "date": "2017-03-11",
+            "trail": false,
+            "time": "21:44",
+            "notes": "3rd female",
+            "blog_link": "orange-out-the-door-5k-race-report.html"
+        },
+        {
+            "name": "Winter Run",
+            "location": "Granville, OH",
+            "date": "2016-02-28",
+            "trail": false,
+            "time": "23:15",
+            "notes": "3 miles"
         }
     ],
     "4 miles": [{
