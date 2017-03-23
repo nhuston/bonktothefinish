@@ -4,7 +4,7 @@ race = current_article.data.race || {}
 location = race.fetch(:location,"")
 date = race.fetch(:date,"")
 distances = race.fetch(:distances,"")
-size = race.fetch(:size,"")
+participants = race.fetch(:participants,"")
 url = race.fetch(:url,"")
 pacing = race.fetch(:pacing,"")
 strava_url = race.fetch(:strava_url,"")
@@ -30,11 +30,11 @@ strava_url = race.fetch(:strava_url,"")
       <b>Distances: </b><span><%= distances %></span><br/>
     <% end %>
 
-    <% if size != "" then %>
-      <b>People: </b><span><%= size %></span><br/>
+    <% if participants != "" then %>
+      <b>People: </b><span><%= participants %></span><br/>
     <% end %>
 
-    <% if size != "" then %>
+    <% if url != "" then %>
       <a href="<%= url %>">Race Website</a><br/>
     <% end %>
 
