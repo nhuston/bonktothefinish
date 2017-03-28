@@ -123,9 +123,20 @@ main {
 
 .about {
     .content {
-        img {
+        .left-img {
             float: left;
             margin: 0 $margin * 2 $margin * 2 0;
+        }
+
+        .social {
+            border-bottom: 1px solid #ccc;
+            padding: $margin 0;
+            text-align: center;
+
+            img {
+                width: $icon-len * 2;
+                height: $icon-len * 2;
+            }
         }
     }
 }
@@ -184,6 +195,7 @@ blockquote {
     img {
         @extend .icon;
         display: block;
+        margin: 0;
     }
 
     a {
