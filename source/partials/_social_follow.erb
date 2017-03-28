@@ -4,6 +4,8 @@ social = data.about_me.social
 
 <div class="social">
   <% social.each do |site_name,site_data| %>
-    <%= img_link site_data.img_url,       site_data.img_alt,      site_data.url,       "Follow on #{site_data.img_alt}", "" %>
+    <% if site_data.url %>
+      <%= img_link site_data.img_url, site_data.img_alt, site_data.url, "Follow on #{site_data.img_alt}", "" %>
+    <% end %>
   <% end %>
 </div>
