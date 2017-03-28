@@ -3,8 +3,7 @@ social = data.about_me.social
 %>
 
 <div class="social">
-  <%= img_link social.strava.img_url,       social.strava.img_alt,      social.strava.url,       "Follow on #{social.strava.img_alt}", "" %>
-  <%= img_link social.facebook.img_url,     social.facebook.img_alt,    social.facebook.url,     "Follow on #{social.facebook.img_alt}", "" %>
-  <%= img_link social.twitter.img_url,      social.twitter.img_alt,     social.twitter.url,      "Follow on #{social.twitter.img_alt}", "" %>
-  <%= img_link social.linkedIn.img_url,     social.linkedIn.img_alt,    social.linkedIn.url,     "Follow on #{social.linkedIn.img_alt}", "" %>
+  <% social.each do |site_name,site_data| %>
+    <%= img_link site_data.img_url,       site_data.img_alt,      site_data.url,       "Follow on #{site_data.img_alt}", "" %>
+  <% end %>
 </div>
