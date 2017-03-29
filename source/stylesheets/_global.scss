@@ -81,14 +81,14 @@ main {
     }
 }
 
+iframe {
+    display: block;
+    margin: $margin*2 auto;
+    max-width: 100%;
+}
+
 .race-info {
     text-align: left;
-
-    iframe {
-        display: block;
-        margin: $margin*2 auto;
-        max-width: 100%;
-    }
     @include media-query($on-laptop) {}
 }
 
@@ -200,9 +200,6 @@ blockquote {
 
     a {
         display: inline-block;
-        border: 1px solid #ccc;
-        border-radius: 2px 8px 2px;
-        background-color: white;
         padding: 3px;
     }
 
