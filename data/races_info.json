@@ -10,7 +10,7 @@
         },
         {
             "name": "Be Tucson Women's 5k",
-            "location": "Tucson, AZ",
+            "location": "Tucson, Arizona",
             "date": "2015-02-05",
             "trail": false,
             "time": "22:31.9",
@@ -18,14 +18,14 @@
         },
         {
             "name": "First on the First",
-            "location": "Westerville, OH",
+            "location": "Westerville, Ohio",
             "date": "2015-01-01",
             "trail": false,
             "time": "22:46"
         },
         {
             "name": "First on the First",
-            "location": "Westerville, OH",
+            "location": "Westerville, Ohio",
             "date": "2016-01-01",
             "trail": false,
             "time": "21:35",
@@ -41,7 +41,7 @@
         },
         {
             "name": "Thanksgiving Cross-Country",
-            "location": "Tucson, AZ",
+            "location": "Tucson, Arizona",
             "date": "2013-11-28",
             "trail": false,
             "time": "28:02",
@@ -58,7 +58,7 @@
         },
         {
             "name": "Winter Run",
-            "location": "Granville, OH",
+            "location": "Granville, Ohio",
             "date": "2016-02-28",
             "trail": false,
             "time": "23:15",
@@ -66,7 +66,7 @@
         },
         {
             "name": "Run for Everyone",
-            "location": "Lewis Center, OH",
+            "location": "Lewis Center, Ohio",
             "date": "2016-05-16",
             "trail": false,
             "time": "22:12",
@@ -74,7 +74,7 @@
         },
         {
             "name": "Field of Heroes 5k",
-            "location": "Westerville, OH",
+            "location": "Westerville, Ohio",
             "date": "2016-05-29",
             "trail": false,
             "time": "20:37",
@@ -83,7 +83,7 @@
         },
         {
             "name": "Jaeger Run for Pride",
-            "location": "Columbus, OH",
+            "location": "Columbus, Ohio",
             "date": "2016-06-17",
             "trail": false,
             "time": "20:34",
@@ -92,12 +92,21 @@
         },
         {
             "name": "July 4th Westerville Rotary Run",
-            "location": "Westerville, OH",
+            "location": "Westerville, Ohio",
             "date": "2016-07-04",
             "trail": false,
             "time": "21:17",
             "notes": "3rd in age group",
             "blog_link": "july-4th-westerville-rotary-5k-race-report.html"
+        },
+        {
+            "name": "On the Right Track 5k",
+            "location": "London, Ohio",
+            "date": "2017-03-18",
+            "trail": false,
+            "time": "21:41.4",
+            "notes": "7th overall, 1st female",
+            "blog_link": "on-the-right-track-5k-race-report.html"
         }
     ],
     "4 miles": [{
