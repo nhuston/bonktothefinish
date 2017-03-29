@@ -63,6 +63,41 @@
             "trail": false,
             "time": "23:15",
             "notes": "3 miles"
+        },
+        {
+            "name": "Run for Everyone",
+            "location": "Lewis Center, OH",
+            "date": "2016-05-16",
+            "trail": false,
+            "time": "22:12",
+            "notes": "with James"
+        },
+        {
+            "name": "Field of Heroes 5k",
+            "location": "Westerville, OH",
+            "date": "2016-05-29",
+            "trail": false,
+            "time": "20:37",
+            "notes": "new PR!",
+            "blog_link": "field-of-heroes-5k-race-report.html"
+        },
+        {
+            "name": "Jaeger Run for Pride",
+            "location": "Columbus, OH",
+            "date": "2016-06-17",
+            "trail": false,
+            "time": "20:34",
+            "notes": "newer PR!",
+            "blog_link": "jaeger-run-for-pride-5k-race-report.html"
+        },
+        {
+            "name": "July 4th Westerville Rotary Run",
+            "location": "Westerville, OH",
+            "date": "2016-07-04",
+            "trail": false,
+            "time": "21:17",
+            "notes": "3rd in age group",
+            "blog_link": "july-4th-westerville-rotary-5k-race-report.html"
         }
     ],
     "4 miles": [{
@@ -365,6 +400,13 @@
         "trail": true,
         "time": "6:31:44",
         "blog_link": "olde-girdled-grit-50k-race-report.html"
+    }, {
+        "name": "Tie Dye",
+        "location": "Yellow Springs, OH",
+        "date": "2016-05-14",
+        "trail": true,
+        "time": "7:06:13.0",
+        "blog_link": "tie-dye-50k-race-report.html"
     }],
     "60K": [{
         "name": "Hocking Hills Indian Run",
