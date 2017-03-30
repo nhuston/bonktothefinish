@@ -41,6 +41,7 @@ GEM
     fast_blank (1.0.0)
     fastimage (2.1.0)
     ffi (1.9.18)
+    gemoji (3.0.0)
     haml (4.0.7)
       tilt
     hamster (3.0.0)
@@ -97,6 +98,9 @@ GEM
       middleman-core (>= 3.2)
       net-sftp
       ptools
+    middleman-emojifire (1.1.0)
+      gemoji (>= 3.0.0)
+      middleman-core (>= 4.2.1)
     middleman-livereload (3.4.6)
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
@@ -150,6 +154,7 @@ DEPENDENCIES
   middleman-blog
   middleman-compass (>= 4.0.0)
   middleman-deploy (~> 2.0.0.pre.alpha)
+  middleman-emojifire
   middleman-livereload
   middleman-syntax
   nokogiri
