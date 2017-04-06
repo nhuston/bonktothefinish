@@ -425,9 +425,15 @@
         "time": "7:12:04",
         "notes": "First Ultra"
     }],
-    "50 miles": [
-
-    ],
+    "50 miles": [{
+        "name": "Burning River (100 DNF)",
+        "location": "Willoughby Hills, Ohio",
+        "date": "2016-08-06",
+        "trail": true,
+        "time": "12:17:46",
+        "notes": "100 DNF dropped at mile 52",
+        "blog_link": "processing-a-dnf.html"
+    }],
     "Relays": [
 
     ]
