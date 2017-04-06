@@ -71,27 +71,75 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
-   def get_article_img(article_tags,is_icon=true)
-     tag_links = data.tags
-     #search thru data's tag list, return image url of highest ranking matching tag
-     saved_url = ''
-     top_ranking = 0
-     tag_links.each do |tag_name, tag|
-       if article_tags.include? tag_name and tag.ranking > top_ranking then
-         top_ranking = tag.ranking
-         if is_icon then
-           saved_url = tag.icon_url
-         else
-           saved_url = tag.img_url
-         end
-       end
+   def to_mi(str)
+     str = str.downcase
+     if str == "marathon"
+       return 26.2
+     elsif str == "half marathon"
+       return 13.1
+     elsif str == "ultramarathon"
+       return 30
      end
 
-     #return the url value
-     if saved_url != '' then
-       return saved_url
+     number = str.scan(/\d+/).first
+     if number == nil
+       return nil
+     end
+
+     unit_start_idx = number.length + str.index(number)
+     unit = str[unit_start_idx..-1].downcase
+     mi = nil
+     if unit == " mile" or unit == " miles"
+       mi = number.to_f
+     elsif unit =="k"
+       mi = number.to_f * 1.60934
+     end
+     return mi
+   end
+
+   def tags_to_mi(tags)
+     tags.each do |tag|
+       mi = to_mi(tag)
+       if mi != nil
+         return mi
+       end
+     end
+     return nil
+   end
+
+   def get_tag_info(article_tags)
+    # distances are top priority
+    mi = tags_to_mi(article_tags)
+    if mi != nil
+      data.tags.each do |tag_info|
+        if tag_info.key?(:dist) and mi >= tag_info.dist.low and (not tag_info.dist.key?(:high) or mi < tag_info.dist.high)
+          return tag_info
+        end
+      end
+    end
+
+    #article does not have a distance, check the 'tags' property instead
+    data.tags.each do |tag_info|
+     next if not tag_info.key?(:tags)
+
+     tags = tag_info.tags.split(',')
+     tags.each do |tag_name|
+       if article_tags.include? tag_name
+         return tag_info
+       end
+     end
+    end
+
+    return data.tags.last #default is the last item - "other"/"misc"
+   end
+
+   def get_article_img(article_tags)
+     tag_info = get_tag_info(article_tags)
+
+     if tag_info.key?(:img_url)
+       return tag_info.img_url
      else
-       return tag_links['race'].url
+       return tag_info.icon_url
      end
    end
 

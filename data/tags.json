@@ -1,29 +1,58 @@
-{
-    "dog": {
-        "ranking": 750,
+[{
+        "icon_url": "/images/icons/fire-dash.svg",
+        "dist": {
+            "low": 0,
+            "high": 10
+        },
+        "name": "short races"
+    },
+    {
+        "icon_url": "/images/icons/sprint.svg",
+        "dist": {
+            "low": 10,
+            "high": 15
+        },
+        "name": "moderate races"
+    },
+    {
+        "icon_url": "/images/icons/boulder-dash.svg",
+        "dist": {
+            "low": 15,
+            "high": 27
+        },
+        "name": "long races"
+    },
+    {
+        "icon_url": "/images/icons/shambling-zombie.svg",
+        "dist": {
+            "low": 27
+        },
+        "name": "ultra long races"
+    },
+    {
+        "icon_url": "/images/icons/despair.svg",
+        "tags": "DNF",
+        "name": "DNF"
+    },
+    {
+        "icon_url": "/images/icons/training.svg",
+        "tags": "training,train",
+        "name": "training"
+    },
+    {
+        "icon_url": "/images/icons/open-treasure-chest.svg",
+        "tags": "product review,review",
+        "name": "reviews"
+    },
+    {
+        "icon_url": "/images/icons/blog.svg",
+        "tags": "blog",
+        "name": "blog"
+    },
+    {
         "img_url": "/images/homepagedog.jpg",
-        "icon_url": "/images/icons/dog.svg"
-    },
-    "goals": {
-        "ranking": 900,
-        "icon_url": "/images/icons/goal.svg"
-    },
-    "gardening": {
-        "ranking": 800,
-        "img_url": "/images/blog/banana-plant-after-3-5-months/banana-plant2.jpg",
-        "icon_url": "/images/icons/gardening.svg"
-    },
-    "cooking": {
-        "ranking": 850,
-        "icon_url": "/images/icons/cooking.svg"
-    },
-    "blog": {
-        "ranking": 950,
-        "icon_url": "/images/icons/blog.svg"
-    },
-    "race": {
-        "ranking": 700,
-        "img_url": "/images/homepagerace.jpg",
-        "icon_url": "/images/icons/shoe.svg"
+        "icon_url": "/images/icons/dog.svg",
+        "tags": "dog,goals,gardening,cooking",
+        "name": "other"
     }
-}
+]

@@ -14,6 +14,7 @@ end
 
 <div  class="card">
     <div class="card-img-wrap <%= img_class %>" style="background-color:<%= color_background %>;<%= style %>;">
+        <h3><%= tag_name.capitalize %></h3>
         <%if is_icon then %>
           <%= app.image_tag img_url, alt: tag_name %>
         <% end %>
@@ -33,8 +34,10 @@ end
           <% end %>
         </ul>
 
+        <!--
         <% if articles.length > num_articles_per_card then %>
           <p class="center"><%= link_to "More \"#{tag_name.capitalize}\" posts...", tag_path(tag_name) %></p>
         <% end %>
+        -->
     </div>
 </div>

@@ -24,9 +24,8 @@ $color-back: #00bdbd;
     navbar {
         position: absolute;
         text-align: center;
-        $blur: 6px;
         display: block;
-        text-shadow: 0 0 $blur #000,0 0 $blur #000,0 0 $blur #000;
+        text-shadow: $outline;
         font-size: 1em;
         width: 95%;
         margin: $margin;

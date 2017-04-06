@@ -1,10 +1,42 @@
-<% data.tags.sort_by { |k, v| v[:ranking] }.each do |tag_name,tag_info|
-  is_icon = !tag_info.key?(:img_url)
-  img_url = tag_info.img_url || tag_info.icon_url
-  %>
+<%
+#reference blogs in reverse order. blog.articles ordered most recent first, thus each new article will push them background-image
+#if you want a specific article to always be referenced, must ref relative to the end of the list
+len = blog.articles.length
+%>
+<%= partial "partials/post_summary.erb", locals: {
+    article: blog.articles[len - 43] }%>
+<%= partial "partials/post_summary.erb", locals: {
+    article: blog.articles[len - 41] }%>
+<%= partial "partials/post_summary.erb", locals: {
+    article: blog.articles[len - 40] }%>
+
+<hr>
+
+<%
+#create a card_group for each data.tags
+card_groups = {}
+data.tags.each do |tag_info|
+  card_groups[tag_info.name] = {
+    info: tag_info,
+    articles: []
+  }
+end
+
+#add relevant articles to each card_groups
+blog.articles.each do |article|
+  tag_info = get_tag_info(article.tags)
+  card_groups[tag_info.name][:articles].push(article)
+end
+
+#print a card for each card_group
+card_groups.each do |name,value|
+  tag_info = value[:info]
+%>
+
   <%= partial "partials/card.erb", locals: {
-      articles:blog.tags[tag_name],
-      img_url: img_url,
-      is_icon: is_icon,
-      tag_name: tag_name } %>
+      articles: value[:articles],
+      img_url: tag_info.img_url || tag_info.icon_url,
+      is_icon: !tag_info.key?(:img_url),
+      tag_name: tag_info.name } %>
+
 <% end %>
