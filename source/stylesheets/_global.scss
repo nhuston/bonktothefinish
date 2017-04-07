@@ -61,7 +61,7 @@ main {
         }
         @include media-query($on-laptop) {
             display: inline-block;
-            width: 100%-$sidebar-desktop-width - ($sidebar-padding-left +1%);
+            width: 100%-$sidebar-desktop-width - ($sidebar-padding-left + 1%);
         }
     }
 
@@ -69,7 +69,13 @@ main {
         text-align: center;
         vertical-align: top;
 
+        .social {
+            padding: 0;
+        }
+
         div {
+            padding-bottom: $margin;
+
             h4 {
                 border-bottom: 1px double #ddd;
                 padding-bottom: $margin;
@@ -80,13 +86,19 @@ main {
                 border: 1px dashed #ddd;
             }
 
-            .option {
-                text-align: center;
+            select {
+                text-align: center; //doesnt work
+                background: white;
+                padding: $margin/2;
+                margin: $margin/2;
+                box-sizing: content-box;
+                max-width: 100%;
             }
         }
 
         #mc_embed_signup {
             max-width: 100%;
+            padding: 0;
 
             input {
                 max-width: 95%;
@@ -139,6 +151,10 @@ iframe {
             margin: $margin 0;
         }
     }
+}
+
+.index {
+    text-align: center;
 }
 
 .about {

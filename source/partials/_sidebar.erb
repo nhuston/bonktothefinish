@@ -16,6 +16,18 @@ end
 %>
 
 <aside class="sidebar">
+  <!--
+  <div class="about">
+    <h4>About</h4>
+
+    <%=
+    #http://www.rubydoc.info/gems/middleman-core/Middleman/Sitemap/Resource
+    #https://forum.middlemanapp.com/t/querying-proxy-pages-by-locals/1195
+    about_pg = sitemap.resources.select{|r| r.path == 'about.html'}[0]
+    %>
+  </div>
+-->
+
   <div class="follow">
     <h4>Follow</h4>
     <%= partial "partials/email_subscribe_embed.erb" %>
@@ -31,7 +43,7 @@ end
     <h4>Archives</h4>
     <select onChange="window.location.href=this.value">
         <% month_articles.each do |info| %>
-          <option class="option" value="<%= info[:link] %>"><%= info[:name] %></option>
+          <option value="<%= info[:link] %>"><%= info[:name] %></option>
         <% end %>
     </select>
   </div>

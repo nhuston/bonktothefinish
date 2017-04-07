@@ -40,3 +40,5 @@ len = blog.articles.length
     article: blog.articles[len - 41] }%>
 <%= partial "partials/post_summary.erb", locals: {
     article: blog.articles[len - 40] }%>
+
+<h3><%= link_to "More...", "archive.html" %></h3>
