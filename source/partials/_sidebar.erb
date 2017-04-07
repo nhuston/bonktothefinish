@@ -24,6 +24,8 @@ end
     #http://www.rubydoc.info/gems/middleman-core/Middleman/Sitemap/Resource
     #https://forum.middlemanapp.com/t/querying-proxy-pages-by-locals/1195
     about_pg = sitemap.resources.select{|r| r.path == 'about.html'}[0]
+    # about_pg.summary #Crash - undefined method `summary' for #<Middleman::Sitemap::Resource path=about.html>
+    blog.articles[0].summary #works! but i don't care about blog article summaries here, I want the about page summary
     %>
   </div>
 -->
