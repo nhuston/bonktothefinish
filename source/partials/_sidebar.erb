@@ -42,9 +42,10 @@ end
   <div class="calendar">
     <h4>Archives</h4>
     <select onChange="window.location.href=this.value">
-        <% month_articles.each do |info| %>
-          <option value="<%= info[:link] %>"><%= info[:name] %></option>
-        <% end %>
+      <option value="" disabled selected hidden>Select a month</option>
+      <% month_articles.each do |info| %>
+        <option value="<%= info[:link] %>"><%= info[:name] %></option>
+      <% end %>
     </select>
   </div>
 
