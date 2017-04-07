@@ -1,18 +1,4 @@
 <%
-#reference blogs in reverse order. blog.articles ordered most recent first, thus each new article will push them background-image
-#if you want a specific article to always be referenced, must ref relative to the end of the list
-len = blog.articles.length
-%>
-<%= partial "partials/post_summary.erb", locals: {
-    article: blog.articles[len - 43] }%>
-<%= partial "partials/post_summary.erb", locals: {
-    article: blog.articles[len - 41] }%>
-<%= partial "partials/post_summary.erb", locals: {
-    article: blog.articles[len - 40] }%>
-
-<hr>
-
-<%
 #create a card_group for each data.tags
 card_groups = {}
 data.tags.each do |tag_info|
@@ -40,3 +26,17 @@ card_groups.each do |name,value|
       tag_name: tag_info.name } %>
 
 <% end %>
+
+<hr>
+
+<%
+#reference blogs in reverse order. blog.articles ordered most recent first, thus each new article will push them background-image
+#if you want a specific article to always be referenced, must ref relative to the end of the list
+len = blog.articles.length
+%>
+<%= partial "partials/post_summary.erb", locals: {
+    article: blog.articles[len - 43] }%>
+<%= partial "partials/post_summary.erb", locals: {
+    article: blog.articles[len - 41] }%>
+<%= partial "partials/post_summary.erb", locals: {
+    article: blog.articles[len - 40] }%>

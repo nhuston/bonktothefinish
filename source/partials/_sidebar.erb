@@ -1,8 +1,45 @@
-<aside class="sidebar">
-  <%= partial "partials/email_subscribe_embed.erb" %>
+<%
+recent_article_links = []
+blog.articles[0...5].each do |article|
+  recent_article_links.push(link_to "#{article.title}", article)
+end
 
-  <%= partial "partials/social_follow.erb" %>
-  
-  <%= partial "partials/tags.erb", locals: {
-  	tags: blog.tags }  %>
+month_articles = []
+blog.articles.group_by {|a| a.date.year }.each do |year, year_articles|
+  year_articles.group_by {|a_year| a_year.date.month }.each do |month, articles|
+    month_articles.push({
+      name: Date.new(year, month).strftime('%B %Y'),
+      link: "/blog/#{year}/#{month.to_s.rjust(2, '0')}.html"
+      })
+  end
+end
+%>
+
+<aside class="sidebar">
+  <div class="follow">
+    <h4>Follow</h4>
+    <%= partial "partials/email_subscribe_embed.erb" %>
+    <%= partial "partials/social_follow.erb" %>
+  </div>
+
+  <div class="recent_articles">
+    <h4>Recent Articles</h4>
+    <%= recent_article_links.join("<hr class='dotted'>")%>
+  </div>
+
+  <div class="calendar">
+    <h4>Archives</h4>
+    <select onChange="window.location.href=this.value">
+        <% month_articles.each do |info| %>
+          <option class="option" value="<%= info[:link] %>"><%= info[:name] %></option>
+        <% end %>
+    </select>
+  </div>
+
+  <div class="tags">
+    <h4>Tags</h4>
+    <% blog.tags.each do |tag, articles| %>
+      <%= link_to "#{tag}", tag_path(tag), { class: "button button_primary" }%>
+    <% end %>
+  </div>
 </aside>

@@ -1,7 +1,7 @@
 
   <div class="tags">
-    <img src="/images/icons/tag.svg" class="icon"/>
-    <span>Tags</span>
+    <p>Tags</p>
+    <hr>
     <% tags.each do |tag, articles| %>
       <%= link_to "#{tag}", tag_path(tag), { class: "button button_primary" }%>
     <% end %>
