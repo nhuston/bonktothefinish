@@ -35,10 +35,10 @@ card_groups.each do |name,value|
 len = blog.articles.length
 %>
 <%= partial "partials/post_summary.erb", locals: {
-    article: blog.articles[len - 43] }%>
+    article: blog.articles[len - 7] }%>
 <%= partial "partials/post_summary.erb", locals: {
-    article: blog.articles[len - 41] }%>
+    article: blog.articles[len - 24] }%>
 <%= partial "partials/post_summary.erb", locals: {
-    article: blog.articles[len - 40] }%>
+    article: blog.articles[len - 15] }%>
 
-<h3><%= link_to "More...", "archive.html" %></h3>
+<h3><%= link_to "More Articles...", "archive.html" %></h3>
