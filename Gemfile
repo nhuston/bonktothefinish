@@ -22,3 +22,5 @@ gem 'redcarpet', '~> 3.3', '>= 3.3.3'#for markdown
 gem 'builder', '~> 3.0'# For feed.xml.builder
 
 gem 'chronic_duration'
+
+gem 'html-proofer' # https://github.com/gjtorikian/html-proofer

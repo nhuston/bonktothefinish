@@ -1,6 +1,7 @@
 ###
 # Page options, layouts, aliases and proxies
 ###
+require 'html-proofer'
 
 # Per-page layout changes:
 #
@@ -164,4 +165,12 @@ configure :build do
   #why were they enabled by default?
   #activate :relative_assets
   #set :relative_links, true
+end
+
+after_build do |builder|
+  begin
+    HTMLProofer.check_directory(config[:build_dir], { :assume_extension => true }).run
+  rescue RuntimeError => e
+    puts e
+  end
 end
