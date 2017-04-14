@@ -1,5 +1,6 @@
 <!-- Implementing Open Graph Protocol - http://ogp.me/ -->
-<meta property="og:image" content="<%= config[:host] %>/favicon.ico" />
+<!-- the param makes crawlers think image is unique, and will force updates -->
+<meta property="og:image" content="<%= config[:host] %>/favicon.ico?nonsense" />
 <meta property="og:title" content="<%= title %>" />
 <meta property="og:description" content="<%= description %>" />
 <meta property="og:url" content="<%= config[:host] %><%= current_page.url %>" />
@@ -19,4 +20,5 @@
 
 <!-- Twitter specs that use OGP like format -->
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:creator" content="@bonktothefinish" />
+<meta name="twitter:site" content="bonktothefinish" />
+<meta name="twitter:image:alt" content="Bonk To The Finish website's icon or picture" />
