@@ -9,11 +9,8 @@ classes||=""
     <img src="<%= get_article_img(article.tags) %>" class="article-type" alt="Article Icon"/>
 
     <!-- tags -->
-    <div class="tags">
-      <% article.tags.each do |tag| %>
-        <%= link_to "#{tag}", tag_path(tag), { class: "button button_primary" }%>
-      <% end %>
-    </div>
+    <%= partial "partials/tags.erb", locals: {
+      tags: article.tags }  %>
   </aside>
 
   <article>

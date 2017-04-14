@@ -1,0 +1,6 @@
+
+<div class="tags">
+  <% tags.each do |tag| %>
+    <%= link_to "#{tag}", tag_path(tag), { class: "button button_primary" }%>
+  <% end %>
+</div>

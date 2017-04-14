@@ -29,6 +29,10 @@
             "img_url": "icons/social/reddit.svg",
             "img_alt": "Reddit"
         },
+        "stumbleupon": {
+            "img_url": "http://cdn.stumble-upon.com/i/badges/badgeLogo18x18.png?v5",
+            "img_alt": "StumbleUpon"
+        },
         "gPlus": {
             "img_url": "icons/social/google-plus.svg",
             "img_alt": "Google Plus"

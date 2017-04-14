@@ -55,9 +55,9 @@ end
     <h4>Tags</h4>
     <% tags = word_cloud(blog.tags) %>
     <% tags.each do |tag, size_percent|
-      min_size = 0.25
+      min_size = 0.1
       range_size = 1.5
-      scaled_percent = size_percent ** 0.4 #give a higher weight to less common tags to prevent domination by 1 or two most common tags
+      scaled_percent = size_percent ** 0.2 #give a higher weight to less common tags to prevent domination by 1 or two most common tags
       size = scaled_percent * range_size + min_size
       %>
       <%= link_to "#{tag}", tag_path(tag), { style: "font-size:#{size}em;" }%>
