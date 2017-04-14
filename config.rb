@@ -73,6 +73,33 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
+  def word_cloud(words)
+    #preprocess to number of occurrences
+    occurrences = {}
+    words.each do |word, val|
+      if not val.is_a? Numeric then
+        occurrences[word] = val.length
+      else
+        occurrences[word] = val
+      end
+    end
+
+    word = occurrences.keys()[0]
+    max_freq = occurrences[word]
+    occurrences.each do |word, freq|
+      if freq > max_freq then
+        max_freq = freq
+      end
+    end
+    max_freq = max_freq.to_f
+
+    occurrences.each do |word, freq|
+      occurrences[word] = occurrences[word] / max_freq
+    end
+
+    return occurrences
+  end
+
    def to_mi(str)
      str = str.downcase
      if str == "marathon"

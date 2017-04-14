@@ -1,7 +1,15 @@
 ---
 pageable: true
 ---
-<h1>'<%= tagname.capitalize %>' Articles</h1>
+<%
+len = blog.tags[tagname].length
+if len == 1
+  articles = "Article"
+else
+  articles = "Articles"
+end
+%>
+<h1><%= len %> '<%= tagname.capitalize %>' <%= articles %></h1>
 
 <%= partial "partials/post_summaries.erb", locals: {
     articles: page_articles }%>

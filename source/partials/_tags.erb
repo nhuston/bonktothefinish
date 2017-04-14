@@ -1,8 +1,0 @@
-
-  <div class="tags">
-    <p>Tags</p>
-    <hr>
-    <% tags.each do |tag, articles| %>
-      <%= link_to "#{tag}", tag_path(tag), { class: "button button_primary" }%>
-    <% end %>
-  </div>
