@@ -1,4 +1,6 @@
 <%
+social = data.about_me.social
+
 recent_article_links = []
 blog.articles[0...5].each do |article|
   recent_article_links.push(link_to "#{article.title}", article)
@@ -34,7 +36,10 @@ end
     <h4>Follow</h4>
     <%= partial "partials/email_subscribe_embed.erb" %>
     <%= partial "partials/social_follow.erb" %>
+    <%= img_link social.bibrave.img_url,     social.bibrave.img_alt,    social.bibrave.url,           "Follow on #{social.bibrave.img_alt}", "" %>
   </div>
+
+
 
   <div class="recent_articles">
     <h4>Recent Articles</h4>

@@ -20,6 +20,11 @@
             "img_url": "icons/social/instagram.svg",
             "img_alt": "Instagram"
         },
+        "bibrave": {
+            "url": "https://www.bibrave.com/users/128054",
+            "img_url": "icons/social/bibrave.png",
+            "img_alt": "Bibrave"
+        },
         "twitter": {
             "url": "https://twitter.com/bonktothefinish/",
             "img_url": "icons/social/twitter.svg",
