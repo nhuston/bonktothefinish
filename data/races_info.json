@@ -442,6 +442,15 @@
         "notes": "hot",
         "blog_link": "dawg-gone-long-run-50-race-report.html"
     }],
+        "68ish miles": [{
+        "name": "Georgia Death Race",
+        "location": "Vogel State Park to Amicalola Falls State Park, GA",
+        "date": "2017-04-01",
+        "trail": true,
+        "time": "22:57:43",
+        "notes": "hardest race I've ever done",
+        "blog_link": "georgia-death-race-report.html"
+    }],
     "Relays": [
 
     ]
