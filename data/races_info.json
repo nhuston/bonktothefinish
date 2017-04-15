@@ -107,8 +107,54 @@
             "time": "21:41.4",
             "notes": "7th overall, 1st female",
             "blog_link": "on-the-right-track-5k-race-report.html"
+        },
+        {
+            "name": "Leftover Run",
+            "location": "Dublin, OH",
+            "date": "2016-11-26",
+            "trail": false,
+            "time": "21:04.3",
+            "notes": "4th female"
+        },
+        {
+            "name": "First on the First",
+            "location": "Westerville, OH",
+            "date": "2017-01-01",
+            "trail": false,
+            "time": "21:41",
+            "notes": "12th female, 1st in AG",
+            "blog_link": "first-on-the-first-race-report.html"
+        },
+        {
+            "name": "First on the First",
+            "location": "Westerville, OH",
+            "date": "2013-01-01",
+            "trail": false,
+            "time": "25:07"
+        },
+        {
+            "name": "First on the First",
+            "location": "Westerville, OH",
+            "date": "2014-01-01",
+            "trail": false,
+            "time": "26:26",
+            "notes": "Injured knee a few months prior, stiff for several days after this run. I could barely walk up stairs."
         }
     ],
+    "6K": [{
+        "name": "NIRCA Southwest Regionals",
+        "location": "Fresno, CA",
+        "date": "2012-10-20",
+        "trail": false,
+        "time": "27:53"
+    },{
+        "name": "NIRCA Southwest Regionals",
+        "location": "Los Angeles, CA",
+        "date": "2013-11-02",
+        "trail": false,
+        "time": "30:20"
+    }],
+
     "4 miles": [{
         "name": "The Ohio State Four Miler",
         "location": "Columbus, OH",
@@ -299,7 +345,56 @@
         "notes": "Dropped from 50K"
     }],
     "Half Marathon": [
-
+      {
+          "name": "Fleet Feet Veterans Day Half",
+          "location": "Tuscon, AZ",
+          "date": "2012-11-11",
+          "trail": false,
+          "time": "1:54:01",
+          "notes": "First Half!!! Foot Numbness, 5th in AG (15-19)"
+      },
+      {
+          "name": "Arizona Distance Classic",
+          "location": "Oro Valley, AZ",
+          "date": "2013-03-24",
+          "trail": false,
+          "time": "1:54:28"
+      },{
+          "name": "Mount Lemmon Marathon",
+          "location": "Mt. Lemmon, Tucson, AZ",
+          "date": "2013-04-28",
+          "trail": false,
+          "time": "2:08:45",
+          "notes": "1st in age group"
+      },{
+          "name": "A-Mountain Half",
+          "location": "A-Mountain, Tucson, AZ",
+          "date": "2013-10-20",
+          "trail": false,
+          "time": "1:56:30",
+          "notes": "3rd in Age Group (1-19)"
+      },{
+          "name": "Fleet Feet Veterans Day Half",
+          "location": "Tuscon, AZ",
+          "date": "2013-11-10",
+          "trail": false,
+          "time": "2:31:27",
+          "notes": "Got Injured during race (knee)"
+      },{
+          "name": "Arizona Distance Classic",
+          "location": "Oro Valley, AZ",
+          "date": "2014-03-23",
+          "trail": false,
+          "time": "2:18:04",
+          "notes": "First run since RAGNAR ultra"
+      },{
+          "name": "A-Mountain Half",
+          "location": "A-Mountain, Tucson, AZ",
+          "date": "2014-10-19",
+          "trail": false,
+          "time": "1:58:07",
+          "notes": "Day after Bisbee"
+      }
     ],
     "Marathon": [{
         "name": "Kalamazoo Marathon",
