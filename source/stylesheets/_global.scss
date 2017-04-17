@@ -162,6 +162,13 @@ iframe {
     text-align: center;
 }
 
+.discounts {
+    iframe {
+        width: 100%;
+        border-style: none;
+    }
+}
+
 .about {
     .content {
         .left-img {
