@@ -1,0 +1,29 @@
+<%
+#initialize local variables in case they were not included
+caption ||= ""
+classes ||= ""
+ogg ||= false
+mp4 ||= false
+webm ||= false
+
+src = prefix_img(src)
+%>
+
+<figure class="<%= classes %>">
+  <video autoplay controls loop>
+    <% if mp4 %>
+      <source src="<%=src%>.mp4" type="video/mp4">
+    <% end %>
+    <% if ogg %>
+      <source src="<%=src%>.ogg" type="video/ogg">
+    <% end %>
+    <% if webm %>
+      <source src="<%=src%>.webm" type="video/webm">
+    <% end %>
+  Your browser does not support the video tag.
+  </video>
+
+  <figcaption>
+  <%= caption %>
+  </figcaption>
+</figure>
