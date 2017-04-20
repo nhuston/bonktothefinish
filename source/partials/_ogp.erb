@@ -1,9 +1,9 @@
 <%
 #get the img, allow custom and default settings
-header_img = "#{config[:host]}/images/site-header-img.jpg"
+img = "#{config[:host]}/images/site-header-img.jpg"
 custom_img = current_page.data.dig(:top_img)
 if custom_img != nil and custom_img.length > 0
-  header_img = prefix_img(custom_img)
+  img = prefix_img(custom_img)
 end
 img+="?nonsense" #makes crawlers think image is unique, and will force updates
 %>
