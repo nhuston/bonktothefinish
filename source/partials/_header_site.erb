@@ -1,11 +1,11 @@
 <%
-#choose the image to display as the site banner
-header_img = "/images/site-header-img.jpg"
-if current_page.data.dig(:top_img) then
-  url = current_article.url
-  url_without_ext = url[0..url.length-6]
-  header_img = "/images#{url_without_ext}/#{current_page.data.top_img}"
+#get the img, allow custom and default settings
+header_img = "#{config[:host]}/images/site-header-img.jpg"
+custom_img = current_page.data.dig(:top_img)
+if custom_img != nil and custom_img.length > 0
+  header_img = prefix_img(custom_img)
 end
+
 %>
 
 <header class="site-header-banner">
