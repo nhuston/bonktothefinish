@@ -1,6 +1,8 @@
 var races = <%= processed_races_info().to_json %>;
+console.log(races);
 
-/*
+
+
 // Set the dimensions of the canvas / graph
 var margin = {
         top: 30,
@@ -22,77 +24,87 @@ var margin = {
     height = 500 - margin.top - margin.bottom;
 
 // parse the date / time
-var parseDate = d3.timeParse("%d-%b-%y");
-var parseTime = d3.timeParse("%d-%b-%y");
+var parseDate = d3.timeParse("%Y-%m-%d");
 
-// set the ranges
-var x = d3.scaleTime().range([0, width]);
-var y = d3.scaleLinear().range([height, 0]);
 
-// define the line
-var valueline = d3.line()
-    .x(function(d) {
-        return x(d.date);
-    })
-    .y(function(d) {
-        return y(d.close);
-    });
+// preprocess/format the data
+for(race_name in races){
+	for(race of races[race_name]){
+		race.date = parseDate(race.date);
+		race.time = (race.time);
+	}
+}
 
-// append the svg obgect to the body of the page
-// appends a 'group' element to 'svg'
-// moves the 'group' element to the top left margin
-var svg = d3.select("body").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
-    .append("g")
-    .attr("transform",
-        "translate(" + margin.left + "," + margin.top + ")");
+document.addEventListener("DOMContentLoaded", function(e) {
+	// append the svg obgect to the body of the page
+	// appends a 'group' element to 'svg'
+	// moves the 'group' element to the top left margin
+	var svg = d3.select("body").append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+		.append("g")
+		.attr("transform",
+			"translate(" + margin.left + "," + margin.top + ")");
+	create_scatter_plot(svg, races["5K"]);
+  });
 
-// Get the data
-// format the data
-races.forEach(function(race_type) {
-  race_type.forEach(function(race_type) {
-    race_type.date = parseDate(race_type.date);
-  }
-});
+function format_duration(d) {
+    var hours = Math.floor(d / 3600),
+        minutes = Math.floor((d - (hours * 3600)) / 60),
+        seconds = d - (minutes * 60);
+    var output = seconds + 's';
+    if (minutes) {
+        output = minutes + 'm ' + output;
+    }
+    if (hours) {
+        output = hours + 'h ' + output;
+    }
+    return output;
+}
 
-d3.csv("data.csv", function(error, data) {
-    if (error) throw error;
+function create_scatter_plot(svg, data){
+	var get_x = function(d){ return d.date;}
+	var get_y = function(d){ return d.time;}
 
-    // Scale the range of the data
-    x.domain(d3.extent(data, function(d) {
-        return d.date;
-    }));
-    y.domain([0, d3.max(data, function(d) {
-        return d.close;
-    })]);
+	// set the ranges
+	var x = d3.scaleTime()
+		.range([0, width])
+		.domain(d3.extent(data, get_x));
+	var y = d3.scaleLinear()
+		.range([height, 0])
+		.domain([d3.min(data, get_y), d3.max(data, get_y)]);
 
-    // Add the valueline path.
-    svg.append("path")
-        .data([data])
-        .attr("class", "line")
-        .attr("d", valueline);
+	var get_axis_x = function(d){ return x(get_x(d));}
+	var get_axis_y = function(d){ return y(get_y(d));}
 
-    // Add the scatterplot
-    svg.selectAll("dot")
-        .data(data)
-        .enter().append("circle")
-        .attr("r", 5)
-        .attr("cx", function(d) {
-            return x(d.date);
-        })
-        .attr("cy", function(d) {
-            return y(d.close);
-        });
+	// define the line
+	var valueline = d3.line()
+		.x(get_axis_x)
+		.y(get_axis_y);
 
-    // Add the X Axis
-    svg.append("g")
-        .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
+	// Add the valueline path.
+	svg.append("path")
+	.data([data])
+	.attr("class", "line")
+	.attr("d", valueline);
 
-    // Add the Y Axis
-    svg.append("g")
-        .call(d3.axisLeft(y));
+	// Add the scatterplot
+	svg.selectAll("dot")
+	.data(data)
+	.enter().append("circle")
+	.attr("r", 5)
+	.attr("cx", get_axis_x)
+	.attr("cy", get_axis_y);
 
-});
-*/
+	// Add the X Axis
+	svg.append("g")
+	.attr("transform", "translate(0," + height + ")")
+	.call(d3.axisBottom(x));
+
+	// Add the Y Axis
+	svg.append("g")
+	.call(
+		d3.axisLeft(y)
+		.tickFormat(format_duration)
+	);
+}
