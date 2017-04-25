@@ -1,7 +1,14 @@
+document.addEventListener("DOMContentLoaded", function(e) {
+	create_scatter_plot("#graph_5K",races["5K"]);
+});
+
 var races = <%= processed_races_info().to_json %>;
 console.log(races);
 
-
+/*
+D3 examples adapted from
+https://bl.ocks.org/d3noob/6f082f0e3b820b6bf68b78f2f7786084
+*/
 
 // Set the dimensions of the canvas / graph
 var margin = {
@@ -36,12 +43,6 @@ for(race_name in races){
 		return a.date - b.date;
 	});
 }
-console.log("Asd")
-
-document.addEventListener("DOMContentLoaded", function(e) {
-  console.log("Asd")
-	create_scatter_plot("#graph_5K",races["5K"]);
-});
 
 //d3 only has date formatters for time, not durations. So must write own linear axis formatter
 function format_duration(d) {
@@ -86,6 +87,8 @@ function create_scatter_plot(DOM_id, data){
 	var svg = d3.select(DOM_id).append("svg")
 		.attr("width", width + margin.left + margin.right)
 		.attr("height", height + margin.top + margin.bottom)
+    .attr('viewBox','0 0 '+(width + margin.left + margin.right)+' '+(height + margin.top + margin.bottom)) //make responsive
+    .attr('preserveAspectRatio','xMinYMin') //make responsive
 		.append("g")
 		.attr("transform",
 			"translate(" + margin.left + "," + margin.top + ")");
