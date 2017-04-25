@@ -26,28 +26,24 @@ var margin = {
 // parse the date / time
 var parseDate = d3.timeParse("%Y-%m-%d");
 
-
 // preprocess/format the data
 for(race_name in races){
 	for(race of races[race_name]){
 		race.date = parseDate(race.date);
 		race.time = (race.time);
 	}
+	races[race_name].sort(function(a,b){
+		return a.date - b.date;
+	});
 }
+console.log("Asd")
 
 document.addEventListener("DOMContentLoaded", function(e) {
-	// append the svg obgect to the body of the page
-	// appends a 'group' element to 'svg'
-	// moves the 'group' element to the top left margin
-	var svg = d3.select("body").append("svg")
-		.attr("width", width + margin.left + margin.right)
-		.attr("height", height + margin.top + margin.bottom)
-		.append("g")
-		.attr("transform",
-			"translate(" + margin.left + "," + margin.top + ")");
-	create_scatter_plot(svg, races["5K"]);
-  });
+  console.log("Asd")
+	create_scatter_plot("#graph_5K",races["5K"]);
+});
 
+//d3 only has date formatters for time, not durations. So must write own linear axis formatter
 function format_duration(d) {
     var hours = Math.floor(d / 3600),
         minutes = Math.floor((d - (hours * 3600)) / 60),
@@ -62,7 +58,38 @@ function format_duration(d) {
     return output;
 }
 
-function create_scatter_plot(svg, data){
+function get_race_point_class(data){
+	return function(d){
+		var classes=""
+		var min_time = d3.min(data, function(d){return d.time;});
+		var max_time = d3.max(data, function(d){return d.time;});
+		if(d.trail){
+			classes += " trail ";
+		}else{
+			classes += " no_trail ";
+		}
+
+		if(d.time === min_time){
+			classes += " min_time ";
+		}
+		if(d.time === max_time){
+			classes += " max_time ";
+		}
+		return classes;
+	};
+}
+
+function create_scatter_plot(DOM_id, data){
+	// append the svg obgect to the body of the page
+	// appends a 'group' element to 'svg'
+	// moves the 'group' element to the top left margin
+	var svg = d3.select(DOM_id).append("svg")
+		.attr("width", width + margin.left + margin.right)
+		.attr("height", height + margin.top + margin.bottom)
+		.append("g")
+		.attr("transform",
+			"translate(" + margin.left + "," + margin.top + ")");
+
 	var get_x = function(d){ return d.date;}
 	var get_y = function(d){ return d.time;}
 
@@ -72,7 +99,7 @@ function create_scatter_plot(svg, data){
 		.domain(d3.extent(data, get_x));
 	var y = d3.scaleLinear()
 		.range([height, 0])
-		.domain([d3.min(data, get_y), d3.max(data, get_y)]);
+		.domain(d3.extent(data, get_y));
 
 	var get_axis_x = function(d){ return x(get_x(d));}
 	var get_axis_y = function(d){ return y(get_y(d));}
@@ -94,7 +121,8 @@ function create_scatter_plot(svg, data){
 	.enter().append("circle")
 	.attr("r", 5)
 	.attr("cx", get_axis_x)
-	.attr("cy", get_axis_y);
+	.attr("cy", get_axis_y)
+	.attr("class",get_race_point_class(data));
 
 	// Add the X Axis
 	svg.append("g")

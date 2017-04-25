@@ -1,0 +1,19 @@
+.races_graph {
+    svg {
+        max-width: 100%;
+
+        .line {
+            fill: none;
+            stroke: steelblue;
+            stroke-width: 2 px;
+        }
+
+        .no_trail {
+            fill: #000000;
+        }
+
+        .trail {
+            fill: #44d62c;
+        }
+    }
+}

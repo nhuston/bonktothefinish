@@ -200,8 +200,11 @@ helpers do
       distance = race_type[0]
       info = race_type[1]
       #sort races by date
-      info.sort_by! do |race|
+      info.each do |race|
         race[:time] = ChronicDuration.parse(race[:time],:keep_zero => true)
+      end
+      info.sort_by! do |race|
+        race[:date]
       end
     end
     return new_info
