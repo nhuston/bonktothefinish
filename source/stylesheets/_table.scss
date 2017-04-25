@@ -20,6 +20,12 @@ table {
         }
     }
 
+    .line {
+        fill: none;
+        stroke: steelblue;
+        stroke-width: 2px;
+    }
+
     thead {
         font-weight: bold;
         @include media-query($on-laptop) {

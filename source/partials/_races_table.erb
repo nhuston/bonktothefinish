@@ -1,17 +1,10 @@
 
 <%
 note_idx = 1
-
-data.races_info.each do |race_type|
+race_data = processed_races_info()
+race_data.each do |race_type|
   distance = race_type[0]
   info = race_type[1]
-  %>
-
-  <%
-  #sort races by date
-  info.sort_by! do |item|
-    item[:date]
-  end
   %>
 
   <!-- Do not create table if there are 0 elements in it-->
@@ -22,7 +15,7 @@ data.races_info.each do |race_type|
   <%
   avg_time = 0
   info.each do |race|
-    avg_time += ChronicDuration.parse(race.time)
+    avg_time += race.time.to_f()
   end
   avg_time /= info.length
   avg_time = avg_time.round(2)
@@ -46,7 +39,7 @@ data.races_info.each do |race_type|
   <% info.each do |race|
       #initialize the values
       name = race.name ? race.name :  ""
-      time = race.time ? race.time :  ""
+      time = race.time ? ChronicDuration.output(race.time,:format => :chrono) :  ""
       date = race.date ? race.date :  ""
       location = race.location ? race.location :  ""
       trail = race.trail ? "Yes" :  "No"
@@ -83,7 +76,7 @@ data.races_info.each do |race_type|
 <h2>Notes</h2>
 <%
 note_idx = 1
-data.races_info.each do |race_type|
+race_data.each do |race_type|
   distance = race_type[0]
   info = race_type[1]
   %>
