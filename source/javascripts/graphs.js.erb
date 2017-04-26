@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function(e) {
 });
 
 function race_id(distance){
-	return "#graph_"+ distance.replace(".","").replace(" ","_");
+	return "#graph_" + distance.replace(".","").replace(" ","_");
 }
 
 
@@ -42,7 +42,8 @@ var parseDate = d3.timeParse("%Y-%m-%d");
 
 // preprocess/format the data
 for(race_name in races){
-	for(race of races[race_name]){
+	for(var i=0;i<races[race_name].length;i++ ){
+		var race = races[race_name][i];
 		race.date = parseDate(race.date);
 		race.time = (race.time);
 	}
