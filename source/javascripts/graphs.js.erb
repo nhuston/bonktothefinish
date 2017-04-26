@@ -2,13 +2,13 @@ var races = <%= processed_races_info().to_json %>;
 console.log(races);
 
 document.addEventListener("DOMContentLoaded", function(e) {
-	for(race in races){
-		create_scatter_plot(race_id(race),races[race]);
-	}
+    for (race in races) {
+        create_scatter_plot(race_id(race), races[race]);
+    }
 });
 
-function race_id(distance){
-	return "#graph_" + distance.replace(".","").replace(" ","_");
+function race_id(distance) {
+    return "#graph_" + distance.replace(".", "").replace(" ", "_");
 }
 
 
@@ -16,16 +16,6 @@ function race_id(distance){
 D3 examples adapted from
 https://bl.ocks.org/d3noob/6f082f0e3b820b6bf68b78f2f7786084
 */
-
-// Set the dimensions of the canvas / graph
-var margin = {
-        top: 30,
-        right: 20,
-        bottom: 30,
-        left: 50
-    },
-    width = 600 - margin.left - margin.right,
-    height = 270 - margin.top - margin.bottom;
 
 // set the dimensions and margins of the graph
 var margin = {
@@ -35,21 +25,18 @@ var margin = {
         left: 50
     },
     width = 960 - margin.left - margin.right,
-    height = 500 - margin.top - margin.bottom;
+    height = 700 - margin.top - margin.bottom;
 
 // parse the date / time
 var parseDate = d3.timeParse("%Y-%m-%d");
 
 // preprocess/format the data
-for(race_name in races){
-	for(var i=0;i<races[race_name].length;i++ ){
-		var race = races[race_name][i];
-		race.date = parseDate(race.date);
-		race.time = (race.time);
-	}
-	races[race_name].sort(function(a,b){
-		return a.date - b.date;
-	});
+for (race_name in races) {
+    for (var i = 0; i < races[race_name].length; i++) {
+        var race = races[race_name][i];
+        race.date = parseDate(race.date);
+        race.time = (race.time);
+    }
 }
 
 //d3 only has date formatters for time, not durations. So must write own linear axis formatter
@@ -67,83 +54,127 @@ function format_duration(d) {
     return output;
 }
 
-function get_race_point_class(data){
-	return function(d){
-		var classes=""
-		var min_time = d3.min(data, function(d){return d.time;});
-		var max_time = d3.max(data, function(d){return d.time;});
-		if(d.trail){
-			classes += " trail ";
-		}else{
-			classes += " no_trail ";
-		}
+function get_race_point_class(data) {
+    return function(d) {
+        var classes = ""
+        var min_time = d3.min(data, function(d) {
+            return d.time;
+        });
+        var max_time = d3.max(data, function(d) {
+            return d.time;
+        });
+        if (d.trail) {
+            classes += " trail ";
+        } else {
+            classes += " no_trail ";
+        }
 
-		if(d.time === min_time){
-			classes += " min_time ";
-		}
-		if(d.time === max_time){
-			classes += " max_time ";
-		}
-		return classes;
-	};
+        if (d.time === min_time) {
+            classes += " min_time ";
+        }
+        if (d.time === max_time) {
+            classes += " max_time ";
+        }
+        return classes;
+    };
 }
 
-function create_scatter_plot(DOM_id, data){
-	// append the svg obgect to the body of the page
-	// appends a 'group' element to 'svg'
-	// moves the 'group' element to the top left margin
-	var svg = d3.select(DOM_id).append("svg")
-		//.attr("width", width + margin.left + margin.right)
-		//.attr("height", height + margin.top + margin.bottom)
-    .attr('viewBox','0 0 '+(width + margin.left + margin.right)+' '+(height + margin.top + margin.bottom)) //make responsive
-    .attr('preserveAspectRatio','xMinYMin') //make responsive
-		.append("g")
-		.attr("transform",
-			"translate(" + margin.left + "," + margin.top + ")");
+function create_d3_line(data, svg, get_x, get_y, css_class) {
+    css_class = css_class || "";
 
-	var get_x = function(d){ return d.date;}
-	var get_y = function(d){ return d.time;}
+    // define the line
+    var valueline = d3.line()
+        .x(get_x)
+        .y(get_y);
 
-	// set the ranges
-	var x = d3.scaleTime()
-		.range([0, width])
-		.domain(d3.extent(data, get_x));
-	var y = d3.scaleLinear()
-		.range([height, 0])
-		.domain(d3.extent(data, get_y));
+    // Add the valueline path.
+    svg.append("path")
+        .data([data])
+        .attr("class", "line " + css_class)
+        .attr("d", valueline);
+}
 
-	var get_axis_x = function(d){ return x(get_x(d));}
-	var get_axis_y = function(d){ return y(get_y(d));}
+function get_all_data_with_x(data, accessor) {
+    var new_data = [];
+    for (var i in data) {
+        var pt = data[i];
+        if (accessor(pt)) {
+            new_data.push(pt);
+        }
+    }
+    new_data.sort(function(a, b) {
+        return a.date - b.date;
+    });
+    return new_data;
+}
 
-	// define the line
-	var valueline = d3.line()
-		.x(get_axis_x)
-		.y(get_axis_y);
+function create_scatter_plot(DOM_id, data) {
+    // append the svg obgect to the body of the page
+    // appends a 'group' element to 'svg'
+    // moves the 'group' element to the top left margin
+    var svg = d3.select(DOM_id).append("svg")
+        //.attr("width", width + margin.left + margin.right)
+        //.attr("height", height + margin.top + margin.bottom)
+        .attr('viewBox', '0 0 ' + (width + margin.left + margin.right) + ' ' + (height + margin.top + margin.bottom)) //make responsive
+        .attr('preserveAspectRatio', 'xMinYMin') //make responsive
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
 
-	// Add the valueline path.
-	svg.append("path")
-	.data([data])
-	.attr("class", "line")
-	.attr("d", valueline);
+    var get_x = function(d) {
+        return d.date;
+    }
+    var get_y = function(d) {
+        return d.time;
+    }
 
-	// Add the scatterplot
-	svg.selectAll("dot")
-	.data(data)
-	.enter().append("circle")
-	.attr("r", 5)
-	.attr("cx", get_axis_x)
-	.attr("cy", get_axis_y)
-	.attr("class",get_race_point_class(data));
+    // set the ranges
+    var x = d3.scaleTime()
+        .range([0, width])
+        .domain(d3.extent(data, get_x));
+    var y = d3.scaleLinear()
+        .range([height, 0])
+        .domain(d3.extent(data, get_y));
 
-	// Add the X Axis
-	svg.append("g")
-	.attr("transform", "translate(0," + height + ")")
-	.call(d3.axisBottom(x));
+    var get_axis_x = function(d) {
+        return x(get_x(d));
+    }
+    var get_axis_y = function(d) {
+        return y(get_y(d));
+    }
 
-	// Add the Y Axis
-	svg.append("g")
-	.call(
-		d3.axisLeft(y)
-		.tickFormat(format_duration)
-	);
+    var trail_races = get_all_data_with_x(data, function(d) {
+        return d.trail;
+    });
+    var not_trail_races = get_all_data_with_x(data, function(d) {
+        return !d.trail;
+    });
+    if (trail_races.length > 1) {
+        create_d3_line(trail_races, svg, get_axis_x, get_axis_y, " line_trail ");
+    }
+    if (not_trail_races.length > 1) {
+        create_d3_line(not_trail_races, svg, get_axis_x, get_axis_y, " line_no_trail ");
+    }
+
+
+    // Add the scatterplot
+    svg.selectAll("dot")
+        .data(data)
+        .enter().append("circle")
+        .attr("r", 5)
+        .attr("cx", get_axis_x)
+        .attr("cy", get_axis_y)
+        .attr("class", get_race_point_class(data));
+
+    // Add the X Axis
+    svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(x));
+
+    // Add the Y Axis
+    svg.append("g")
+        .call(
+            d3.axisLeft(y)
+            .tickFormat(format_duration)
+        );
 }

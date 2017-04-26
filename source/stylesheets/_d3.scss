@@ -4,16 +4,23 @@
 
         .line {
             fill: none;
-            stroke: steelblue;
             stroke-width: 2 px;
         }
 
-        .no_trail {
-            fill: #000000;
+        .line_trail {
+            stroke: $graph-trail-color;
         }
 
         .trail {
-            fill: #44d62c;
+            fill: $graph-trail-color;
+        }
+
+        .line_no_trail {
+            stroke: $graph-street-color;
+        }
+
+        .no_trail {
+            fill: $graph-street-color;
         }
     }
 }
