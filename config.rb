@@ -178,6 +178,10 @@ helpers do
     return data.tags.last #default is the last item - "other"/"misc"
    end
 
+   def graph_id(race)
+     return race.sub(".","").sub(" ","_")
+   end
+
    def get_article_img(article_tags)
      tag_info = get_tag_info(article_tags)
 

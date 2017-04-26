@@ -1,9 +1,16 @@
-document.addEventListener("DOMContentLoaded", function(e) {
-	create_scatter_plot("#graph_5K",races["5K"]);
-});
-
 var races = <%= processed_races_info().to_json %>;
 console.log(races);
+
+document.addEventListener("DOMContentLoaded", function(e) {
+	for(race in races){
+		create_scatter_plot(race_id(race),races[race]);
+	}
+});
+
+function race_id(distance){
+	return "#graph_"+ distance.replace(".","").replace(" ","_");
+}
+
 
 /*
 D3 examples adapted from
@@ -85,8 +92,8 @@ function create_scatter_plot(DOM_id, data){
 	// appends a 'group' element to 'svg'
 	// moves the 'group' element to the top left margin
 	var svg = d3.select(DOM_id).append("svg")
-		.attr("width", width + margin.left + margin.right)
-		.attr("height", height + margin.top + margin.bottom)
+		//.attr("width", width + margin.left + margin.right)
+		//.attr("height", height + margin.top + margin.bottom)
     .attr('viewBox','0 0 '+(width + margin.left + margin.right)+' '+(height + margin.top + margin.bottom)) //make responsive
     .attr('preserveAspectRatio','xMinYMin') //make responsive
 		.append("g")

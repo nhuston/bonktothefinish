@@ -1,93 +1,63 @@
+<%
+note_idx=1
+%>
+
+<!-- Do not create table if there are 0 elements in it-->
+<% if info.length > 0 %>
 
 <%
-note_idx = 1
-race_data = processed_races_info()
-race_data.each do |race_type|
-  distance = race_type[0]
-  info = race_type[1]
-  %>
+avg_time = 0
+info.each do |race|
+  avg_time += race.time.to_f()
+end
+avg_time /= info.length
+avg_time = avg_time.round(2)
+%>
+<p class="center"><%= info.length %> Races -- Average Time <%= ChronicDuration.output(avg_time,:format => :short) %></p>
 
-  <!-- Do not create table if there are 0 elements in it-->
-  <% if info.length > 0 %>
+<table>
+  <thead>
+    <tr>
+       <th>Race</th>
+       <th>Time</th>
+       <th>Date</th>
+       <th>Place</th>
+       <th>Trail</th>
+       <th>Notes</th>
+    </tr>
+  </thead>
 
-  <h2><%= distance %></h2>
+  <tbody>
 
-  <%
-  avg_time = 0
-  info.each do |race|
-    avg_time += race.time.to_f()
-  end
-  avg_time /= info.length
-  avg_time = avg_time.round(2)
-  %>
-  <p class="center"><%= info.length %> Races -- Average Time <%= ChronicDuration.output(avg_time,:format => :short) %></p>
+<% info.each do |race|
+    #initialize the values
+    name = race.name ? race.name :  ""
+    time = race.time ? ChronicDuration.output(race.time,:format => :chrono) :  ""
+    date = race.date ? race.date :  ""
+    location = race.location ? race.location :  ""
+    trail = race.trail ? "Yes" :  "No"
 
-  <table>
-    <thead>
-      <tr>
-         <th>Race</th>
-         <th>Time</th>
-         <th>Date</th>
-         <th>Place</th>
-         <th>Trail</th>
-         <th>Notes</th>
-      </tr>
-    </thead>
-
-    <tbody>
-
-  <% info.each do |race|
-      #initialize the values
-      name = race.name ? race.name :  ""
-      time = race.time ? ChronicDuration.output(race.time,:format => :chrono) :  ""
-      date = race.date ? race.date :  ""
-      location = race.location ? race.location :  ""
-      trail = race.trail ? "Yes" :  "No"
-
-      if race.notes then
-        notes = "<a href=\"#note_#{note_idx}\">#{note_idx}</a>"
-        note_idx +=1
-      end
-      notes ||= ""
-
-      if race.blog_link then
-        name = "<a href=\"/blog/#{race.blog_link}\">#{name}</a>"
-      end
-      %>
-      <tr>
-         <th><%= name %></th>
-         <th><%= time %></th>
-         <th><%= date %></th>
-         <th><%= location %></th>
-         <th><%= trail %></th>
-         <th><%= notes %></th>
-      </tr>
-    <% end %>
-
-    </tbody>
-  </table>
-
-  <% end %>
-<% end %>
-
-<br/>
-
-<!-- Loop over the races again, adding the required links for each discovered note -->
-<h2>Notes</h2>
-<%
-note_idx = 1
-race_data.each do |race_type|
-  distance = race_type[0]
-  info = race_type[1]
-  %>
-  <% info.each do |race|
     if race.notes then
-      notes = "<p id=\"note_#{note_idx}\">#{note_idx} - #{race.name}: #{race.notes}</p>"
+      notes = "<a href=\"#note_#{distance}_#{note_idx}\">#{note_idx}</a>"
       note_idx +=1
     end
+    notes ||= ""
+
+    if race.blog_link then
+      name = "<a href=\"/blog/#{race.blog_link}\">#{name}</a>"
+    end
     %>
-
-<%= notes %>
-
+    <tr>
+       <th><%= name %></th>
+       <th><%= time %></th>
+       <th><%= date %></th>
+       <th><%= location %></th>
+       <th><%= trail %></th>
+       <th title="<%= race.notes %>"><%= notes %></th>
+    </tr>
   <% end %>
+
+  </tbody>
+</table>
+
 <% end %>

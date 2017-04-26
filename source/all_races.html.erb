@@ -1,0 +1,37 @@
+<% content_for :head do
+  js = javascript_include_tag "https://d3js.org/d3.v4.min.js", "graphs"
+end %>
+
+<% race_infos = processed_races_info()%>
+
+
+<% race_infos.each do |race_type|
+  distance = race_type[0]
+  info = race_type[1]
+  %>
+  <% if info.length > 0 %>
+    <h2><%= distance %></h2>
+    <% if info.length > 1 %> <div class="races_graph" id="graph_<%= graph_id(distance) %>"></div> <% end %>
+    <%= partial "partials/races_table.erb", locals: {
+        distance: distance,
+        info: info
+    } %>
+  <% end %>
+<% end %>
+
+<h2>Notes</h2>
+
+<% race_infos.each do |race_type|
+  distance = race_type[0]
+  info = race_type[1]
+  %>
+  <% if info.length > 0%>
+
+    <h3><%= distance %></h3>
+    <%= partial "partials/race_notes.erb", locals: {
+        distance: distance,
+        info: info
+    } %>
+
+  <% end %>
+<% end %>
