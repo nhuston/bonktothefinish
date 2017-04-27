@@ -22,7 +22,7 @@ var margin = {
         top: 20,
         right: 20,
         bottom: 30,
-        left: 50
+        left: 100
     },
     width = 960 - margin.left - margin.right,
     height = 700 - margin.top - margin.bottom;
@@ -41,17 +41,33 @@ for (race_name in races) {
 
 //d3 only has date formatters for time, not durations. So must write own linear axis formatter
 function format_duration(d) {
-    var hours = Math.floor(d / 3600),
-        minutes = Math.floor((d - (hours * 3600)) / 60),
-        seconds = d - (minutes * 60);
-    var output = seconds + 's';
-    if (minutes) {
-        output = minutes + 'm ' + output;
-    }
-    if (hours) {
-        output = hours + 'h ' + output;
-    }
-    return output;
+  var dateFuture = new Date();
+  dateFuture.setSeconds(dateFuture.getSeconds() + d);
+  var dateNow = new Date();
+
+  var seconds = Math.floor((dateFuture - (dateNow))/1000);
+  var minutes = Math.floor(seconds/60);
+  var hours = Math.floor(minutes/60);
+  var days = Math.floor(hours/24);
+
+  hours = hours-(days*24);
+  minutes = minutes-(days*24*60)-(hours*60);
+  seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
+
+  var output = "";
+  if(days){
+    output += days+'d ';
+  }
+  if(hours){
+    output += hours+'h ';
+  }
+  if(minutes){
+    output += minutes+'m ';
+  }
+  if(seconds){
+    output += seconds+'s';
+  }
+  return output;
 }
 
 function get_race_point_class(data) {
@@ -161,7 +177,7 @@ function create_scatter_plot(DOM_id, data) {
     svg.selectAll("dot")
         .data(data)
         .enter().append("circle")
-        .attr("r", 5)
+        .attr("r", 8)
         .attr("cx", get_axis_x)
         .attr("cy", get_axis_y)
         .attr("class", get_race_point_class(data));
@@ -169,12 +185,17 @@ function create_scatter_plot(DOM_id, data) {
     // Add the X Axis
     svg.append("g")
         .attr("transform", "translate(0," + height + ")")
-        .call(d3.axisBottom(x));
+        .call(
+          d3.axisBottom(x)
+            .ticks(5)
+        )
+        .style("font-size","20px");
 
     // Add the Y Axis
     svg.append("g")
         .call(
             d3.axisLeft(y)
-            .tickFormat(format_duration)
-        );
+              .tickFormat(format_duration)
+        )
+        .style("font-size","18px");
 }
