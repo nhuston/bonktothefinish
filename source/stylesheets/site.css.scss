@@ -4,7 +4,7 @@ $icon-len: 1rem;
 $small-icon-len: 1em;
 $sidebar-desktop-width: 25%;
 $margin: 0.67em;
-$width-max: 780px;
+$width-max: 1000px;
 $outline: 0 0 6px #000,0 0 6px #000,0 0 6px #000;
 $base-font-size: 21px;
 $footer-padding: 1em;
@@ -31,4 +31,4 @@ $card-p-size: 1.2em;
     }
 }
 @import "colors";
-@import "global","table","card","footer","header_site","buttons","post_summary";
+@import "global","table","d3","card","footer","header_site","buttons","post_summary";

@@ -1,0 +1,243 @@
+var races = <%= processed_races_info().to_json %>;
+console.log(races);
+
+document.addEventListener("DOMContentLoaded", function(e) {
+    for (race in races) {
+      if(races[race].length > 2){
+        create_scatter_plot(race_id(race), races[race]);
+      }
+    }
+});
+
+function race_id(distance) {
+    return "#graph_" + distance.replace(".", "").replace(" ", "_");
+}
+
+
+/*
+D3 examples adapted from
+https://bl.ocks.org/d3noob/6f082f0e3b820b6bf68b78f2f7786084
+*/
+
+// set the dimensions and margins of the graph
+var margin = {
+        top: 20,
+        right: 20,
+        bottom: 30,
+        left: 100
+    },
+    width = 960 - margin.left - margin.right,
+    height = 700 - margin.top - margin.bottom;
+
+// parse the date / time
+var parseDate = d3.timeParse("%Y-%m-%d");
+
+// preprocess/format the data
+for (race_name in races) {
+    for (var i = 0; i < races[race_name].length; i++) {
+        var race = races[race_name][i];
+        race.date = parseDate(race.date);
+        race.time = (race.time);
+    }
+}
+
+//d3 only has date formatters for time, not durations. So must write own linear axis formatter
+function format_duration(d) {
+  var dateFuture = new Date();
+  dateFuture.setSeconds(dateFuture.getSeconds() + d);
+  var dateNow = new Date();
+
+  var seconds = Math.floor((dateFuture - (dateNow))/1000);
+  var minutes = Math.floor(seconds/60);
+  var hours = Math.floor(minutes/60);
+  var days = Math.floor(hours/24);
+
+  hours = hours-(days*24);
+  minutes = minutes-(days*24*60)-(hours*60);
+  seconds = seconds-(days*24*60*60)-(hours*60*60)-(minutes*60);
+
+  var output = "";
+  if(days){
+    output += days+'d ';
+  }
+  if(hours){
+    output += hours+'h ';
+  }
+  if(minutes){
+    output += minutes+'m ';
+  }
+  if(seconds){
+    output += seconds+'s';
+  }
+  return output;
+}
+
+//source: https://dillieodigital.wordpress.com/2013/01/16/quick-tip-how-to-draw-a-star-with-svg-and-javascript/
+function CalculateStarPoints(centerX, centerY, arms, outerRadius, innerRadius)
+{
+   var results = "";
+
+   var angle = Math.PI / arms;
+
+   for (var i = 0; i < 2 * arms; i++)
+   {
+      // Use outer or inner radius depending on what iteration we are in.
+      var r = (i & 1) == 0 ? outerRadius : innerRadius;
+
+      var currX = centerX + Math.cos(i * angle) * r;
+      var currY = centerY + Math.sin(i * angle) * r;
+
+      // Our first time we simply append the coordinates, subsequet times
+      // we append a ", " to distinguish each coordinate pair.
+      if (i == 0)
+      {
+         results = currX + "," + currY;
+      }
+      else
+      {
+         results += ", " + currX + "," + currY;
+      }
+   }
+
+   return results;
+}
+
+function get_race_point_class(data, min_time_race, max_time_race) {
+    return function(d) {
+        var classes = "";
+        if (d.trail) {
+            classes += " trail ";
+        } else {
+            classes += " no_trail ";
+        }
+
+        if (d.time === min_time_race.time) {
+            classes += " min_time ";
+        }
+        if (d.time === max_time_race.time) {
+            classes += " max_time ";
+        }
+        return classes;
+    };
+}
+
+function create_d3_line(data, svg, get_x, get_y, css_class) {
+    css_class = css_class || "";
+
+    // define the line
+    var valueline = d3.line()
+        .x(get_x)
+        .y(get_y);
+
+    // Add the valueline path.
+    svg.append("path")
+        .data([data])
+        .attr("class", "line " + css_class)
+        .attr("d", valueline);
+}
+
+function get_all_data_with_x(data, accessor) {
+    var new_data = [];
+    for (var i in data) {
+        var pt = data[i];
+        if (accessor(pt)) {
+            new_data.push(pt);
+        }
+    }
+    new_data.sort(function(a, b) {
+        return a.date - b.date;
+    });
+    return new_data;
+}
+
+function create_scatter_plot(DOM_id, data) {
+    // append the svg obgect to the body of the page
+    // appends a 'group' element to 'svg'
+    // moves the 'group' element to the top left margin
+    var svg = d3.select(DOM_id).append("svg")
+        //.attr("width", width + margin.left + margin.right)
+        //.attr("height", height + margin.top + margin.bottom)
+        .attr('viewBox', '0 0 ' + (width + margin.left + margin.right) + ' ' + (height + margin.top + margin.bottom)) //make responsive
+        .attr('preserveAspectRatio', 'xMinYMin') //make responsive
+        .append("g")
+        .attr("transform",
+            "translate(" + margin.left + "," + margin.top + ")");
+
+    var get_x = function(d) {
+        return d.date;
+    }
+    var get_y = function(d) {
+        return d.time;
+    }
+    var min_time_race_idx = d3.scan(data, function(a, b) { return a.time - b.time; });
+    var max_time_race_idx = d3.scan(data, function(a, b) { return b.time - a.time; });
+    var min_time_race = data[min_time_race_idx];
+    var max_time_race = data[min_time_race_idx];
+
+    // set the ranges
+    var x_domain = d3.extent(data, get_x);
+    var y_domain = d3.extent(data, get_y);
+    y_domain[0] -= 30; //add some margin on the ends of the domains
+    y_domain[1] += 30;
+    var x = d3.scaleTime()
+        .range([0, width])
+        .domain(x_domain);
+    var y = d3.scaleLinear()
+        .range([height, 0])
+        .domain(y_domain);
+
+    var get_axis_x = function(d) {
+        return x(get_x(d));
+    }
+    var get_axis_y = function(d) {
+        return y(get_y(d));
+    }
+
+    var trail_races = get_all_data_with_x(data, function(d) {
+        return d.trail;
+    });
+    var not_trail_races = get_all_data_with_x(data, function(d) {
+        return !d.trail;
+    });
+    if (trail_races.length > 1) {
+        create_d3_line(trail_races, svg, get_axis_x, get_axis_y, " line_trail ");
+    }
+    if (not_trail_races.length > 1) {
+        create_d3_line(not_trail_races, svg, get_axis_x, get_axis_y, " line_no_trail ");
+    }
+
+
+    // Add the scatterplot
+    svg.selectAll("dot")
+        .data(data)
+        .enter().append("circle")
+        .attr("r", 8)
+        .attr("cx", get_axis_x)
+        .attr("cy", get_axis_y)
+        .attr("class", get_race_point_class(data,min_time_race,max_time_race));
+    svg.selectAll("dot")
+        .data([min_time_race])
+        .enter().append("svg:polygon")
+        .attr("points", CalculateStarPoints(
+          get_axis_x(min_time_race),
+          get_axis_y(min_time_race),
+          5, 8, 20))
+        .attr("class", get_race_point_class(data,min_time_race,max_time_race));
+
+    // Add the X Axis
+    svg.append("g")
+        .attr("transform", "translate(0," + height + ")")
+        .call(
+          d3.axisBottom(x)
+            .ticks(5)
+        )
+        .style("font-size","20px");
+
+    // Add the Y Axis
+    svg.append("g")
+        .call(
+            d3.axisLeft(y)
+              .tickFormat(format_duration)
+        )
+        .style("font-size","18px");
+}

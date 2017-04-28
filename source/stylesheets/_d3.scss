@@ -1,0 +1,30 @@
+.races_graph {
+    svg {
+        max-width: 100%;
+
+        .line {
+            fill: none;
+            stroke-width: 5px;
+        }
+
+        .line_trail {
+            stroke: $graph-trail-color;
+        }
+
+        .trail {
+            fill: $graph-trail-color;
+        }
+
+        .line_no_trail {
+            stroke: $graph-street-color;
+        }
+
+        .no_trail {
+            fill: $graph-street-color;
+        }
+
+        .min_time {
+            fill: red;
+        }
+    }
+}

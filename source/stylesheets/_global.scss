@@ -54,7 +54,24 @@ body {
 //main site content inside the wrap
 
 main {
+    max-width: $width-max;
+
     .content {
+        figure {
+            img {
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
+                max-height: 425px;
+            }
+
+            figcaption {
+                text-align: center;
+                font-size: 0.95rem;
+                margin: $margin 0;
+            }
+        }
+
         h1:first-child,
         section:first-child {
             margin-top: 0;
@@ -139,23 +156,6 @@ iframe {
 
 .center {
     text-align: center;
-}
-
-.content {
-    figure {
-        img {
-            display: block;
-            margin: 0 auto;
-            max-width: 100%;
-            max-height: 425px;
-        }
-
-        figcaption {
-            text-align: center;
-            font-size: 0.95rem;
-            margin: $margin 0;
-        }
-    }
 }
 
 .index {

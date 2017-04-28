@@ -178,6 +178,10 @@ helpers do
     return data.tags.last #default is the last item - "other"/"misc"
    end
 
+   def graph_id(race)
+     return race.sub(".","").sub(" ","_")
+   end
+
    def get_article_img(article_tags)
      tag_info = get_tag_info(article_tags)
 
@@ -191,6 +195,23 @@ helpers do
   def img_link(img_url, img_alt, url, title, css_class,target = "_blank",id="")
     img = app.image_tag img_url, alt: img_alt
     link = app.link_to img, url, title: title,target: target, class: css_class, id: id
+  end
+
+  def processed_races_info()
+    # pre-parse data.races_info times
+    new_info = data.races_info.deep_dup()
+    new_info.each do |race_type|
+      distance = race_type[0]
+      info = race_type[1]
+      #sort races by date
+      info.each do |race|
+        race[:time] = ChronicDuration.parse(race[:time],:keep_zero => true)
+      end
+      info.sort_by! do |race|
+        race[:date]
+      end
+    end
+    return new_info
   end
  end
 
@@ -216,4 +237,9 @@ after_build do |builder|
   rescue RuntimeError => e
     puts e
   end
+end
+
+def after_configuration
+  # add your pre-build, post config.rb execution code here...
+  preprocess_races_info()
 end

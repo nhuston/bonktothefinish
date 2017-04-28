@@ -1,0 +1,13 @@
+<%
+note_idx = 1
+notes = ""
+%>
+<% info.each do |race|
+  if race.notes then
+    notes += "<p id=\"note_#{distance}_#{note_idx}\">#{note_idx} - #{race.name}: #{race.notes}</p>"
+    note_idx +=1
+  end
+end
+  %>
+
+<%= notes %>
