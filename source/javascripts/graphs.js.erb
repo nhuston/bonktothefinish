@@ -3,7 +3,9 @@ console.log(races);
 
 document.addEventListener("DOMContentLoaded", function(e) {
     for (race in races) {
+      if(races[race].length > 2){
         create_scatter_plot(race_id(race), races[race]);
+      }
     }
 });
 
@@ -70,25 +72,49 @@ function format_duration(d) {
   return output;
 }
 
-function get_race_point_class(data) {
+//source: https://dillieodigital.wordpress.com/2013/01/16/quick-tip-how-to-draw-a-star-with-svg-and-javascript/
+function CalculateStarPoints(centerX, centerY, arms, outerRadius, innerRadius)
+{
+   var results = "";
+
+   var angle = Math.PI / arms;
+
+   for (var i = 0; i < 2 * arms; i++)
+   {
+      // Use outer or inner radius depending on what iteration we are in.
+      var r = (i & 1) == 0 ? outerRadius : innerRadius;
+
+      var currX = centerX + Math.cos(i * angle) * r;
+      var currY = centerY + Math.sin(i * angle) * r;
+
+      // Our first time we simply append the coordinates, subsequet times
+      // we append a ", " to distinguish each coordinate pair.
+      if (i == 0)
+      {
+         results = currX + "," + currY;
+      }
+      else
+      {
+         results += ", " + currX + "," + currY;
+      }
+   }
+
+   return results;
+}
+
+function get_race_point_class(data, min_time_race, max_time_race) {
     return function(d) {
-        var classes = ""
-        var min_time = d3.min(data, function(d) {
-            return d.time;
-        });
-        var max_time = d3.max(data, function(d) {
-            return d.time;
-        });
+        var classes = "";
         if (d.trail) {
             classes += " trail ";
         } else {
             classes += " no_trail ";
         }
 
-        if (d.time === min_time) {
+        if (d.time === min_time_race.time) {
             classes += " min_time ";
         }
-        if (d.time === max_time) {
+        if (d.time === max_time_race.time) {
             classes += " max_time ";
         }
         return classes;
@@ -143,14 +169,22 @@ function create_scatter_plot(DOM_id, data) {
     var get_y = function(d) {
         return d.time;
     }
+    var min_time_race_idx = d3.scan(data, function(a, b) { return a.time - b.time; });
+    var max_time_race_idx = d3.scan(data, function(a, b) { return b.time - a.time; });
+    var min_time_race = data[min_time_race_idx];
+    var max_time_race = data[min_time_race_idx];
 
     // set the ranges
+    var x_domain = d3.extent(data, get_x);
+    var y_domain = d3.extent(data, get_y);
+    y_domain[0] -= 30; //add some margin on the ends of the domains
+    y_domain[1] += 30;
     var x = d3.scaleTime()
         .range([0, width])
-        .domain(d3.extent(data, get_x));
+        .domain(x_domain);
     var y = d3.scaleLinear()
         .range([height, 0])
-        .domain(d3.extent(data, get_y));
+        .domain(y_domain);
 
     var get_axis_x = function(d) {
         return x(get_x(d));
@@ -180,7 +214,15 @@ function create_scatter_plot(DOM_id, data) {
         .attr("r", 8)
         .attr("cx", get_axis_x)
         .attr("cy", get_axis_y)
-        .attr("class", get_race_point_class(data));
+        .attr("class", get_race_point_class(data,min_time_race,max_time_race));
+    svg.selectAll("dot")
+        .data([min_time_race])
+        .enter().append("svg:polygon")
+        .attr("points", CalculateStarPoints(
+          get_axis_x(min_time_race),
+          get_axis_y(min_time_race),
+          5, 8, 20))
+        .attr("class", get_race_point_class(data,min_time_race,max_time_race));
 
     // Add the X Axis
     svg.append("g")
