@@ -3,7 +3,7 @@ console.log(races);
 
 document.addEventListener("DOMContentLoaded", function(e) {
     for (race in races) {
-      if(races[race].length > 2){
+      if(races[race].length > 1){
         create_scatter_plot(race_id(race), races[race]);
       }
     }
