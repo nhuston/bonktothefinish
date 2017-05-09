@@ -1,7 +1,7 @@
 {
     "5K": [{
             "name": "5th Line 5k",
-            "location": "Nationwide Arena, Columbus, Ohio",
+            "location": "Columbus, OH",
             "date": "2017-02-05",
             "trail": false,
             "time": "20:52",
@@ -10,7 +10,7 @@
         },
         {
             "name": "Be Tucson Women's 5k",
-            "location": "Tucson, Arizona",
+            "location": "Tucson, AZ",
             "date": "2015-02-05",
             "trail": false,
             "time": "22:31.9",
@@ -18,14 +18,14 @@
         },
         {
             "name": "First on the First",
-            "location": "Westerville, Ohio",
+            "location": "Westerville, OH",
             "date": "2015-01-01",
             "trail": false,
             "time": "22:46"
         },
         {
             "name": "First on the First",
-            "location": "Westerville, Ohio",
+            "location": "Westerville, OH",
             "date": "2016-01-01",
             "trail": false,
             "time": "21:35",
@@ -33,7 +33,7 @@
         },
         {
             "name": "5th Line 5k",
-            "location": "Nationwide Arena, Columbus, Ohio",
+            "location": "Columbus, OH",
             "date": "2016-01-23",
             "trail": false,
             "time": "21:19",
@@ -41,7 +41,7 @@
         },
         {
             "name": "Thanksgiving Cross-Country",
-            "location": "Tucson, Arizona",
+            "location": "Tucson, AZ",
             "date": "2013-11-28",
             "trail": false,
             "time": "28:02",
@@ -49,7 +49,7 @@
         },
         {
             "name": "Orange out the Door",
-            "location": "Lewis Center, Ohio",
+            "location": "Lewis Center, OH",
             "date": "2017-03-11",
             "trail": false,
             "time": "21:44",
@@ -58,7 +58,7 @@
         },
         {
             "name": "Winter Run",
-            "location": "Granville, Ohio",
+            "location": "Granville, OH",
             "date": "2016-02-28",
             "trail": false,
             "time": "23:15",
@@ -66,7 +66,7 @@
         },
         {
             "name": "Run for Everyone",
-            "location": "Lewis Center, Ohio",
+            "location": "Lewis Center, OH",
             "date": "2016-05-16",
             "trail": false,
             "time": "22:12",
@@ -74,7 +74,7 @@
         },
         {
             "name": "Field of Heroes 5k",
-            "location": "Westerville, Ohio",
+            "location": "Westerville, OH",
             "date": "2016-05-29",
             "trail": false,
             "time": "20:37",
@@ -83,7 +83,7 @@
         },
         {
             "name": "Jaeger Run for Pride",
-            "location": "Columbus, Ohio",
+            "location": "Columbus, OH",
             "date": "2016-06-17",
             "trail": false,
             "time": "20:34",
@@ -92,7 +92,7 @@
         },
         {
             "name": "July 4th Westerville Rotary Run",
-            "location": "Westerville, Ohio",
+            "location": "Westerville, OH",
             "date": "2016-07-04",
             "trail": false,
             "time": "21:17",
@@ -101,7 +101,7 @@
         },
         {
             "name": "On the Right Track 5k",
-            "location": "London, Ohio",
+            "location": "London, OH",
             "date": "2017-03-18",
             "trail": false,
             "time": "21:41.4",
@@ -139,6 +139,14 @@
             "trail": false,
             "time": "26:26",
             "notes": "Injured knee a few months prior, stiff for several days after this run. I could barely walk up stairs."
+        },
+        {
+            "name": "Pro Football HOF Legends 5K",
+            "location": "Canton, OH",
+            "date": "2017-04-29",
+            "trail": false,
+            "time": "22:07",
+            "blog_link": "legends-5k-race-report.html"
         }
     ],
     "6K": [{
@@ -449,13 +457,13 @@
         "notes": "First Marathon; recovering from 2 week long flu"
     }, {
         "name": "North Face Endurance Challenge - Madison",
-        "location": "Kettle Moraine State Park, Wisconsin",
+        "location": "Kettle Moraine State Park, WI",
         "date": "2016-09-17",
         "trail": true,
         "time": "6:29:23"
     }, {
         "name": "Warm Up Columbus",
-        "location": "Dublin, Ohio",
+        "location": "Dublin, OH",
         "date": "2017-02-19",
         "trail": false,
         "time": "4:12:03",
@@ -464,7 +472,7 @@
     }],
     "50K": [{
         "name": "Run for Regis",
-        "location": "Cuyahoga Valley National Park, Peninsula, Ohio",
+        "location": "Peninsula, OH",
         "date": "2017-01-28",
         "trail": true,
         "time": "06:53:49",
@@ -472,7 +480,7 @@
         "blog_link": "run-for-regis-50k-race-report.html"
     }, {
         "name": "Rocks and Roots",
-        "location": "Alum Creek State Park, Ohio",
+        "location": "Alum Creek State Park, OH",
         "date": "2017-01-08",
         "trail": true,
         "time": "06:23:36",
@@ -480,7 +488,7 @@
         "blog_link": "rocks-and-roots-race-report-1.html"
     }, {
         "name": "Rocks and Roots",
-        "location": "Alum Creek State Park, Ohio",
+        "location": "Alum Creek State Park, OH",
         "date": "2017-02-12",
         "trail": true,
         "time": "08:01:59",
@@ -511,10 +519,24 @@
         "trail": true,
         "time": "7:06:13.0",
         "blog_link": "tie-dye-50k-race-report.html"
+    }, {
+        "name": "Forget the PR",
+        "location": "Loudonville, OH",
+        "date": "2017-04-15",
+        "trail": true,
+        "time": "7:02:24",
+        "blog_link": "forget-the-pr-race-report.html"
+    }, {
+        "name": "Worlds End Ultramarathon",
+        "location": "Worlds End State Park, PA",
+        "date": "2016-05-21",
+        "trail": true,
+        "time": "7:44:56",
+        "blog_link": "worlds-end-50k-race-report.html"
     }],
     "60K": [{
         "name": "Hocking Hills Indian Run",
-        "location": "Hocking Hills, Ohio",
+        "location": "Hocking Hills, OH",
         "date": "2015-09-19",
         "trail": true,
         "time": "7:12:04",
@@ -522,7 +544,7 @@
     }],
     "50 miles": [{
         "name": "Burning River (100 DNF)",
-        "location": "Willoughby Hills, Ohio",
+        "location": "Willoughby Hills, OH",
         "date": "2016-08-06",
         "trail": true,
         "time": "12:17:46",
@@ -530,7 +552,7 @@
         "blog_link": "processing-a-dnf.html"
     },{
         "name": "Dawg Gone Long Run",
-        "location": "Caesar Creek State Park, Waynesville, Ohio",
+        "location": "Waynesville, OH",
         "date": "2016-06-25",
         "trail": true,
         "time": "12:02:00",
