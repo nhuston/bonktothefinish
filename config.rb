@@ -2,6 +2,7 @@
 # Page options, layouts, aliases and proxies
 ###
 require 'html-proofer'
+require 'builder'
 
 # Per-page layout changes:
 #
@@ -9,6 +10,7 @@ require 'html-proofer'
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page "/sitemap.xml", :layout => false
 
 set :markdown_engine, :kramdown
 set :markdown, parse_block_html: true
