@@ -469,6 +469,14 @@
         "time": "4:12:03",
         "notes": "10th female",
         "blog_link": "warm-up-columbus-race-report.html"
+    }, {
+        "name": "Pro Football Hall of Fame Marathon ",
+        "location": "Canton, Ohio",
+        "date": "2017-04-30",
+        "trail": false,
+        "time": "4:02:18",
+        "notes": "10th marathon",
+        "blog_link": "pro-football-hof-marathon-race-report.html"
     }],
     "50K": [{
         "name": "Run for Regis",
