@@ -16,10 +16,15 @@ else
   title = "BonkToTheFinish"
 end
 
+keywords = ""
+if current_page.data.dig(:keywords) then
+  keywords += current_page.data.keywords
+end
 if current_page.data.dig(:tags) then
-  keywords = current_page.data.tags
-else
-  keywords = "Ulta Running, Trail Running, Race, Run, Dog, Bonk, Finish, Train"
+  keywords += current_page.data.tags
+end
+if keywords == ""
+  keywords = "Ulta Running, Trail Running, Race, Run, Dog, Bonk, Finish, Training, Fitness"
 end
 %>
 
