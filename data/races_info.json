@@ -155,7 +155,7 @@
         "date": "2012-10-20",
         "trail": false,
         "time": "27:53"
-    },{
+    }, {
         "name": "NIRCA Southwest Regionals",
         "location": "Los Angeles, CA",
         "date": "2013-11-02",
@@ -182,7 +182,7 @@
         "trail": false,
         "time": "29:52",
         "notes": "yikes",
-				"blog_link": "fore-miler-race-report.html"
+        "blog_link": "fore-miler-race-report.html"
     }],
     "5 miles": [{
         "name": "Bisbee Stair Climb",
@@ -226,7 +226,7 @@
         "trail": false,
         "time": "35:54",
         "notes": "1st in AG",
-				"blog_link": "gary-smith-worthington-classic-race-report.html"
+        "blog_link": "gary-smith-worthington-classic-race-report.html"
     }, {
         "name": "UACA Memorial Day 5 Miler",
         "location": "Upper Arlington, OH",
@@ -234,7 +234,7 @@
         "trail": false,
         "time": "35:26",
         "notes": "1st in AG",
-				"blog_link": "uaca-5-miler-race-report.html"
+        "blog_link": "uaca-5-miler-race-report.html"
     }, {
         "name": "Columbus Turkey Trot",
         "location": "Upper Arlington, OH",
@@ -276,7 +276,7 @@
         "trail": true,
         "time": "1:01:20",
         "notes": "3rd female",
-				"blog_link": "dirt-of-the-earth-10k.html"
+        "blog_link": "dirt-of-the-earth-10k.html"
     }, {
         "name": "Hoot 10k",
         "location": "Alum Creek State Park, OH",
@@ -321,14 +321,14 @@
         "date": "2016-03-20",
         "trail": false,
         "time": "1:17:59"
-    },{
+    }, {
         "name": "Scioto Miles Training Series",
         "location": "Genoa Park, Columbus, OH",
         "date": "2016-04-10",
         "trail": false,
         "time": "1:23:02",
         "notes": "Ran with James"
-    },{
+    }, {
         "name": "Hot Chocolate 15k",
         "location": "Scottsdale, AZ",
         "date": "2014-12-07",
@@ -352,57 +352,56 @@
         "time": "2:44:20",
         "notes": "Dropped from 50K"
     }],
-    "Half Marathon": [
-      {
-          "name": "Fleet Feet Veterans Day Half",
-          "location": "Tuscon, AZ",
-          "date": "2012-11-11",
-          "trail": false,
-          "time": "1:54:01",
-          "notes": "First Half!!! Foot Numbness, 5th in AG (15-19)"
-      },
-      {
-          "name": "Arizona Distance Classic",
-          "location": "Oro Valley, AZ",
-          "date": "2013-03-24",
-          "trail": false,
-          "time": "1:54:28"
-      },{
-          "name": "Mount Lemmon Marathon",
-          "location": "Mt. Lemmon, Tucson, AZ",
-          "date": "2013-04-28",
-          "trail": false,
-          "time": "2:08:45",
-          "notes": "1st in age group"
-      },{
-          "name": "A-Mountain Half",
-          "location": "A-Mountain, Tucson, AZ",
-          "date": "2013-10-20",
-          "trail": false,
-          "time": "1:56:30",
-          "notes": "3rd in Age Group (1-19)"
-      },{
-          "name": "Fleet Feet Veterans Day Half",
-          "location": "Tuscon, AZ",
-          "date": "2013-11-10",
-          "trail": false,
-          "time": "2:31:27",
-          "notes": "Got Injured during race (knee)"
-      },{
-          "name": "Arizona Distance Classic",
-          "location": "Oro Valley, AZ",
-          "date": "2014-03-23",
-          "trail": false,
-          "time": "2:18:04",
-          "notes": "First run since RAGNAR ultra"
-      },{
-          "name": "A-Mountain Half",
-          "location": "A-Mountain, Tucson, AZ",
-          "date": "2014-10-19",
-          "trail": false,
-          "time": "1:58:07",
-          "notes": "Day after Bisbee"
-      }
+    "Half Marathon": [{
+            "name": "Fleet Feet Veterans Day Half",
+            "location": "Tuscon, AZ",
+            "date": "2012-11-11",
+            "trail": false,
+            "time": "1:54:01",
+            "notes": "First Half!!! Foot Numbness, 5th in AG (15-19)"
+        },
+        {
+            "name": "Arizona Distance Classic",
+            "location": "Oro Valley, AZ",
+            "date": "2013-03-24",
+            "trail": false,
+            "time": "1:54:28"
+        }, {
+            "name": "Mount Lemmon Marathon",
+            "location": "Mt. Lemmon, Tucson, AZ",
+            "date": "2013-04-28",
+            "trail": false,
+            "time": "2:08:45",
+            "notes": "1st in age group"
+        }, {
+            "name": "A-Mountain Half",
+            "location": "A-Mountain, Tucson, AZ",
+            "date": "2013-10-20",
+            "trail": false,
+            "time": "1:56:30",
+            "notes": "3rd in Age Group (1-19)"
+        }, {
+            "name": "Fleet Feet Veterans Day Half",
+            "location": "Tuscon, AZ",
+            "date": "2013-11-10",
+            "trail": false,
+            "time": "2:31:27",
+            "notes": "Got Injured during race (knee)"
+        }, {
+            "name": "Arizona Distance Classic",
+            "location": "Oro Valley, AZ",
+            "date": "2014-03-23",
+            "trail": false,
+            "time": "2:18:04",
+            "notes": "First run since RAGNAR ultra"
+        }, {
+            "name": "A-Mountain Half",
+            "location": "A-Mountain, Tucson, AZ",
+            "date": "2014-10-19",
+            "trail": false,
+            "time": "1:58:07",
+            "notes": "Day after Bisbee"
+        }
     ],
     "Marathon": [{
         "name": "Kalamazoo Marathon",
@@ -470,13 +469,21 @@
         "notes": "10th female",
         "blog_link": "warm-up-columbus-race-report.html"
     }, {
-        "name": "Pro Football Hall of Fame Marathon ",
+        "name": "Pro Football Hall of Fame Marathon",
         "location": "Canton, Ohio",
         "date": "2017-04-30",
         "trail": false,
         "time": "4:02:18",
         "notes": "10th marathon",
         "blog_link": "pro-football-hof-marathon-race-report.html"
+    }, {
+        "name": "Brokebabes Marathon Distance Classic",
+        "location": "Mt. Sterling, Ohio",
+        "date": "2017-05-14",
+        "trail": true,
+        "time": "5:07:00",
+        "notes": "I won!",
+        "blog_link": "brokebabes-marathon-distance-challenge-race-report.html"
     }],
     "50K": [{
         "name": "Run for Regis",
@@ -558,7 +565,7 @@
         "time": "12:17:46",
         "notes": "100 DNF dropped at mile 52",
         "blog_link": "processing-a-dnf.html"
-    },{
+    }, {
         "name": "Dawg Gone Long Run",
         "location": "Waynesville, OH",
         "date": "2016-06-25",
@@ -567,7 +574,7 @@
         "notes": "hot",
         "blog_link": "dawg-gone-long-run-50-race-report.html"
     }],
-        "68ish miles": [{
+    "68ish miles": [{
         "name": "Georgia Death Race",
         "location": "Vogel State Park to Amicalola Falls State Park, GA",
         "date": "2017-04-01",
