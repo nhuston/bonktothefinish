@@ -470,7 +470,7 @@
         "blog_link": "warm-up-columbus-race-report.html"
     }, {
         "name": "Pro Football Hall of Fame Marathon",
-        "location": "Canton, Ohio",
+        "location": "Canton, OH",
         "date": "2017-04-30",
         "trail": false,
         "time": "4:02:18",
@@ -478,12 +478,20 @@
         "blog_link": "pro-football-hof-marathon-race-report.html"
     }, {
         "name": "Brokebabe's Marathon Distance Classic",
-        "location": "Mt. Sterling, Ohio",
+        "location": "Mt. Sterling, OH",
         "date": "2017-05-14",
         "trail": true,
         "time": "5:07:00",
         "notes": "I won!",
         "blog_link": "brokebabes-marathon-distance-challenge-race-report.html"
+    }, {
+        "name": "Rockford Marathon",
+        "location": "Rockford, IL",
+        "date": "2017-05-21",
+        "trail": false,
+        "time": "4:54:42",
+        "notes": "Pacing James through his 4th marathon",
+        "blog_link": "rockford-marathon-race-report.html"
     }],
     "50K": [{
         "name": "Run for Regis",
