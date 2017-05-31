@@ -61,12 +61,12 @@ function format_duration(d) {
     output += days+'d ';
   }
   if(hours){
-    output += hours+'h ';
+    output += hours+'h\n';
   }
-  if(minutes){
+  if(minutes && !days){
     output += minutes+'m ';
   }
-  if(seconds){
+  if(seconds && !days && !hours){
     output += seconds+'s';
   }
   return output;

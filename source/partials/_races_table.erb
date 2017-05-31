@@ -6,14 +6,17 @@ note_idx=1
 <% if info.length > 0 %>
 
 <%
-avg_time = 0
-info.each do |race|
-  avg_time += race.time.to_f()
-end
-avg_time /= info.length
-avg_time = avg_time.round(2)
-%>
-<p class="center"><%= info.length %> Races -- Average Time <%= ChronicDuration.output(avg_time,:format => :short) %></p>
+if info.length > 1
+
+  avg_time = 0
+  info.each do |race|
+    avg_time += race.time.to_f()
+  end
+  avg_time /= info.length
+  avg_time = avg_time.round(2)
+  %>
+  <p class="center"><%= info.length %> Races -- Average Time <%= ChronicDuration.output(avg_time,:format => :short) %></p>
+<% end %>
 
 <table>
   <thead>
