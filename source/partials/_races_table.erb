@@ -8,14 +8,35 @@ note_idx=1
 <%
 if info.length > 1
 
-  avg_time = 0
+  avg_road_time = 0
+  avg_trail_time = 0
+  num_trail_races = 0
+  num_road_races = 0
   info.each do |race|
-    avg_time += race.time.to_f()
+    if race.trail
+      avg_trail_time += race.time.to_f()
+      num_trail_races += 1
+    else
+      avg_road_time += race.time.to_f()
+      num_road_races += 1
+    end
   end
-  avg_time /= info.length
-  avg_time = avg_time.round(2)
   %>
-  <p class="center"><%= info.length %> Races -- Average Time <%= ChronicDuration.output(avg_time,:format => :short) %></p>
+
+  <!-- <p class="center"><%= info.length %> Races</p> -->
+
+  <% if num_road_races > 0
+    avg_road_time /= num_road_races
+    %>
+    <p class="center"><%= num_road_races %> Road Races - Avg: <%= ChronicDuration.output(avg_road_time.round(2),:format => :short) %></p>
+  <% end %>
+
+  <% if num_trail_races > 0
+    avg_trail_time /= num_trail_races
+    %>
+    <p class="center"><%= num_trail_races %> Trail Races - Avg: <%= ChronicDuration.output(avg_trail_time.round(2),:format => :short) %></p>
+  <% end %>
+
 <% end %>
 
 <table>
