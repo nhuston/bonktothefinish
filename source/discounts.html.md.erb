@@ -277,5 +277,8 @@ Use code “BIBRAVEHNL” to save 15% on your race entry!
 [http://www.sedonamarathon.com/](http://www.sedonamarathon.com/) <br/>
 Use code “18BibRave" for 20% off race entry!
 
-
 <%= partial "partials/ad_unit_bottom.erb" %>
+
+
+<% update_date = File.mtime(current_page.source_file).to_date %>
+<p class="small center">Last Updated <%=  update_date.strftime("%b %e, %Y") %></p>
