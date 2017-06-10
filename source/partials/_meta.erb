@@ -3,9 +3,9 @@
 if current_page.data.dig(:description) then
   description = current_page.data.description
 elsif current_article then
-  description = Nokogiri::HTML(current_article.summary(250)).text
+  description = Nokogiri::HTML(current_article.summary(155)).text
 else
-  description = "BonkToTheFinish.com, home of the ultra runner and Finance guru Nicole Huston"
+  description = "BonkToTheFinish.com, home of ultra runner Nicole Huston. Race and fitness discounts, race reports, training info, and stories of acheivement."
 end
 
 author = "Nicole Huston"
@@ -13,7 +13,7 @@ author = "Nicole Huston"
 if current_page.data.dig(:title) then
   title = current_page.data.title
 else
-  title = "BonkToTheFinish"
+  title = "BonkToTheFinish - Races, Discounts, Growth"
 end
 
 keywords = ""
