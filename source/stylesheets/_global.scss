@@ -57,7 +57,8 @@ main {
     max-width: $width-max;
 
     .content {
-        figure {
+        figure,
+        p {
             img {
                 display: block;
                 margin: 0 auto;
