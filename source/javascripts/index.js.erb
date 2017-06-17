@@ -1,0 +1,42 @@
+var articles = <%=   
+    articles = []
+    blog.articles.each do |article|
+        #create links from the tags
+        tags = []
+        article.tags.each do |tag|
+            tags.push(link_to "#{tag}", tag_path(tag))
+        end 
+
+        json = {
+            "title": link_to("#{article.title}", article),
+            "tags": tags.join(", "),
+            "date": article.date.strftime("%B %e, %Y"),
+            "description": article.summary(200)
+        }
+        articles.push(json)
+    end 
+    articles.to_json
+%>  
+
+document.addEventListener("DOMContentLoaded", function(event) {
+    var rand_post_1 = document.getElementById('random_post_1');
+    var rand_post_2 = document.getElementById('random_post_2');
+
+    var rand_article_id1 = Math.floor(Math.random() * articles.length);
+    var rand_article_id2 = rand_article_id1;
+    while(rand_article_id2 == rand_article_id1){
+        rand_article_id2 = Math.floor(Math.random() * articles.length);
+    }
+
+    sub_post_feature_content(rand_post_1, rand_article_id1);
+    sub_post_feature_content(rand_post_2, rand_article_id2);
+});
+
+function sub_post_feature_content(el, article_num){
+    var info = articles[article_num];
+    el.getElementsByTagName( 'h2' )[0].innerHTML = info.title;
+    el.getElementsByTagName( 'p' )[0].innerHTML = info.description;
+    var meta = el.getElementsByClassName( 'meta' )[0];
+    meta.getElementsByTagName( 'time' )[0].innerHTML = info.date;
+    meta.getElementsByClassName( 'tag-list' )[0].innerHTML = info.tags;
+}

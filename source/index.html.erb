@@ -1,3 +1,21 @@
+<% content_for :head do
+  js = javascript_include_tag "index"
+end %>
+
+<%= partial "partials/post_feature.erb", locals: {
+  article: blog.articles[0] }%>
+
+<%= partial "partials/post_feature.erb", locals: {
+  article: blog.articles[0],
+  style: "width: 42%;font-size:.8em;",
+  id: "random_post_1"   }%>
+
+<%= partial "partials/post_feature.erb", locals: {
+  article: blog.articles[0],
+  style: "width: 42%;font-size:.8em;",
+  id: "random_post_2" }%>
+
+
 <%
 #create a card_group for each data.tags
 card_groups = {}

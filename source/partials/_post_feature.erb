@@ -1,0 +1,23 @@
+<%
+classes||=""
+style||=""
+id||=""
+tags = []
+article.tags.each do |tag|
+  tags.push(link_to "#{tag}", tag_path(tag))
+end 
+
+%>
+
+<section class="post_feature <%= classes %>" style="<%= style %>" id="<%= id %>">
+  <h2><%= link_to article.title, article %> </h2>
+
+  <section class="meta">    
+    <time><%= article.date.strftime("%B %e, %Y") %></time> | 
+    <span class="tag-list">
+      <%= tags.join(", ")%>
+    </span>
+  </section>
+  
+  <p class="summary"><%= article.summary(200) %></p>
+</section>

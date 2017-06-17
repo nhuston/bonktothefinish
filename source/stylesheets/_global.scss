@@ -39,6 +39,29 @@ body {
     }
 }
 
+.post_feature{
+    vertical-align: top;
+    border: 2px solid gray; 
+    border-radius: 5px;
+    padding:8px;
+    margin:4px;
+    display: inline-block;
+
+    h2{
+        margin:.5em;
+    }
+    .meta{
+        font-size: .75em;
+        margin:.3em;
+    }
+    p{
+        margin:.4em;
+        img,figure{
+            display: none;
+        }
+    }
+}
+
 .tags {
     display: block;
 
