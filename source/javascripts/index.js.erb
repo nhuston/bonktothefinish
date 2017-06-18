@@ -24,6 +24,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     var rand_article_id1 = Math.floor(Math.random() * articles.length);
     var rand_article_id2 = rand_article_id1;
+    while(rand_article_id1 == 0){
+        rand_article_id1 = Math.floor(Math.random() * articles.length);
+    }
     while(rand_article_id2 == rand_article_id1){
         rand_article_id2 = Math.floor(Math.random() * articles.length);
     }
