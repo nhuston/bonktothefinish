@@ -420,7 +420,7 @@
     ],
     "Marathon": [{
         "name": "Kalamazoo Marathon",
-        "location": "Kalamazoo, Michigan",
+        "location": "Kalamazoo, MI",
         "date": "2016-05-08",
         "trail": false,
         "time": "04:13:05.05",
@@ -428,7 +428,7 @@
         "blog_link": "kalamazoo-marathon-race-report.html"
     }, {
         "name": "Wisconsin Marathon",
-        "location": "Kenosha, Wisconsin",
+        "location": "Kenosha, WI",
         "date": "2016-05-07",
         "trail": false,
         "time": "04:02:10",
@@ -436,7 +436,7 @@
         "blog_link": "wisconsin-marathon-race-report.html"
     }, {
         "name": "Pro Football Hall of Fame Marathon",
-        "location": "Canton, Ohio",
+        "location": "Canton, OH",
         "date": "2016-04-24",
         "trail": false,
         "time": "04:09:01",
@@ -444,27 +444,27 @@
         "blog_link": "pro-football-hall-of-fame-marathon-race-report.html"
     }, {
         "name": "Bobcat Trail Marathon",
-        "location": "Glouster, Ohio",
+        "location": "Glouster, OH",
         "date": "2015-11-07",
         "trail": true,
         "time": "05:49:59",
         "notes": "Was sick, stuffy"
     }, {
         "name": "Columbus Marathon",
-        "location": "Columbus, Ohio",
+        "location": "Columbus, OH",
         "date": "2015-10-18",
         "trail": false,
         "time": "03:58:15"
     }, {
         "name": "Big Sur International Marathon",
-        "location": "Big Sur, California",
+        "location": "Big Sur, CA",
         "date": "2015-04-26",
         "trail": false,
         "time": "04:36:01",
         "notes": "Celebrating my 21st birthday!"
     }, {
         "name": "Rock 'n' Roll Arizona",
-        "location": "Phoenix, Arizona",
+        "location": "Phoenix, AZ",
         "date": "2015-01-18",
         "trail": false,
         "time": "04:06:27",
@@ -507,6 +507,14 @@
         "time": "4:54:42",
         "notes": "Pacing James through his 4th marathon",
         "blog_link": "rockford-marathon-race-report.html"
+    }, {
+        "name": "Rock 'n' Roll San Diego Marathon",
+        "location": "San Diego, CA",
+        "date": "2017-06-04",
+        "trail": false,
+        "time": "4:17:29",
+        "notes": "high HR and chest pain",
+        "blog_link": "rock-n-roll-san-diego-marathon-race-report.html"
     }],
     "50K": [{
         "name": "Run for Regis",
