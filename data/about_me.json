@@ -1,9 +1,9 @@
 {
     "social": {
-        "linkedIn": {
-            "url": "https://www.linkedin.com/in/nicole-huston-7791a3a8/",
-            "img_url": "icons/social/Linkedin.svg",
-            "img_alt": "LinkedIn"
+        "youtube": {
+            "url": "https://www.youtube.com/channel/UCp7nBpNpVZggj8TzETGPZjA",
+            "img_url": "icons/social/youtube.svg",
+            "img_alt": "YouTube"
         },
         "facebook": {
             "url": "https://www.facebook.com/nicole.huston",

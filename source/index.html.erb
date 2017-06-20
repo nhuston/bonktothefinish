@@ -3,18 +3,20 @@
 end %>
 
 <%= partial "partials/post_feature.erb", locals: {
-  article: blog.articles[0] }%>
-
-<%= partial "partials/post_feature.erb", locals: {
   article: blog.articles[0],
-  style: "width: 42%;font-size:.8em;",
-  id: "random_post_1"   }%>
+  id: "featured_post" }%>
 
-<%= partial "partials/post_feature.erb", locals: {
-  article: blog.articles[0],
-  style: "width: 42%;font-size:.8em;",
-  id: "random_post_2" }%>
+<div class="sub_features">
+  <%= partial "partials/post_feature.erb", locals: {
+    article: blog.articles[0],
+    style: "width: 42%;font-size:.8em;",
+    id: "random_post_1"   }%>
 
+  <%= partial "partials/post_feature.erb", locals: {
+    article: blog.articles[0],
+    style: "width: 42%;font-size:.8em;",
+    id: "random_post_2" }%>
+</div>
 
 <%
 #create a card_group for each data.tags
@@ -44,19 +46,3 @@ card_groups.each do |name,value|
       tag_name: tag_info.name } %>
 
 <% end %>
-
-<hr>
-
-<%
-#reference blogs in reverse order. blog.articles ordered most recent first, thus each new article will push them background-image
-#if you want a specific article to always be referenced, must ref relative to the end of the list
-len = blog.articles.length
-%>
-<%= partial "partials/post_summary.erb", locals: {
-    article: blog.articles[len - 5] }%>
-<%= partial "partials/post_summary.erb", locals: {
-    article: blog.articles[len - 9] }%>
-<%= partial "partials/post_summary.erb", locals: {
-    article: blog.articles[len - 15] }%>
-
-<h3><%= link_to "More Articles...", "archive.html" %></h3>

@@ -41,7 +41,7 @@ body {
 
 .post_feature{
     vertical-align: top;
-    border: 2px solid gray; 
+    border: 2px solid gray;
     border-radius: 5px;
     padding:8px;
     margin:4px;
@@ -57,9 +57,15 @@ body {
     .summary{
         margin:.4em;
     }
-    img,figure{
+    img,figure,iframe{
         display: none;
     }
+}
+
+#featured_post{
+  img,figure,iframe{
+      display: block;
+  }
 }
 
 .tags {
