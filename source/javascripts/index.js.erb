@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 function sub_post_feature_content(el, article_num){
     var info = articles[article_num];
     el.getElementsByTagName( 'h2' )[0].innerHTML = info.title;
-    el.getElementsByTagName( 'p' )[0].innerHTML = info.description;
+    el.getElementsByClassName( 'summary' )[0].innerHTML = info.description;
     var meta = el.getElementsByClassName( 'meta' )[0];
     meta.getElementsByTagName( 'time' )[0].innerHTML = info.date;
     meta.getElementsByClassName( 'tag-list' )[0].innerHTML = info.tags;
