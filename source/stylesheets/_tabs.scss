@@ -4,18 +4,18 @@
 /* Style the tab */
 
 .tabs {
-    margin:2em 0;
-
+    margin: 2em 0;
     /* Style the tab buttons and header */
     .tab_header {
         font-size: .8em;
         overflow: hidden;
         border: 1px solid #ccc;
         background-color: #f1f1f1;
+        text-align: center;
         /* Style the buttons inside the tab */
         button {
+            display: inline-block;
             background-color: inherit;
-            float: left;
             border: none;
             outline: none;
             cursor: pointer;
@@ -31,7 +31,6 @@
             background-color: #ccc;
         }
     }
-
     /* Style the tab content */
     .tabcontent {
         font-size: .8em;
