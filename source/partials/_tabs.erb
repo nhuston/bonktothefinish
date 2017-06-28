@@ -1,0 +1,35 @@
+<% 
+def active_tab(i)
+    active = ""
+    if i == 0 then
+        active += " active "
+    end
+    return active
+end
+%>
+
+
+<!-- Tab container -->
+<div class="tabs">
+    <!-- Tab Buttons -->    
+    <div class="tab_header">
+        <% tabs.each_with_index do |tab_info,i| %>
+            <button class="tablinks <%= active_tab(i) %>" onclick="openTab(event, 'tab_<%= tab_info[:title] %>')"><%= tab_info[:title] %></button>
+        <% end %>
+    </div>
+
+    <!-- Content that goes into each tab -->
+    <% tabs.each_with_index do |tab_info,i|
+    style = ""
+    if active_tab(i) != "" 
+        style="display:block;"
+    end 
+    %>
+    <div id="tab_<%= tab_info[:title] %>" class="tabcontent"style="<%= style %>">
+        <% tab_info[:articles].each do |article| %>
+            <%= partial "partials/post_summary.erb", locals: {
+                article:article } %>
+        <% end %>
+    </div>
+    <% end %>
+</div>

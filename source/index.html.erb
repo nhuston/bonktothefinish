@@ -18,31 +18,39 @@ end %>
     id: "random_post_2" }%>
 </div>
 
+
 <%
-#create a card_group for each data.tags
-card_groups = {}
+#create an article grouping for each data.tags
+article_groups = {}
 data.tags.each do |tag_info|
-  card_groups[tag_info.name] = {
+  article_groups[tag_info.name] = {
     info: tag_info,
     articles: []
   }
 end
 
-#add relevant articles to each card_groups
+#add the relevant articles
+max_num_of_tagged_articles = 4
 blog.articles.each do |article|
   tag_info = get_tag_info(article.tags)
-  card_groups[tag_info.name][:articles].push(article)
+
+  #add articles to article groups, ensure that the groups are under a set # of articles
+  if article_groups[tag_info.name][:articles].length < max_num_of_tagged_articles
+    article_groups[tag_info.name][:articles].push(article)
+  end
 end
 
-#print a card for each card_group
-card_groups.each do |name,value|
-  tag_info = value[:info]
+
+tabs = []
+article_groups.each do |name,value|
+  tabs.push({
+      'title':name.titleize,
+      'articles': value[:articles]
+  })
+end
+
 %>
 
-  <%= partial "partials/card.erb", locals: {
-      articles: value[:articles],
-      img_url: tag_info.img_url || tag_info.icon_url,
-      is_icon: !tag_info.key?(:img_url),
-      tag_name: tag_info.name } %>
 
-<% end %>
+
+<%= partial "partials/tabs.erb", locals: { tabs: tabs } %>
