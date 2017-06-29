@@ -17,7 +17,7 @@ find $1 -type f -name '*' -exec sh -c '
 
 	echo "Shrinking...$0 to $filename.jpg"
 
-	convert "$0" -resize 1000x1000\> -quality  80% "$dir/$filename.jpg"
+	convert "$0" -resize 1700x1700\> -quality  70% "$dir/$filename.jpg"
 	
 	if [ "$extension" != "jpg" ]
 	then
