@@ -6,6 +6,9 @@ echo $0
 #example:
 # sh shrink_img.sh ~/Documents/nicole-blog/source/images/blog/5th-line-5k-race-report
 
+# To convert a single image - example:
+# convert site-header-img.jpg -resize 1000x1000\> -quality  80% site-header-img.jpg
+
 find $1 -type f -name '*' -exec sh -c '
 	filename=$(basename "$0")
 	extension="${filename##*.}"
