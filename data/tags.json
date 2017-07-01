@@ -27,27 +27,12 @@
         "dist": {
             "low": 27
         },
-        "name": "ultra long races"
-    },
-    {
-        "icon_url": "/images/icons/despair.svg",
-        "tags": "DNF",
-        "name": "DNF"
-    },
-    {
-        "icon_url": "/images/icons/training.svg",
-        "tags": "training,train",
-        "name": "training"
+        "name": "ultra races"
     },
     {
         "icon_url": "/images/icons/open-treasure-chest.svg",
         "tags": "product review,review",
         "name": "reviews"
-    },
-    {
-        "icon_url": "/images/icons/blog.svg",
-        "tags": "blog",
-        "name": "blog"
     },
     {
         "img_url": "/images/homepagedog.jpg",

@@ -423,6 +423,28 @@
             "trail": false,
             "time": "1:58:07",
             "notes": "Day after Bisbee"
+        }, {
+            "name": "Run and Ride Cedar Point",
+            "location": "Sandusky, OH",
+            "date": "2017-06-11",
+            "trail": false,
+            "time": "1:59:29",
+            "notes": "Pacing 2:00 group with Beast Pacing",
+            "blog_link": "run-and-ride-cedar-point.html"
+        }, {
+            "name": "Islamorada Half Marathon",
+            "location": "Islamorada,FL",
+            "date": "2016-12-11",
+            "trail": false,
+            "time": "2:14:29",
+            "notes": "Pacing 2:15 group with Beast Pacing",
+            "blog_link": "islamorada-half-marathon-race-report.html"
+        }, {
+            "name": "Three Creeks Half Marathon",
+            "location": "Groveport, OH",
+            "date": "2016-04-03",
+            "trail": false,
+            "time": "1:43:01.2"
         }
     ],
     "Marathon": [{
