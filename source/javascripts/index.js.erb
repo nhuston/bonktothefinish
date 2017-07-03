@@ -1,11 +1,11 @@
-var articles = <%=   
+var articles = <%=
     articles = []
     blog.articles.each do |article|
         #create links from the tags
         tags = []
         article.tags.each do |tag|
             tags.push(link_to "#{tag}", tag_path(tag))
-        end 
+        end
 
         json = {
             "title": link_to("#{article.title}", article),
@@ -14,9 +14,9 @@ var articles = <%=
             "description": article.summary(200)
         }
         articles.push(json)
-    end 
+    end
     articles.to_json
-%>  
+%>
 
 document.addEventListener("DOMContentLoaded", function(event) {
     var rand_post_1 = document.getElementById('random_post_1');
@@ -27,12 +27,17 @@ document.addEventListener("DOMContentLoaded", function(event) {
     while(rand_article_id1 == 0){
         rand_article_id1 = Math.floor(Math.random() * articles.length);
     }
-    while(rand_article_id2 == rand_article_id1){
+    while(rand_article_id2 == rand_article_id1 || rand_article_id2 == 0){
         rand_article_id2 = Math.floor(Math.random() * articles.length);
     }
 
     sub_post_feature_content(rand_post_1, rand_article_id1);
     sub_post_feature_content(rand_post_2, rand_article_id2);
+
+    //open random tab
+    var tabs = document.getElementsByClassName("tab_header")[0].children;
+    var rand_tab = tabs[Math.floor(Math.random()*tabs.length)];
+    eventFire(rand_tab, 'click');
 });
 
 function sub_post_feature_content(el, article_num){
@@ -63,4 +68,16 @@ function openTab(evt, activeTabId) { //source: https://www.w3schools.com/howto/h
     // Show the current tab, and add an "active" class to the button that opened the tab
     document.getElementById(activeTabId).style.display = "block";
     evt.currentTarget.className += " active";
+}
+
+
+//source: https://stackoverflow.com/questions/2705583/how-to-simulate-a-click-with-javascript
+function eventFire(el, etype){
+  if (el.fireEvent) {
+    el.fireEvent('on' + etype);
+  } else {
+    var evObj = document.createEvent('Events');
+    evObj.initEvent(etype, true, false);
+    el.dispatchEvent(evObj);
+  }
 }

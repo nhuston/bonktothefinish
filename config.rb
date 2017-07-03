@@ -76,6 +76,41 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
+
+  def tab_groupings()
+    #create an article grouping for each data.tags
+    article_groups = {}
+    data.tags.each do |tag_info|
+      article_groups[tag_info.name] = {
+        info: tag_info,
+        articles: []
+      }
+    end
+
+    #add the relevant articles
+    max_num_of_tagged_articles = 4
+    blog.articles.each do |article|
+      tag_info = get_tag_info(article.tags)
+
+      #add articles to article groups, ensure that the groups are under a set # of articles
+      if article_groups[tag_info.name][:articles].length < max_num_of_tagged_articles
+        article_groups[tag_info.name][:articles].push(article)
+      end
+    end
+
+
+    tabs = []
+    article_groups.each do |name,value|
+      tabs.push({
+          'title':name.titleize,
+          'articles': value[:articles]
+      })
+    end
+    return tabs
+  end
+def tab_id(title)
+  return "tab_#{title}"
+end
    def prefix_img(img_name_or_url)
      #strip '.html' extension off article link to get name of folder
      url = current_page.url
