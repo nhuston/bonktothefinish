@@ -4,7 +4,7 @@
 echo $0
 
 #example:
-# sh source/images/shrink_img.sh ~/Documents/nicole-blog/source/images/blog/cat-names
+# sh source/images/shrink_img.sh ~/Documents/nicole-blog/source/images/blog/xxxx-folder-name
 
 # To convert a single image - example:
 # convert site-header-img.jpg -resize 1000x1000\> -quality  80% site-header-img.jpg
