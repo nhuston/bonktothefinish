@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     color: $off-black;
+    word-break: break-all;
 }
 
 .clearfix {
@@ -28,8 +29,8 @@ body {
 .small {
     font-size: 0.7em;
 }
-//https://codepen.io/juanbrujo/pen/yGpAK
 
+//https://codepen.io/juanbrujo/pen/yGpAK
 .deepshadow {
     color: #e0dfdc;
     letter-spacing: 0.1em;
@@ -39,52 +40,52 @@ body {
     }
 }
 
-.post_feature{
+.post_feature {
     vertical-align: top;
     border: 2px solid gray;
     border-radius: 5px;
-    padding:8px;
-    margin:4px;
+    padding: 8px;
+    margin: 4px;
     display: inline-block;
-
-    h2{
-        margin:.5em;
+    h2 {
+        margin: .5em;
     }
-    .meta{
+    .meta {
         font-size: .75em;
-        margin:.3em;
+        margin: .3em;
     }
-    .summary{
-        margin:.4em;
+    .summary {
+        margin: .4em;
     }
-    img,figure,iframe{
+    img,
+    figure,
+    iframe {
         display: none;
     }
 }
 
-#featured_post{
-  img,figure,iframe{
-      display: block;
-  }
+#featured_post {
+    img,
+    figure,
+    iframe {
+        display: block;
+    }
 }
 
 .tags {
     display: block;
-
     a {
         font-size: 0.75rem;
         margin: $margin/2;
     }
-
     hr {
         width: 50%;
     }
 }
-//main site content inside the wrap
 
+//main site content inside the wrap
 main {
     max-width: $width-max;
-
     .content {
         figure,
         p {
@@ -94,14 +95,12 @@ main {
                 max-width: 100%;
                 max-height: 425px;
             }
-
             figcaption {
                 text-align: center;
                 font-size: 0.95rem;
                 margin: $margin 0;
             }
         }
-
         h1:first-child,
         section:first-child {
             margin-top: 0;
@@ -111,33 +110,26 @@ main {
             width: 100%-$sidebar-desktop-width - ($sidebar-padding-left + 1%);
         }
     }
-
     .sidebar {
         text-align: center;
         vertical-align: top;
-
         .social {
             padding: 0;
             max-width: 100%;
         }
-
         img {
             max-width: 125px;
         }
-
         div {
             padding-bottom: $margin;
-
             h4 {
                 border-bottom: 1px double #ddd;
                 padding-bottom: $margin;
                 margin: $margin/2;
             }
-
             hr {
                 border: 1px dashed #ddd;
             }
-
             select {
                 text-align: center; //doesnt work
                 background: white;
@@ -147,11 +139,9 @@ main {
                 max-width: 100%;
             }
         }
-
         #mc_embed_signup {
             max-width: 100%;
             padding: 0;
-
             input {
                 max-width: 95%;
                 margin: 3px;
@@ -205,12 +195,10 @@ iframe {
             float: left;
             margin: 0 $margin * 2 $margin * 2 0;
         }
-
         .social {
             border-bottom: 1px solid #ccc;
             padding: $margin 0;
             text-align: center;
-
             img {
                 width: $icon-len * 2;
                 height: $icon-len * 2;
@@ -231,7 +219,6 @@ iframe {
 a {
     color: $link-color;
     text-decoration: none;
-
     &:hover {
         color: $text-color;
         text-decoration: underline;
@@ -253,7 +240,6 @@ blockquote {
 .article-header {
     margin-bottom: $margin;
     text-align: center;
-
     .subtext {
         font-size: 0.8em;
     }
@@ -269,18 +255,15 @@ blockquote {
 
 .social {
     display: block;
-
     img {
         @extend .icon;
         display: block;
         margin: 0;
     }
-
     a {
         display: inline-block;
         padding: 3px;
     }
-
     a:hover {
         background-color: $grey-color;
     }
