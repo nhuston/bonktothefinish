@@ -81,9 +81,11 @@ body {
         width: 50%;
     }
 }
-p{
+
+p {
     word-break: break-all;
 }
+
 //main site content inside the wrap
 main {
     max-width: $width-max;
@@ -277,7 +279,7 @@ blockquote {
     height: $icon-len;
 }
 
-#mc_embed_signup{
-    padding:5px;
+#mc_embed_signup {
+    padding: 5px;
     box-sizing: border-box;
 }
