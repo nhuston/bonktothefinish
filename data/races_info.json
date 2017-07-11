@@ -161,6 +161,15 @@
             "trail": false,
             "time": "23:00.6",
             "blog_link": "the-big-run-race-report.html"
+        },
+        {
+            "name": "Jaeger Run for Pride",
+            "location": "Columbus, OH",
+            "date": "2017-06-16",
+            "trail": false,
+            "time": "21:01",
+            "notes": "3 miles, not 5k",
+            "blog_link": "jaeger-run-for-pride.html"
         }
     ],
     "6K": [{
