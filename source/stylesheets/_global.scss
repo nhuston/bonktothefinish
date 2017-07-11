@@ -10,7 +10,6 @@ body {
     margin: 0;
     padding: 0;
     color: $off-black;
-    word-break: break-all;
 }
 
 .clearfix {
@@ -82,7 +81,9 @@ body {
         width: 50%;
     }
 }
-
+p{
+    word-break: break-all;
+}
 //main site content inside the wrap
 main {
     max-width: $width-max;
