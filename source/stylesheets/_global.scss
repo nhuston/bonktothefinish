@@ -83,7 +83,10 @@ body {
 }
 
 p {
-    word-break: break-all;
+    a,
+    code {
+        word-break: break-all;
+    }
 }
 
 //main site content inside the wrap
