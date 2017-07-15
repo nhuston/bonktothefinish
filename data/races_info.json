@@ -170,6 +170,15 @@
             "time": "21:01",
             "notes": "3 miles, not 5k",
             "blog_link": "jaeger-run-for-pride.html"
+        },
+        {
+            "name": "Westerville Rotary July 4th Run",
+            "location": "Westerville, OH",
+            "date": "2017-07-04",
+            "trail": false,
+            "time": "22:44",
+            "notes": "7th in age group",
+            "blog_link": "westerville-rotary-5k.html"
         }
     ],
     "6K": [{
