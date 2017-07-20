@@ -147,6 +147,13 @@ end
     end
     max_freq = max_freq.to_f
 
+    ##delete words under the min occurrences
+    occurrences.delete_if do |word, freq|
+      if freq <= 1
+        true # Make sure the if statement returns true, so it gets marked for deletion
+      end
+    end
+
     occurrences.each do |word, freq|
       occurrences[word] = occurrences[word] / max_freq
     end
