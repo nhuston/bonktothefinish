@@ -17,6 +17,7 @@ set :markdown, parse_block_html: true
 activate :syntax, :line_numbers => true
 activate :emojifire
 activate :search_engine_sitemap
+activate :autoprefixer
 
 # With alternative layout
 # page "/path/to/file.html", layout: :otherlayout

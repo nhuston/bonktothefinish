@@ -2,6 +2,9 @@
 # the following line to use 'http://'
 source 'https://rubygems.org'
 
+#Improve compatibility for CSS
+gem 'middleman-autoprefixer' # https://github.com/middleman/middleman-autoprefixer
+
 # For faster file watcher updates on Windows:
 gem 'wdm', '~> 0.1.0', platforms: [:mswin, :mingw]
 
