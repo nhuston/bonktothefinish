@@ -1,0 +1,16 @@
+
+<div class="articles-linkage">
+    <div>
+        <% if current_article.next_article
+            art = current_article.next_article %>
+            <%= link_to "Next Article", art%>
+        <% end %>
+    </div>
+
+    <div>
+        <% if current_article.previous_article 
+            art = current_article.previous_article %>
+            <%= link_to "Previous Article", art%>
+        <% end %>
+    </div>
+</div>
