@@ -41,25 +41,25 @@ body {
 
 .post_feature {
     vertical-align: top;
-    border: 2px solid gray;
-    border-radius: 5px;
-    padding: 8px;
+    color:white;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 320px;
     margin: 4px;
-    display: inline-block;
-    h2 {
-        margin: .5em;
-    }
-    .meta {
-        font-size: .75em;
-        margin: .3em;
-    }
-    .summary {
-        margin: .4em;
-    }
-    img,
-    figure,
-    iframe {
-        display: none;
+
+    div{
+        bottom:0;
+        display: absolute;
+        padding: 1em 0;
+        width:100%;
+        background-color: rgba(50,50,50,.9);
+        h4{
+            margin: 3px 0;
+        }
+        span{
+            font-size: .75em;
+        }
     }
 }
 
@@ -109,8 +109,7 @@ main {
                 margin: $margin 0;
             }
         }
-        h1:first-child,
-        section:first-child {
+        h1:first-child{
             margin-top: 0;
         }
         @include media-query($on-laptop) {
@@ -188,6 +187,14 @@ iframe {
 
 .index {
     text-align: center;
+    @include media-query($on-laptop) {
+        .sub_features{
+            display: flex;
+            .post_feature{
+                width:50%;
+            }
+        }
+    }
 }
 
 .discounts {

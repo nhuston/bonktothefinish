@@ -1,6 +1,10 @@
+---
+pageable: true
+---
+
 <h1 class="center"><%= blog.articles.length %> Article Archive</h1>
 
-<% blog.articles.group_by {|a| a.date.year }.each do |year, year_articles| %>
+<% page_articles.group_by {|a| a.date.year }.each do |year, year_articles| %>
 
   <h2><%= year %></h2>
     <% year_articles.group_by {|a| a.date.month }.each do |month,month_articles| %>
@@ -14,3 +18,5 @@
     <% end %>
 
 <% end %>
+
+<%= partial "partials/pages.erb"%>

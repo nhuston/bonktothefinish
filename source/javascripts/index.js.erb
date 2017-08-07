@@ -11,7 +11,7 @@ var articles = <%=
             "title": link_to("#{article.title}", article),
             "tags": tags.join(", "),
             "date": article.date.strftime("%B %e, %Y"),
-            "description": article.summary(200)
+            "img_src": get_article_img_src(article)
         }
         articles.push(json)
     end
@@ -42,11 +42,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 function sub_post_feature_content(el, article_num){
     var info = articles[article_num];
-    el.getElementsByTagName( 'h2' )[0].innerHTML = info.title;
-    el.getElementsByClassName( 'summary' )[0].innerHTML = info.description;
-    var meta = el.getElementsByClassName( 'meta' )[0];
-    meta.getElementsByTagName( 'time' )[0].innerHTML = info.date;
-    meta.getElementsByClassName( 'tag-list' )[0].innerHTML = info.tags;
+    el.getElementsByTagName( 'h4' )[0].innerHTML = info.title;
+    //el.getElementsByClassName( 'summary' )[0].innerHTML = info.description;
+    el.style.backgroundImage = "url('" + info.img_src + "')";
+    el.getElementsByTagName( 'time' )[0].innerHTML = info.date;
+    el.getElementsByClassName( 'tag-list' )[0].innerHTML = info.tags;
 }
 
 function openTab(evt, activeTabId) { //source: https://www.w3schools.com/howto/howto_js_tabs.asp

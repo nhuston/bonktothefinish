@@ -58,7 +58,7 @@ activate :blog do |blog|
 
  # Enable pagination
  blog.paginate = true
- blog.per_page = 10
+ blog.per_page = 20
  blog.page_link = "#{blog.prefix}/page/{num}"
 end
 
@@ -77,6 +77,32 @@ end
 
 # Methods defined in the helpers block are available in templates
 helpers do
+  #get a "summary" image for the article
+  def get_article_img_src(article)
+    src = nil
+
+    #first choice: the manually defined image
+    if article.data.has_key?(:top_img)
+      src = prefix_img(article.data.top_img,article)
+
+    #second choice: first image that appears in the article's body
+    else
+      doc = Nokogiri::HTML(article.body) 
+      img = doc.xpath('//img').first
+      src = img['src'] if img != nil
+    end
+
+    #last choice: get a general icon if a more specific one doesn't exist
+    if src == nil
+      tag_info = get_tag_info(article.tags)
+      if tag_info.key?(:img_url)
+        src = tag_info.img_url
+      else
+        src = tag_info.icon_url
+      end
+    end
+    return src
+  end
 
   def tab_groupings()
     #create an article grouping for each data.tags
@@ -89,7 +115,7 @@ helpers do
     end
 
     #add the relevant articles
-    max_num_of_tagged_articles = 4
+    max_num_of_tagged_articles = 5
     blog.articles.each do |article|
       tag_info = get_tag_info(article.tags)
 
@@ -109,12 +135,14 @@ helpers do
     end
     return tabs
   end
-def tab_id(title)
-  return "tab_#{title}"
-end
-   def prefix_img(img_name_or_url)
+    
+  def tab_id(title)
+    return "tab_#{title}"
+  end
+
+   def prefix_img(img_name_or_url, page=current_page)
      #strip '.html' extension off article link to get name of folder
-     url = current_page.url
+     url = page.url
      url_without_ext = url[0..url.length-6]
 
      #determine if video has an exact link or belongs to "/images/blog/CURRENT_ARTICLE_NAME/"
@@ -226,16 +254,6 @@ end
 
    def graph_id(race)
      return race.sub(".","").sub(" ","_")
-   end
-
-   def get_article_img(article_tags)
-     tag_info = get_tag_info(article_tags)
-
-     if tag_info.key?(:img_url)
-       return tag_info.img_url
-     else
-       return tag_info.icon_url
-     end
    end
 
   def img_link(img_url, img_alt, url, title, css_class,target = "_blank",id="")

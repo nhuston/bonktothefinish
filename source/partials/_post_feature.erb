@@ -1,25 +1,22 @@
 <%
 classes||=""
-style||=""
-id||=""
-tags = []
-article.tags.each do |tag|
-  tags.push(link_to "#{tag}", tag_path(tag))
-end 
+id||="" 
+tags = article.tags.map {|tag| link_to "#{tag}", tag_path(tag) }
 
 %>
 
-<section class="post_feature <%= classes %>" style="<%= style %>" id="<%= id %>">
-  <h2><%= link_to article.title, article %> </h2>
 
-  <section class="meta">    
-    <time><%= article.date.strftime("%B %e, %Y") %></time> | 
-    <span class="tag-list">
-      <%= tags.join(", ")%>
+<section class="post_feature <%= classes %>" style="background-image: url('<%= get_article_img_src(article) %>')" id="<%= id %>">
+  <div>
+    <h4><%= link_to article.title, article %> </h4>
+    <span>
+      <time><%= article.date.strftime("%B %e, %Y") %></time> 
+      | 
+      <span class="tag-list">
+        <%= tags.join(", ")%>
+      </span>
     </span>
-  </section>
-  
-  <div class="summary">
-    <%= article.summary(200) %>
   </div>
+
 </section>
+

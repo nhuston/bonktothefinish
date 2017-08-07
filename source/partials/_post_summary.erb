@@ -2,20 +2,22 @@
 summary_len ||= 150
 img_url = article.data.dig(:header,:img_url) ? article.data.header.img_url : "/images/icons/write.svg"
 classes||=""
+tags = article.tags.map {|tag| link_to "#{tag}", tag_path(tag) }
 %>
 
 <section class="post_summary <%= classes %>">
   <aside>
-    <img src="<%= get_article_img(article.tags) %>" class="article-type" alt="Article Icon"/>
-
-    <!-- tags -->
-    <%= partial "partials/tags.erb", locals: {
-      tags: article.tags }  %>
+    <img src="<%= get_article_img_src(article) %>" alt="Article Icon"/>
   </aside>
 
   <article>
     <h2><%= link_to article.title, article %> </h2>
-    <time><%= article.date.strftime("%B %e, %Y") %></time>
+
+    <time><%= article.date.strftime("%B %e, %Y") %></time> | 
+    <span class="tag-list">
+      <%= tags.join(", ")%>
+    </span>
+
     <%=
     article.summary(summary_len)
     #article.body
