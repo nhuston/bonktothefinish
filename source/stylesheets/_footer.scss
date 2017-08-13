@@ -20,24 +20,4 @@ footer {
     .sides {
         width: 175px;
     }
-
-    .footer-links {
-        a {
-            text-decoration: none;
-            display: inline-block;
-            width: $footer-img-len;
-            height: $footer-img-len;
-            padding: $footer-img-len/6;
-
-            &:hover {
-                background-color: $grey-color-light;
-            }
-
-            img {
-                width: $footer-img-len;
-                height: $footer-img-len;
-                padding: 0;
-            }
-        }
-    }
 }

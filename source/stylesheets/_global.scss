@@ -47,11 +47,14 @@ body {
     background-size: cover;
     height: 320px;
     margin: 4px;
+    position:relative;
 
     div{
         bottom:0;
-        display: absolute;
-        padding: 1em 0;
+        left:0;
+        position: absolute;
+        padding: .7em .5em;
+        box-sizing: border-box;
         width:100%;
         background-color: rgba(50,50,50,.9);
         h4{
@@ -59,6 +62,13 @@ body {
         }
         span{
             font-size: .75em;
+        }
+        a{
+            &:hover,
+            &:visited:hover {
+                opacity: 0.85;
+                color: white;
+            }
         }
     }
 }
