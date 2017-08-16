@@ -2,13 +2,18 @@
     "social": {
         "youtube": {
             "url": "https://www.youtube.com/channel/UCp7nBpNpVZggj8TzETGPZjA",
-            "img_url": "icons/social/youtube.svg",
+            "img_url": "icons/social/youtube.png",
             "img_alt": "YouTube"
         },
         "facebook": {
             "url": "https://www.facebook.com/nicole.huston",
             "img_url": "icons/social/facebook.svg",
             "img_alt": "Facebook"
+        },
+        "rss": {
+            "url": "/feed.xml",
+            "img_url": "icons/social/rss.svg",
+            "img_alt": "RSS"
         },
         "strava": {
             "url": "https://www.strava.com/athletes/13343220",
