@@ -5,7 +5,7 @@ if current_page.data.dig(:description) then
 elsif current_article then
   description = Nokogiri::HTML(current_article.summary(155)).text
 else
-  description = "BonkToTheFinish.com, home of ultra runner Nicole Huston. Race and fitness discounts, race reports, training info, and stories of acheivement."
+  description = config[:site_description]
 end
 
 author = "Nicole Huston"
