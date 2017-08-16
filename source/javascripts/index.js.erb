@@ -18,11 +18,9 @@ var articles = <%=
     articles.to_json
 %>
 
-var articleShiftFreq = 7000;
-
 document.addEventListener("DOMContentLoaded", function(event) {
     substitute_featured_posts();
-    setInterval(substitute_featured_posts, articleShiftFreq);
+    setInterval(substitute_featured_posts, 7000);
 
     //add timer, resubstitute posts every 3-5? seconds
 
@@ -52,7 +50,7 @@ function substitute_featured_posts(){
 function sub_post_feature_content(el, article_num){
     //fade out
     el.style.opacity = 0;  
-    setTimeout(()=>{
+    setTimeout(function(){
         var info = articles[article_num];
         el.getElementsByTagName( 'h4' )[0].innerHTML = info.title;
         //el.getElementsByClassName( 'summary' )[0].innerHTML = info.description;
