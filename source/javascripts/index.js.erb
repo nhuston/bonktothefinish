@@ -18,8 +18,11 @@ var articles = <%=
     articles.to_json
 %>
 
+var articleShiftFreq = 7000;
+
 document.addEventListener("DOMContentLoaded", function(event) {
     substitute_featured_posts();
+    setInterval(substitute_featured_posts, articleShiftFreq);
 
     //add timer, resubstitute posts every 3-5? seconds
 
@@ -47,12 +50,19 @@ function substitute_featured_posts(){
 }
 
 function sub_post_feature_content(el, article_num){
-    var info = articles[article_num];
-    el.getElementsByTagName( 'h4' )[0].innerHTML = info.title;
-    //el.getElementsByClassName( 'summary' )[0].innerHTML = info.description;
-    el.style.backgroundImage = "url('" + info.img_src + "')";
-    el.getElementsByTagName( 'time' )[0].innerHTML = info.date;
-    el.getElementsByClassName( 'tag-list' )[0].innerHTML = info.tags;
+    //fade out
+    el.style.opacity = 0;  
+    setTimeout(()=>{
+        var info = articles[article_num];
+        el.getElementsByTagName( 'h4' )[0].innerHTML = info.title;
+        //el.getElementsByClassName( 'summary' )[0].innerHTML = info.description;
+        el.style.backgroundImage = "url('" + info.img_src + "')";
+        el.getElementsByTagName( 'time' )[0].innerHTML = info.date;
+        el.getElementsByClassName( 'tag-list' )[0].innerHTML = info.tags;
+
+        //fade in
+        el.style.opacity = 1;
+    }, 500); //change CSS for .post_feature for this time to mod
 }
 
 function openTab(evt, activeTabId) { //source: https://www.w3schools.com/howto/howto_js_tabs.asp
