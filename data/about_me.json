@@ -1,5 +1,20 @@
 {
     "social": {
+        "twitter": {
+            "url": "https://twitter.com/bonktothefinish/",
+            "img_url": "icons/social/twitter.svg",
+            "img_alt": "Twitter"
+        },
+        "instagram": {
+            "url": "https://www.instagram.com/bonktothefinish/?hl=en",
+            "img_url": "icons/social/instagram.svg",
+            "img_alt": "Instagram"
+        },
+        "strava": {
+            "url": "https://www.strava.com/athletes/13343220",
+            "img_url": "icons/social/strava.svg",
+            "img_alt": "Strava"
+        },
         "youtube": {
             "url": "https://www.youtube.com/channel/UCp7nBpNpVZggj8TzETGPZjA",
             "img_url": "icons/social/youtube.png",
@@ -15,25 +30,10 @@
             "img_url": "icons/social/rss.svg",
             "img_alt": "RSS"
         },
-        "strava": {
-            "url": "https://www.strava.com/athletes/13343220",
-            "img_url": "icons/social/strava.svg",
-            "img_alt": "Strava"
-        },
-        "instagram": {
-            "url": "https://www.instagram.com/bonktothefinish/?hl=en",
-            "img_url": "icons/social/instagram.svg",
-            "img_alt": "Instagram"
-        },
         "bibrave": {
             "url": "https://www.bibrave.com/users/128054",
             "img_url": "icons/social/bibrave.png",
             "img_alt": "Bibrave"
-        },
-        "twitter": {
-            "url": "https://twitter.com/bonktothefinish/",
-            "img_url": "icons/social/twitter.svg",
-            "img_alt": "Twitter"
         },
         "reddit": {
             "img_url": "icons/social/reddit.svg",
