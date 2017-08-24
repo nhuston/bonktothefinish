@@ -88,7 +88,7 @@ helpers do
 
     #second choice: first image that appears in the article's body
     else
-      doc = Nokogiri::HTML(article.body) 
+      doc = Nokogiri::HTML(article.body)
       img = doc.xpath('//img').first
       src = img['src'] if img != nil
     end
@@ -136,7 +136,7 @@ helpers do
     end
     return tabs
   end
-    
+
   def tab_id(title)
     return "tab_#{title}"
   end
@@ -179,7 +179,7 @@ helpers do
 
     ##delete words under the min occurrences
     occurrences.delete_if do |word, freq|
-      if freq <= 1
+      if freq <= 2
         true # Make sure the if statement returns true, so it gets marked for deletion
       end
     end
