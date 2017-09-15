@@ -48,9 +48,9 @@ body {
     height: 320px;
     margin: 4px;
     position:relative;
-    transition: opacity 0.5s linear;    
+    transition: opacity 0.5s linear;
     opacity: 1;
-    
+
     div{
         bottom:0;
         left:0;
@@ -174,7 +174,7 @@ main {
     }
 }
 
-iframe {
+iframe,twitterwidget {
     display: block;
     margin: $margin*2 auto;
     max-width: 100%;

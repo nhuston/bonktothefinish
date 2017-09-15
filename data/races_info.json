@@ -179,6 +179,15 @@
             "time": "22:44",
             "notes": "7th in age group",
             "blog_link": "westerville-rotary-5k.html"
+        },
+        {
+            "name": "Wendy's Frosty 5k",
+            "location": "Columbus, OH",
+            "date": "2017-08-13",
+            "trail": false,
+            "time": "22:09",
+            "notes": "day after 14 miler, 1st in AG 4th female",
+            "blog_link": "wendys-frosty-5k.html"
         }
     ],
     "6K": [{
