@@ -472,6 +472,51 @@
             "date": "2016-04-03",
             "trail": false,
             "time": "1:43:01.2"
+        }, {
+            "name": "Arizona Distance Classic",
+            "location": "Oro Valley, AZ",
+            "date": "2015-03-22",
+            "trail": false,
+            "time": "1:46:16"
+        }, {
+            "name": "Scottsdale Challenge Half",
+            "location": "Scottsdale, AZ",
+            "date": "2015-04-12",
+            "trail": false,
+            "time": "2:14:44",
+            "notes": "Crossfit Half"
+        }, {
+            "name": "Run Michigan Cheap - Rochester",
+            "location": "Rochester, MI",
+            "date": "2015-06-27",
+            "trail": false,
+            "time": "1:56:31.1",
+            "notes": "In rain"
+        }, {
+            "name": "Emerald City",
+            "location": "Dublin, OH",
+            "date": "2015-08-23",
+            "trail": false,
+            "time": "1:48:25"
+        }, {
+            "name": "America's Finest City",
+            "location": "San Diego, CA",
+            "date": "2014-08-17",
+            "trail": false,
+            "time": "1:51:40"
+        }, {
+            "name": "The Hoot Half",
+            "location": "Alum Creek State Park, OH",
+            "date": "2015-08-30",
+            "trail": true,
+            "time": "2:26:47"
+        }, {
+            "name": "The Hoot Half",
+            "location": "Alum Creek State Park, OH",
+            "date": "2017-08-20",
+            "trail": true,
+            "time": "2:17:25",
+            "blog_link": "the-hoot-half.html"
         }
     ],
     "Marathon": [{
@@ -643,6 +688,13 @@
         "time": "7:26:00",
         "notes": "came home with a cat (Rye!)",
         "blog_link": "dawg-gone-long-run.html"
+    }, {
+        "name": "Another Dam 50K",
+        "location": "Englewood MetroPark, OH",
+        "date": "2016-06-05",
+        "trail": true,
+        "time": "5:31:07",
+        "blog_link": "another-dam-50k-race-report.html"
     }],
     "60K": [{
         "name": "Hocking Hills Indian Run",
