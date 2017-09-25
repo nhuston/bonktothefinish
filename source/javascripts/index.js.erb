@@ -19,6 +19,12 @@ var articles = <%=
 %>
 
 document.addEventListener("DOMContentLoaded", function(event) {
+    //originally hide the posts
+    var rand_post_1 = document.getElementById('random_post_1');
+    var rand_post_2 = document.getElementById('random_post_2');
+    rand_post_1.style.visibility = 'hidden';
+    rand_post_2.style.visibility = 'hidden';
+
     substitute_featured_posts();
     setInterval(substitute_featured_posts, 7000);
 
@@ -59,6 +65,8 @@ function sub_post_feature_content(el, article_num){
         el.getElementsByClassName( 'tag-list' )[0].innerHTML = info.tags;
 
         //fade in
+
+        el.style.visibility = 'visible';
         el.style.opacity = 1;
     }, 500); //change CSS for .post_feature for this time to mod
 }
