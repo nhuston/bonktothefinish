@@ -193,13 +193,15 @@ helpers do
 
    def to_mi(str)
      str = str.downcase
-     if str == "marathon"
-       return 26.2
-     elsif str == "half marathon"
-       return 13.1
-     elsif str == "ultramarathon"
-       return 30
-     end
+      if str == "marathon"
+        return 26.2
+      elsif str == "half marathon"
+        return 13.1
+      elsif str == "quarter marathon"
+        return 6.55
+      elsif str == "ultramarathon"
+        return 30
+      end
 
      number = str.scan(/\d+/).first
      if number == nil
