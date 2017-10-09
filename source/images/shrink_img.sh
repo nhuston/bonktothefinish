@@ -9,6 +9,10 @@ echo $0
 # To convert a single image - example:
 # convert site-header-img.jpg -resize 1000x1000\> -quality  80% site-header-img.jpg
 
+echo ""
+echo "Checking for Images to shrink..."
+echo ""
+
 find $1 -type f -exec sh -c '
 	filename=$(basename "$0")
 	size=$(wc -c <"$0")
