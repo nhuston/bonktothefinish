@@ -214,7 +214,7 @@ helpers do
      if unit == " mile" or unit == " miles"
        mi = number.to_f
      elsif unit =="k"
-       mi = number.to_f * 1.60934
+       mi = number.to_f / 1.60934
      end
      return mi
    end
