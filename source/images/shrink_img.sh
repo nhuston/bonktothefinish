@@ -17,17 +17,13 @@ find $1 -type f -exec sh -c '
 	filename=$(basename "$0")
 	size=$(wc -c <"$0")
 	file_is_big=$(($size > 1000000))
-
 	if [ $file_is_big != 0 ]
 	then
 		extension="${filename##*.}"
 		filename="${filename%.*}"
 		dir=$(dirname "$0")
-
 		echo "Shrinking...$0 to $filename.jpg"
-
 		convert "$0" -resize 1700x1700\> -quality  70% "$dir/$filename.jpg"
-
 		if [ "$extension" != "jpg" ]
 		then
 			echo "DELETING...$0"
