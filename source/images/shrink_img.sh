@@ -1,6 +1,5 @@
 #!/bin/bash
 
-
 echo $0
 
 #example:
@@ -15,15 +14,23 @@ echo ""
 
 find $1 -type f -exec sh -c '
 	filename=$(basename "$0")
-	size=$(wc -c <"$0")
-	file_is_big=$(($size > 1000000))
-	if [ $file_is_big != 0 ]
+	extension="${filename##*.}"
+	filename="${filename%.*}"
+
+	#size=$(wc -c <"$0")
+	#file_is_big=$(($size > 1000000))
+
+	width=$(identify -format "%w" "$0")> /dev/null
+	height=$(identify -format "%h" "$0")> /dev/null
+
+	if [ $extension != "jpg" ] || [ $width -gt 1700 ] || [ $height -gt 1700 ]; 
 	then
-		extension="${filename##*.}"
-		filename="${filename%.*}"
 		dir=$(dirname "$0")
+
 		echo "Shrinking...$0 to $filename.jpg"
+
 		convert "$0" -resize 1700x1700\> -quality  70% "$dir/$filename.jpg"
+
 		if [ "$extension" != "jpg" ]
 		then
 			echo "DELETING...$0"
