@@ -224,6 +224,13 @@
         "time": "29:52",
         "notes": "yikes",
         "blog_link": "fore-miler-race-report.html"
+    }, {
+        "name": "Oktoberfest Meiler Vier",
+        "location": "Columbus, OH",
+        "date": "2017-09-22",
+        "trail": false,
+        "time": "29:29",
+        "blog_link": "oktoberfest-meiler-vier.html"
     }],
     "5 miles": [{
         "name": "Bisbee Stair Climb",
@@ -533,6 +540,33 @@
             "trail": true,
             "time": "2:17:25",
             "blog_link": "the-hoot-half.html"
+        }, {
+            "name": "Brokeman's Central Ohio",
+            "location": "Columbus, OH",
+            "date": "2015-10-04",
+            "trail": false,
+            "time": "1:43:44"
+        }, {
+            "name": "Brokeman's Central Ohio",
+            "location": "Columbus, OH",
+            "date": "2017-10-01",
+            "trail": false,
+            "time": "2:11:43.9",
+            "blog_link": "brokemans-central-ohio.html"
+        }, {
+            "name": "Urban Bourbon",
+            "location": "Louisville, KY",
+            "date": "2017-10-21",
+            "trail": false,
+            "time": "1:41:07",
+            "blog_link": "urban-bourbon-race-report.html"
+        }, {
+            "name": "First Day of Winter",
+            "location": "West Portsmouth, OH",
+            "date": "2015-12-20",
+            "trail": true,
+            "time": "1:51:24",
+            "notes": "1st female, 2nd overall, week after bigfoot 50k"
         }
     ],
     "Marathon": [{
@@ -625,13 +659,21 @@
         "notes": "Pacing James through his 4th marathon",
         "blog_link": "rockford-marathon-race-report.html"
     }, {
-        "name": "Rock 'n' Roll San Diego Marathon",
+        "name": "Rock 'n' Roll San Diego",
         "location": "San Diego, CA",
         "date": "2017-06-04",
         "trail": false,
         "time": "4:17:29",
         "notes": "high HR and chest pain",
         "blog_link": "rock-n-roll-san-diego-marathon-race-report.html"
+    }, {
+        "name": "Detroit Free Press",
+        "location": "Detroit, MI",
+        "date": "2017-10-15",
+        "trail": false,
+        "time": "3:56:12",
+        "notes": "high winds, humid, but new PR",
+        "blog_link": "detroit-free-press-marathon.html"
     }],
     "50K": [{
         "name": "Run for Regis",
@@ -747,6 +789,17 @@
         "blog_link": "georgia-death-race-report.html"
     }],
     "Relays": [
+
+    ],
+    "100 miles": [{
+        "name": "Canal Corridor",
+        "location": "Arkon, Ohio",
+        "date": "2017-07-08",
+        "trail": false,
+        "time": "27:14:15",
+        "notes": "first 100",
+        "blog_link": "canal-corridor-100.html"
+    }
 
     ]
 }
