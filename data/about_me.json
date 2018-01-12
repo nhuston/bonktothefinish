@@ -25,6 +25,11 @@
             "img_url": "icons/social/facebook.svg",
             "img_alt": "Facebook"
         },
+        "athlinks": {
+            "url": "https://www.athlinks.com/athletes/322443060",
+            "img_url": "icons/social/athlinks.png",
+            "img_alt": "Athlinks"
+        },
         "rss": {
             "url": "/feed.xml",
             "img_url": "icons/social/rss.svg",
