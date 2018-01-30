@@ -69,15 +69,6 @@ activate :blog do |blog|
  blog.page_link = "#{blog.prefix}/page/{num}"
 end
 
-# Documentation - https://github.com/middleman-contrib/middleman-deploy
-activate :deploy do |deploy|
-  deploy.user = 'JTronLabs'
-  deploy.deploy_method = :git
-  deploy.remote   = 'https://github.com/nhuston/nhuston.github.io.git' #I recommend a URL over a 'remote' name, as those have broken on me
-  deploy.branch = 'master'
-  deploy.build_before = true
-end
-
 ###
 # Helpers
 ###
