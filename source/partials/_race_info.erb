@@ -8,6 +8,7 @@ participants = race.fetch(:participants,"")
 url = race.fetch(:url,"")
 pacing = race.fetch(:pacing,"")
 strava_url = race.fetch(:strava_url,"")
+gpx = race.fetch(:gpx, "")
 %>
 
 <% if race.length > 0 %>
@@ -38,9 +39,14 @@ strava_url = race.fetch(:strava_url,"")
       <a href="<%= url %>">Race Website</a><br/>
     <% end %>
 
+    <% if gpx != "" then %>
+      <a href="<%= config[:host] %>/files/gpx/<%= gpx %>.gpx" download>Download GPX File</a><br/>
+    <% end %>
+
     <% if strava_url != "" then %>
       <iframe height='405' width='590' frameborder='0' allowtransparency='true' scrolling='no' src='<%= strava_url %>'></iframe>
     <% end %>
+
   </div>
 
 <% end %>
