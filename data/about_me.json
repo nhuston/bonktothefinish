@@ -45,7 +45,7 @@
             "img_alt": "Reddit"
         },
         "stumbleupon": {
-            "img_url": "http://cdn.stumble-upon.com/i/badges/badgeLogo18x18.png?v5",
+            "img_url": "icons/social/stumbleupon.png",
             "img_alt": "StumbleUpon"
         },
         "gPlus": {
