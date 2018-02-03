@@ -16,7 +16,7 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
-config[:host] = "http://bonktothefinish.com"
+config[:host] = "https://bonktothefinish.com"
 config[:site_description] = "BonkToTheFinish.com, home of ultra runner Nicole Huston. Race and fitness discounts, race reports, training info, and stories of acheivement."
 set :url_root, config[:host]
 set :markdown_engine, :kramdown
