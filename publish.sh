@@ -1,6 +1,7 @@
 git pull origin master
 
-#sh source/images/shrink_img.sh $(pwd)/source/images/blog #netlify will shrink images
+#netflify shrinks imgs, but does not convert to diff file types. Keep image shrinking
+sh source/images/shrink_img.sh $(pwd)/source/images/blog
 
 git add -A
 git commit -m "$1"
