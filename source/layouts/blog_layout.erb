@@ -1,4 +1,18 @@
 <% update_date = File.mtime(current_page.source_file).to_date %>
+<%
+if current_page.data.dig(:author) then
+  author = current_page.data.author
+  
+  if author == "James Lowrey" then 
+    author_link = "https://jarlowrey.com"
+  else
+    author_link = ""
+  end
+else
+  author = "Nicole Huston"
+  author_link = "/about.html"
+end
+%>
 
 <% wrap_layout :layout do %>
       <article>
@@ -6,7 +20,7 @@
         <header class="article-header">
           <h1><%= current_article.title %></h1>
           <span class="subtext">
-            <span><%= current_article.date.strftime("%B %e, %Y") %> / <a href="/about.html" rel="author">Nicole Huston</a> <span>
+            <span><%= current_article.date.strftime("%B %e, %Y") %> / <a href=<%=author_link%> rel="author"><%= author %></a> <span>
             <br/>
 
             <% if current_article.date != update_date %>
