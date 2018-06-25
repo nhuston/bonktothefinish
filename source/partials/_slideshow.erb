@@ -12,12 +12,12 @@
   <% end %>
 
   <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  <a class="prev" onclick="addToSlideIndex('<%= slide_id %>',-1)">&#10094;</a>
+  <a class="next" onclick="addToSlideIndex('<%= slide_id %>', 1)">&#10095;</a>
 
   <!-- Image text -->
   <div class="caption-container">
-    <p id="caption"></p>
+    <p class="caption"></p>
   </div>
 
   <!-- Thumbnail images -->
@@ -25,7 +25,7 @@
     <% images.each_with_index do |img, i| %>
       <div class="column">
         <% active = if i==0 then "active" else "" end %>
-        <img class="demo cursor <%= active %>" src="<%=img[:url]%>" style="width:100%" onclick="currentSlide(<%= i %>)" alt="<%= img[:alt] %>">
+        <img class="demo cursor <%= active %>" src="<%=img[:url]%>" style="width:100%" onclick="setCurrentSlide('<%= slide_id %>',<%= i %>)" alt="<%= img[:alt] %>">
       </div>
     <% end %>
   </div>
@@ -33,6 +33,5 @@
 
 
 <script type="text/javascript">
-initSlide(slide_id);  console.log("2222222");
-
+initSlide("<%= slide_id %>");
 </script>
