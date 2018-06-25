@@ -8,7 +8,11 @@ else
   description = config[:site_description]
 end
 
-author = "Nicole Huston"
+if current_page.data.dig(:author) then
+  author = current_page.data.author
+else
+  author = "Nicole Huston"
+end
 
 if current_page.data.dig(:title) then
   title = current_page.data.title
