@@ -3,6 +3,14 @@
 <!-- Container for the image gallery -->
 <div class="slideshow-container" id="<%= slide_id %>">
 
+  <!-- Image text -->
+  <div class="caption-container">
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="addToSlideIndex('<%= slide_id %>',-1)">&#10094;</a>
+    <a class="next" onclick="addToSlideIndex('<%= slide_id %>', 1)">&#10095;</a>
+    <p class="caption"></p>
+  </div>
+
   <!-- Full-width images with number text -->
   <% images.each_with_index do |img, i| %>
     <div class="mySlides">
@@ -10,15 +18,6 @@
       <img src="<%=img[:url]%>" alt="<%img[:alt]%>" style="width:100%">
     </div>
   <% end %>
-
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="addToSlideIndex('<%= slide_id %>',-1)">&#10094;</a>
-  <a class="next" onclick="addToSlideIndex('<%= slide_id %>', 1)">&#10095;</a>
-
-  <!-- Image text -->
-  <div class="caption-container">
-    <p class="caption"></p>
-  </div>
 
   <!-- Thumbnail images -->
   <div class="row">
