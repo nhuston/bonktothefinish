@@ -60,7 +60,7 @@ activate :blog do |blog|
  #set up blog urls - needs an '.html' on the end or GitHub will download the link instead of opening in browser
  blog.prefix = "blog"# This will add a prefix to all links, template references and source paths
  blog.permalink = "{title}.html" #"{year}/{month}/{day}/{title}.html"
- blog.sources = "{year}-{month}-{day}-{title}.html" # define year-month-day in filename to make an organized dir
+ blog.sources = "{year}/{year}-{month}-{day}-{title}.html" # define year-month-day in filename to make an organized dir
  blog.default_extension = ".markdown"
 
  # Enable pagination
