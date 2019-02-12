@@ -1,0 +1,115 @@
+<%
+require 'uri'
+
+all_other_articles = blog.articles.clone
+all_other_articles.delete(current_article)
+
+#helper functions
+def get_host(article) 
+    url = article.data.dig( :race, :url )
+    if url != nil
+        return URI.parse(url).host
+    end
+    return nil
+end
+def get_state(article)
+    loc = article.data.dig( :race, :location )
+    if loc == "Virtual"
+        return "Virtual"
+    elsif loc != nil
+        return loc.split(',')[-1].strip
+    else
+        return nil
+    end
+end
+def get_city(article)
+    loc = article.data.dig( :race, :location )
+    if loc == "Virtual"
+        return "Virtual"
+    elsif loc != nil
+        return loc.split(',')[-2].strip
+    else
+        return nil
+    end
+end
+def add_similar(similar_articles, article)
+    if not similar_articles.include? article
+        similar_articles.append(article) # do not add duplicates
+    end
+end
+
+same_site = []
+# articles that share the same race website
+my_host = get_host(current_article)
+if my_host != nil
+    all_other_articles.each do |article|
+        if get_host(article) == my_host
+            add_similar(same_site, article)
+        end
+    end
+end
+
+# next same city+state
+same_loc = []
+my_city = get_city(current_article)
+my_state = get_state(current_article)
+if my_city != nil and my_state != nil
+    all_other_articles.each do |article|
+        if get_city(article) == my_city and get_state(article) == my_state
+            add_similar(same_loc, article)
+        end
+    end
+end
+
+# next same state
+same_state = []
+if my_state != nil
+    all_other_articles.each do |article|
+        if get_state(article) == my_state
+            add_similar(same_state, article)
+        end
+    end
+end
+
+# similar tags
+sim_tag_count = {}
+if current_article.tags.size > 0
+    all_other_articles.each do |article|
+        num_sim_tags = 0
+        for tag in article.tags
+            if current_article.tags.include? tag
+                num_sim_tags += 1
+            end
+        end
+
+        if num_sim_tags > 0
+            sim_tag_count[article] = num_sim_tags
+        end
+    end
+end
+same_tags = sim_tag_count.keys.sort_by{|a| sim_tag_count[a]}.reverse
+
+# postprocessing
+# randomize the inclusion of articles from the diff sources
+same_loc.shuffle!
+same_state.shuffle!
+same_site.shuffle!
+# only take the most related
+similar_articles = (same_site + same_loc + same_state + same_tags).uniq 
+similar_articles = similar_articles[0,5]
+# similar_articles.sort_by { |k| k.date } #sort by date
+%>
+
+<% 
+if similar_articles.size > 0 %>
+    <h3>Related Posts</h3>
+    <ul>
+    <% 
+    similar_articles.each do |article| 
+        art_title = article.title 
+        date = article.date.strftime("%b %e, %Y")
+        %>
+        <li> <%= link_to art_title, article %> <span style="font-size:.6em;"> <%=date%> </span></li>
+    <% end %>
+    </ul>
+<% end %>

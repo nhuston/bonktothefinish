@@ -1,15 +1,15 @@
 
 <div class="articles-linkage">
     <div>
-        <% if current_article.next_article
-            art = current_article.next_article %>
+        <% if current_article.article_next
+            art = current_article.article_next %>
             <%= link_to "Next Article", art, class: "button button_primary" %>
         <% end %>
     </div>
 
     <div>
-        <% if current_article.previous_article 
-            art = current_article.previous_article %>
+        <% if current_article.article_previous 
+            art = current_article.article_previous %>
             <%= link_to "Previous Article", art, class: "button button_primary" %>
         <% end %>
     </div>
