@@ -1,3 +1,6 @@
+{::nomarkdown}
+
+
 <% slide_id = "slideshow_id"+String(Random.rand(1000000)) %>
 
 <!-- Container for the image gallery -->
@@ -15,7 +18,7 @@
   <% images.each_with_index do |img, i| %>
     <div class="mySlides">
       <div class="numbertext"><%= i+1 %> / <%= images.length%></div>
-      <img src="<%=img[:url]%>" alt="<%img[:alt]%>" style="width:100%">
+      <img src="<%= prefix_img(img[:url]) %>" alt="<%img[:alt]%>" style="width:100%">
     </div>
   <% end %>
 
@@ -34,3 +37,5 @@
 <script type="text/javascript">
 initSlide("<%= slide_id %>");
 </script>
+
+{:/}
