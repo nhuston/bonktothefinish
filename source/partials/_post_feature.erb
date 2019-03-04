@@ -2,11 +2,11 @@
 classes||=""
 id||="" 
 tags = article.tags.map {|tag| link_to "#{tag}", tag_path(tag) }
-
+img_dir = "big_thumbnails"
 %>
 
 
-<section class="post_feature <%= classes %>" style="background-image: url('<%= get_article_img_src(article) %>')" id="<%= id %>">
+<section class="post_feature <%= classes %>" style="background-image: url('<%= get_article_img_src(article, img_dir) %>')" id="<%= id %>">
   <div>
     <h4><%= link_to article.title, article %> </h4>
     <span>

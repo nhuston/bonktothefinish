@@ -11,7 +11,7 @@ var articles = <%=
             "title": link_to("#{article.title}", article),
             "tags": tags.join(", "),
             "date": article.date.strftime("%B %e, %Y"),
-            "img_src": get_article_img_src(article)
+            "img_src": get_article_img_src(article, "big_thumbnails")
         }
         articles.push(json)
     end

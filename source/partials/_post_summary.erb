@@ -7,7 +7,9 @@ tags = article.tags.map {|tag| link_to "#{tag}", tag_path(tag) }
 
 <section class="post_summary <%= classes %>">
   <aside>
-    <img src="<%= get_article_img_src(article) %>" alt="Article Icon"/>
+    <div>
+      <img src="<%= get_article_img_src(article,"small_thumbnails") %>" alt="Article Icon"/>
+    </div>
   </aside>
 
   <article>

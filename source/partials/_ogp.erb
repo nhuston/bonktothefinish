@@ -3,7 +3,7 @@
 img = "#{config[:host]}/images/site-header-img.jpg"
 custom_img = current_page.data.dig(:top_img)
 if custom_img != nil and custom_img.length > 0
-  img = prefix_img(custom_img)
+  img = prefix_img(custom_img,current_page,"big_thumbnails")
 end
 img+="?nonsense" #makes crawlers think image is unique, and will force updates
 %>

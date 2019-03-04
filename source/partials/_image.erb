@@ -4,8 +4,9 @@ caption ||= ""
 classes ||= ""
 url ||= false 
 
-src = prefix_img(src)
-url = url || src #if url is false (param wasn't passed it), make it point to the full res version of the image
+thumb_src = prefix_img(src,current_page,"big_thumbnails")
+full_sized_src = prefix_img(src)
+url = url || full_sized_src #if url is false (param wasn't passed it), make it point to the full res version of the image
 %>
 
 <!-- Use Kramdown's 'nomarkdown' tag so that this figure is not wrapped in a 'p' tag in the blog pages that use this partial -->
@@ -13,7 +14,7 @@ url = url || src #if url is false (param wasn't passed it), make it point to the
 <figure class="<%= classes %>">
   <!-- Show the image and link to the full resolution on click-->
   <a target="_blank" href="<%= url %>" >
-    <img src="<%= src %>" alt="<%= alt %>">
+    <img src="<%= thumb_src %>" alt="<%= alt %>">
   </a>
 
 

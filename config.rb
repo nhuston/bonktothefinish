@@ -1,9 +1,6 @@
 #Set to TRUE if you want the links to be checked
 check_links_after_build=false
 
-
-
-
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -76,18 +73,21 @@ end
 # Methods defined in the helpers block are available in templates
 helpers do
   #get a "summary" image for the article
-  def get_article_img_src(article)
+  def get_article_img_src(article, img_dir)
     src = nil
 
     #first choice: the manually defined image
     if article.data.has_key?(:top_img)
-      src = prefix_img(article.data.top_img,article)
+      src = prefix_img(article.data.top_img, article, img_dir)
 
     #second choice: first image that appears in the article's body
     else
       doc = Nokogiri::HTML(article.body)
       img = doc.xpath('//img').first
       src = img['src'] if img != nil
+      if src != nil then
+        src = src.sub("full_size",img_dir)
+      end
     end
 
     #last choice: get a general icon if a more specific one doesn't exist
@@ -138,15 +138,15 @@ helpers do
     return "tab_#{title}"
   end
 
-   def prefix_img(img_name_or_url, page=current_page)
+   def prefix_img(img_name_or_url, page=current_page, img_dir="full_size")
      #strip '.html' extension off article link to get name of folder
-     url = page.url
-     url_without_ext = url[0..url.length-6]
-
+     path = page.path[0..page.path.length-(".html/").length] #remove the .html
+     path = path[("blog/").length..path.length]
+    
      #determine if video has an exact link or belongs to "/images/blog/CURRENT_ARTICLE_NAME/"
      if img_name_or_url[0..6] != "http://" and img_name_or_url[0..6] != "https:/" and img_name_or_url[0] !="/" then
-       #image belongs to "/images/blog/CURRENT_ARTICLE_NAME/" - add prefix to src
-       src = "#{config[:host]}/images#{url_without_ext}/#{img_name_or_url}"
+       #image belongs to "/images/blog/IMG_DIR/CURRENT_ARTICLE_NAME/" - add prefix to src
+        src = "#{config[:host]}/images/blog/#{img_dir}/#{path}/#{img_name_or_url}"
      else
        src = img_name_or_url
      end
