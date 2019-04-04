@@ -63,7 +63,10 @@ def make_containing_folder_for(filename):
         os.makedirs(path)
 
 def resize_images():
-    for (dirpath, dirnames, filenames) in os.walk("./blog/full_size"):
+    print("Resizing Images")
+    img_folder_path = "./source/images"
+    full_size_img_path = img_folder_path+"/blog/full_size/"
+    for (dirpath, dirnames, filenames) in os.walk(full_size_img_path):
         for infile in filenames:
             file_root = os.path.splitext(infile)[0]
             jpg_filename = file_root + ".jpg"
@@ -73,7 +76,9 @@ def resize_images():
             try:
                 im = Image.open(outfile) #will fail if image is not ".jpg" extension
             except:
-                im = Image.open(infile)
+                in_filename = dirpath+"/"+infile
+                im = Image.open(in_filename)
+                os.remove(in_filename)
                 need_resize = True
 
             need_resize = need_resize or im.size[0] > max_im_size[0] or im.size[1] > max_im_size[1]# check to see if this image has been shrank before
