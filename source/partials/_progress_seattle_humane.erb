@@ -1,0 +1,12 @@
+<%
+amount_donated = 450
+%>
+
+<div style="border: 3px solid;">
+    <h4>Seattle Humane Donatons</h4>
+    <p>$<%=amount_donated.to_s%>/2.5k Raised</p>
+
+    <progress style="max-width:100%;" value="<%=amount_donated%>" max="2500"></progress>
+
+    <a href="http://shs.convio.net/goto/NicoleH">Donate Now!</a>
+</div>
