@@ -4,7 +4,7 @@ backend:
 media_folder: source/images/uploads
 public_folder: /images/uploads
 
-fields: &allFields
+all-input-fields: &allFields
   - {label: Title, name: title, widget: string}
   - {label: Published, name: "published", widget: "boolean", default: false}
   - {label: Tags, name: tags, widget: "string", hint: "Comma seperated list of tags"}
@@ -43,25 +43,25 @@ collections:
     folder: source/blog/2016
     <<: *allBlogInfo
     fields: 
-      <<: *allFields
+      *allFields
 
   - name: blog2017
     label: "Blog 2017"
     folder: source/blog/2017
     <<: *allBlogInfo
     fields: 
-      <<: *allFields
+      *allFields
 
   - name: blog2018
     label: "Blog 2018"
     folder: source/blog/2018
     <<: *allBlogInfo
     fields: 
-      <<: *allFields
+      *allFields
 
   - name: blog2019
     label: "Blog 2019"
     folder: source/blog/2019
     <<: *allBlogInfo
     fields: 
-      <<: *allFields
+      *allFields
