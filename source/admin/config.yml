@@ -1,0 +1,32 @@
+backend:
+  name: git-gateway
+
+media_folder: source/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: blog
+    label: Blog
+    folder: source/blog/
+    extension: .html.md.erb
+    format: frontmatter
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    fields:
+      - {label: Title, name: title, widget: string}
+      - {label: Published, name: "published", widget: "boolean", default: false}
+      - {label: Tags, name: tags, widget: "string", hint: "Comma seperated list of tags"}
+      - {label: "Header Image Filename", name: top_img, widget: "string", required: false }
+      - label: "Race Details"
+          required: false
+          name: race
+          widget: "object"
+          fields: 
+            - {label: "Location", name: "location", widget: "string"}
+            - label: Date
+              name: date
+              widget: "date"
+              default: ""
+              format: "MM/DD/YYYY"
+            - {label: "Distances", name: "distances", widget: "string"}
+            - {label: "Url", name: "url", widget: "string"}
