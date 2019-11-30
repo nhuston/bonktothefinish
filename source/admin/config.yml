@@ -5,7 +5,7 @@ media_folder: source/images/uploads
 public_folder: /images/uploads
 
 
-blog-fields: &id001
+&allFields fields: 
   - {label: Title, name: title, widget: string}
   - {label: Published, name: "published", widget: "boolean", default: false}
   - {label: Tags, name: tags, widget: "string", hint: "Comma seperated list of tags"}
@@ -40,7 +40,8 @@ collections:
     format: frontmatter
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{title}}'
-    fields: &id001
+    fields: 
+      *allFields
   - name: blog2017
     label: "Blog 2017"
     folder: source/blog/2017
@@ -48,7 +49,8 @@ collections:
     format: frontmatter
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{title}}'
-    fields: &id001
+    fields: 
+      *allFields
   - name: blog2018
     label: "Blog 2018"
     folder: source/blog/2018
@@ -56,7 +58,8 @@ collections:
     format: frontmatter
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{title}}'
-    fields: &id001
+    fields: 
+      *allFields
   - name: blog2019
     label: "Blog 2019"
     folder: source/blog/2019
@@ -64,4 +67,5 @@ collections:
     format: frontmatter
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{title}}'
-    fields: &id001
+    fields: 
+      *allFields
