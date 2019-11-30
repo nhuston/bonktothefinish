@@ -29,7 +29,10 @@ all-input-fields: &allFields
         required: false
         format: "MM/DD/YYYY"
       - {label: "Distances", name: "distances", widget: "string", required: false}
-      - {label: "Url", name: "url", widget: "string", required: false}
+      - {label: "Num Participants", name: "participants", widget: "string", required: false}
+      - {label: "Pacing", name: "pacing", widget: "string", hint: "2:15", required: false}
+      - {label: "Url", name: "participants", widget: "string", required: false}
+      - {label: "Straava Url", name: "strava_url", widget: "string", required: false}
   - {label: Body, name: body, widget: markdown}
 
 info: &allBlogInfo
