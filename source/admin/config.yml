@@ -8,11 +8,11 @@ all-input-fields: &allFields
   - {label: Title, name: title, widget: string}
   - {label: Published, name: "published", widget: "boolean", default: false}
   - {label: Tags, name: tags, widget: "string", hint: "Comma seperated list of tags"}
-  - {label: "Header Image Filename", name: top_img, widget: "string", required: false }
   - label: "Featured Image"
     name: top_img
     widget: "image"
     default: "/images/blog/big_thumbnails/2019/2019-06-04-tacoma-city-5k/tacomacity5k.jpg"
+    required: false
     media_library:
       config:
         multiple: false
@@ -21,14 +21,15 @@ all-input-fields: &allFields
     required: false
     widget: "object"
     fields: 
-      - {label: "Location", name: "location", widget: "string"}
+      - {label: "Location", name: "location", widget: "string", required: false}
       - label: Date
         name: date
         widget: "date"
         default: ""
+        required: false
         format: "MM/DD/YYYY"
-      - {label: "Distances", name: "distances", widget: "string"}
-      - {label: "Url", name: "url", widget: "string"}
+      - {label: "Distances", name: "distances", widget: "string", required: false}
+      - {label: "Url", name: "url", widget: "string", required: false}
   - {label: Body, name: body, widget: markdown}
 
 info: &allBlogInfo
