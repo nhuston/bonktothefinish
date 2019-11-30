@@ -32,40 +32,37 @@ public_folder: /images/uploads
       - {label: "Url", name: "url", widget: "string"}
   - {label: Body, name: body, widget: markdown}
 
+&allBlogInfo info:
+  extension: .html.md.erb
+  format: frontmatter
+  create: true
+  slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+
 collections:
   - name: blog2016
     label: "Blog 2016"
     folder: source/blog/2016
-    extension: .html.md.erb
-    format: frontmatter
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    <<: *allBlogInfo
     fields: 
-      *allFields
+      <<: *allFields
+      
   - name: blog2017
     label: "Blog 2017"
     folder: source/blog/2017
-    extension: .html.md.erb
-    format: frontmatter
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    <<: *allBlogInfo
     fields: 
-      *allFields
+      <<: *allFields
+
   - name: blog2018
     label: "Blog 2018"
     folder: source/blog/2018
-    extension: .html.md.erb
-    format: frontmatter
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    <<: *allBlogInfo
     fields: 
-      *allFields
+      <<: *allFields
+
   - name: blog2019
     label: "Blog 2019"
     folder: source/blog/2019
-    extension: .html.md.erb
-    format: frontmatter
-    create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    <<: *allBlogInfo
     fields: 
-      *allFields
+      <<: *allFields
