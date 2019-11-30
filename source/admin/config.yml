@@ -4,29 +4,64 @@ backend:
 media_folder: source/images/uploads
 public_folder: /images/uploads
 
+
+blog-fields: &id001
+  - {label: Title, name: title, widget: string}
+  - {label: Published, name: "published", widget: "boolean", default: false}
+  - {label: Tags, name: tags, widget: "string", hint: "Comma seperated list of tags"}
+  - {label: "Header Image Filename", name: top_img, widget: "string", required: false }
+  - label: "Featured Image"
+    name: top_img
+    widget: "image"
+    default: "/images/blog/big_thumbnails/2019/2019-06-04-tacoma-city-5k/tacomacity5k.jpg"
+    media_library:
+      config:
+        multiple: false
+  - label: "Race Details"
+    name: race
+    required: false
+    widget: "object"
+    fields: 
+      - {label: "Location", name: "location", widget: "string"}
+      - label: Date
+        name: date
+        widget: "date"
+        default: ""
+        format: "MM/DD/YYYY"
+      - {label: "Distances", name: "distances", widget: "string"}
+      - {label: "Url", name: "url", widget: "string"}
+  - {label: Body, name: body, widget: markdown}
+
 collections:
-  - name: blog
-    label: Blog
-    folder: source/blog/
+  - name: blog2016
+    label: "Blog 2016"
+    folder: source/blog/2016
     extension: .html.md.erb
     format: frontmatter
     create: true
     slug: '{{year}}-{{month}}-{{day}}-{{title}}'
-    fields:
-      - {label: Title, name: title, widget: string}
-      - {label: Published, name: "published", widget: "boolean", default: false}
-      - {label: Tags, name: tags, widget: "string", hint: "Comma seperated list of tags"}
-      - {label: "Header Image Filename", name: top_img, widget: "string", required: false }
-      - label: "Race Details"
-        name: race
-        required: false
-        widget: "object"
-        fields: 
-          - {label: "Location", name: "location", widget: "string"}
-          - label: Date
-            name: date
-            widget: "date"
-            default: ""
-            format: "MM/DD/YYYY"
-          - {label: "Distances", name: "distances", widget: "string"}
-          - {label: "Url", name: "url", widget: "string"}
+    fields: &id001
+  - name: blog2017
+    label: "Blog 2017"
+    folder: source/blog/2017
+    extension: .html.md.erb
+    format: frontmatter
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    fields: &id001
+  - name: blog2018
+    label: "Blog 2018"
+    folder: source/blog/2018
+    extension: .html.md.erb
+    format: frontmatter
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    fields: &id001
+  - name: blog2019
+    label: "Blog 2019"
+    folder: source/blog/2019
+    extension: .html.md.erb
+    format: frontmatter
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{title}}'
+    fields: &id001
