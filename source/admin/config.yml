@@ -4,8 +4,7 @@ backend:
 media_folder: source/images/uploads
 public_folder: /images/uploads
 
-
-&allFields fields: 
+fields: &allFields
   - {label: Title, name: title, widget: string}
   - {label: Published, name: "published", widget: "boolean", default: false}
   - {label: Tags, name: tags, widget: "string", hint: "Comma seperated list of tags"}
@@ -32,7 +31,7 @@ public_folder: /images/uploads
       - {label: "Url", name: "url", widget: "string"}
   - {label: Body, name: body, widget: markdown}
 
-&allBlogInfo info:
+info: &allBlogInfo
   extension: .html.md.erb
   format: frontmatter
   create: true
@@ -45,7 +44,7 @@ collections:
     <<: *allBlogInfo
     fields: 
       <<: *allFields
-      
+
   - name: blog2017
     label: "Blog 2017"
     folder: source/blog/2017
