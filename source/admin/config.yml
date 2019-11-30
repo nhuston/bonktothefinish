@@ -18,15 +18,15 @@ collections:
       - {label: Tags, name: tags, widget: "string", hint: "Comma seperated list of tags"}
       - {label: "Header Image Filename", name: top_img, widget: "string", required: false }
       - label: "Race Details"
-          required: false
-          name: race
-          widget: "object"
-          fields: 
-            - {label: "Location", name: "location", widget: "string"}
-            - label: Date
-              name: date
-              widget: "date"
-              default: ""
-              format: "MM/DD/YYYY"
-            - {label: "Distances", name: "distances", widget: "string"}
-            - {label: "Url", name: "url", widget: "string"}
+        name: race
+        required: false
+        widget: "object"
+        fields: 
+          - {label: "Location", name: "location", widget: "string"}
+          - label: Date
+            name: date
+            widget: "date"
+            default: ""
+            format: "MM/DD/YYYY"
+          - {label: "Distances", name: "distances", widget: "string"}
+          - {label: "Url", name: "url", widget: "string"}
