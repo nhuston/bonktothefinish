@@ -126,7 +126,7 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.12.2)
     multi_json (1.13.1)
-    nokogiri (1.10.4)
+    nokogiri (1.10.8)
       mini_portile2 (~> 2.4.0)
     numerizer (0.1.1)
     padrino-helpers (0.13.3.4)
@@ -179,7 +179,7 @@ DEPENDENCIES
   middleman-livereload
   middleman-search_engine_sitemap
   middleman-syntax
-  nokogiri (~> 1.10.4)
+  nokogiri (~> 1.10.8)
   redcarpet (~> 3.3, >= 3.3.3)
   tzinfo-data
   wdm (~> 0.1.0)
